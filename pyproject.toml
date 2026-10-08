@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "cn-fund-lookthrough"
+version = "0.1.0"
+description = "中国基金持仓穿透：显式来源、未知与计算边界"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+[tool.setuptools.packages.find]
+include = ["cnlookthrough*"]
