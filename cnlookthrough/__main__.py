@@ -1,4 +1,4 @@
-import argparse,json,html
+import argparse,json,html,sys
 from pathlib import Path
 from .engine import analyze
 
@@ -10,6 +10,8 @@ def pairs(items):
  return d
 
 def main():
+ for stream in (sys.stdout,sys.stderr):
+  if hasattr(stream,"reconfigure"):stream.reconfigure(encoding="utf-8")
  p=argparse.ArgumentParser(description='中国基金持仓穿透；读取声明资料，不自动联网')
  p.add_argument('input',type=Path);p.add_argument('--format',choices=['json','markdown','html'],default='json');p.add_argument('--out',type=Path)
  a=p.parse_args()
