@@ -1,0 +1,40 @@
+{
+  "status": "limited-local-validation",
+  "manager": "睿远基金管理有限公司",
+  "fundCode": "007119",
+  "cases": [
+    {
+      "reportDate": "2025-12-31",
+      "publishedAt": "2026-03-27",
+      "rows": 81,
+      "navCNY": "21087155596.14",
+      "equityCNY": "19299724207.54",
+      "source": "https://www.foresightfund.com/upload/pdf/1774572963264-ruiyuanchengzhangjiazhihunhexingzhengquantouzijijin2025nianniandubaogao.pdf",
+      "sourceSha256": "3162db1a3bb2ebdffe21912167cc6d21c825cfc55fdd2963f9f6db9c993e5e6b"
+    },
+    {
+      "reportDate": "2026-06-30",
+      "publishedAt": "2026-08-27",
+      "rows": 77,
+      "navCNY": "22201161634.78",
+      "equityCNY": "19943736946.51",
+      "source": "https://www.foresightfund.com/upload/pdf/1787792089080-ruiyuanchengzhangjiazhihunhexingzhengquantouzijijin2026nianzhongqibaogao.pdf",
+      "sourceSha256": "6fd98c1b4c6440e8230795744e2429c9a27775f0b6f19724c885a35437bf7ed2"
+    }
+  ],
+  "amountReconciliation": "exact against declared totals",
+  "unknownConservation": "passed",
+  "snapshotComparison": "disclosure changes, not trades",
+  "pageReview": "selected holdings page reviewed, not every page",
+  "sourceStatus": "retained local documents; not freshly refetched or live authenticated",
+  "pending": [
+    "second manager",
+    "issuer evidence",
+    "all denominator pages visual review"
+  ],
+  "rawDocumentsBundled": false,
+  "adapterToolVersion": "cnlookthrough-report-0.1.dev1",
+  "engineToolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "explicit-report-totals-v1",
+  "rulesVersion": "six-column-equity-1"
+}

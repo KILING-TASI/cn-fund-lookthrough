@@ -81,7 +81,7 @@ def analyze(spec):
         unique=math.fsum(v for key,v in own.items() if not any(by_root[r].get(key,0)>0 for r in ids if r!=root))
         redundancy.append(dict(rootPosition=root,mappedEquityExposure=denom,
             replicatedShare=replicated/denom if denom else None,uniqueIssuerShare=unique/denom if denom else None))
-    return dict(asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
+    return dict(toolVersion='cn-fund-lookthrough-0.2.0.dev1',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-1',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
         knownExposure=known,unknownExposure=unresolved,unmappedStockIssuerExposure=missing_issuer,
         effectiveMappedEquityIssuers=effective,reportDates=sorted(periods),paths=traces,unknown=unknown,redundancy=redundancy,
         limitations=['仅已披露输入快照，不代表当前真实完整持仓','证券与发行人层分别汇总；AH或不同份额不会自动并成同证券',
