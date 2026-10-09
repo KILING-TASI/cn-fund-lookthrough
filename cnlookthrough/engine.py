@@ -16,6 +16,7 @@ def day(value):
 
 
 def analyze(spec):
+    if spec.get('inputSchema') not in (None,'cnlookthrough-nodes-v1'):raise ValueError('未知输入schema，须显式转换，不能静默按旧版解释')
     cutoff=day(spec['asOf']);nodes=spec['nodes'];roots=spec['positions'];master=spec.get('securities',{})
     if not isinstance(nodes,dict) or not isinstance(master,dict) or not isinstance(roots,list) or not roots:
         raise ValueError('需要持仓列表、节点和证券映射')
@@ -37,6 +38,7 @@ def analyze(spec):
         if len(path)>=20:gap(amount,path+[key],root,'穿透深度上限');return
         if key not in nodes:gap(amount,path+[key],root,'子基金资料缺失');return
         node=nodes[key]
+        if node.get('weightBasis') not in (None,'parent-net-assets') or node.get('renormalized') not in (None,False):raise ValueError('持仓须基于父节点净资产，不接受按权益/已知持仓重新归一')
         report=day(node['reportDate']);published=day(node['publishedAt'])
         if report>published or published>cutoff:raise ValueError('披露时间或报告期超出截止日')
         if node.get('currency')!=currency:raise ValueError('节点币种不一致；不得隐含汇率换算')
@@ -81,7 +83,7 @@ def analyze(spec):
         unique=math.fsum(v for key,v in own.items() if not any(by_root[r].get(key,0)>0 for r in ids if r!=root))
         redundancy.append(dict(rootPosition=root,mappedEquityExposure=denom,
             replicatedShare=replicated/denom if denom else None,uniqueIssuerShare=unique/denom if denom else None))
-    return dict(toolVersion='cn-fund-lookthrough-0.2.0.dev1',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-1',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
+    return dict(toolVersion='cn-fund-lookthrough-0.2.0.dev1',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-2',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
         knownExposure=known,unknownExposure=unresolved,unmappedStockIssuerExposure=missing_issuer,
         effectiveMappedEquityIssuers=effective,reportDates=sorted(periods),paths=traces,unknown=unknown,redundancy=redundancy,
         limitations=['仅已披露输入快照，不代表当前真实完整持仓','证券与发行人层分别汇总；AH或不同份额不会自动并成同证券',

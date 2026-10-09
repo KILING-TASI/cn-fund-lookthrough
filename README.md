@@ -90,3 +90,5 @@ python -m unittest discover -s tests -v
 [本次实际生成的筛选排序HTML](examples/filter-sort-preview.html)沿用[教学输入](examples/demo.json)，保存输入和方法摘要；只做文本与结构检查，未截图/视觉验收。旧readme-preview.html保持冻结。
 
 截图重试记录（2026-10-09）：用户恢复权限后，本地HTML仍被浏览器file协议策略拒绝，且禁止绕过。实际HTML生成与代码验证已完成，三个报告尚未取得浏览器截图或视觉验收；不是合成图替代，也不是许可证或原件核验通过证明。
+
+[方法卡与教学反例](METHODS.md)说明哪些声明被校验、哪些仍需原文；本轮验证规则升级到v2，无schema旧输入仍受理，不自动迁移未知版本。
