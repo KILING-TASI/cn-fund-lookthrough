@@ -82,3 +82,9 @@ python -m unittest discover -s tests -v
 ## 许可范围
 
 [MIT原创许可](LICENSE) · [第三方、示例与数据范围](THIRD_PARTY_NOTICES.md)。代码许可不包含原文、数据或品牌的再分发授权。
+
+## 结果表筛选与排序（待审）
+
+当前HTML可筛选表内文字、按首列名称排序，保存输入及方法摘要。只改变显示，不重新计算或改动未知余额/口径状态；仍需新输出路径，分享前检查保存的输入。原教学预览保持冻结，本次交互未截图、未做浏览器视觉验收。
+
+[本次实际生成的筛选排序HTML](examples/filter-sort-preview.html)沿用[教学输入](examples/demo.json)，保存输入和方法摘要；只做文本与结构检查，未截图/视觉验收。旧readme-preview.html保持冻结。
