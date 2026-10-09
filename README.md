@@ -43,3 +43,7 @@ python -m unittest discover -s tests -v
 后续优先增加真实基金报告适配与发行人关系证据核验，不承诺完整实时持仓。可与 [research-workbench](https://github.com/KILING-TASI/research-workbench) 的取数与报告流程配合，也可独立使用。两者当前接口不同，不假设自动互换输入。
 
 原创部分采用MIT，见 [LICENSE](LICENSE)。数据与公告使用权属于各自提供方；本仓库不附第三方报告、账户资料或作者行情缓存，不构成投资建议。
+
+## 免责声明
+
+本项目仅供学习与研究，不构成投资建议或交易指令，不保证收益或结果准确性。请在使用前阅读[免责声明与使用边界](DISCLAIMER.md)，并结合本次数据来源、假设与缺口独立判断。代码许可不包含第三方数据使用授权。
