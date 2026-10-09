@@ -1,0 +1,1345 @@
+{
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "adapterVersion": "cnlookthrough-report-0.2.dev1",
+  "asOf": "2026-10-09",
+  "currency": "CNY",
+  "positions": [
+    {
+      "id": "disclosed-fund",
+      "node": "fund:000001:2025-12-31",
+      "weight": 1
+    }
+  ],
+  "nodes": {
+    "fund:000001:2025-12-31": {
+      "currency": "CNY",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31",
+      "publishedAt": "2026-03-31",
+      "holdings": [
+        {
+          "kind": "stock",
+          "security": "CN-equity:300308",
+          "weight": 0.04569641932378323
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002475",
+          "weight": 0.028443511028937614
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688347",
+          "weight": 0.0257139076019054
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002371",
+          "weight": 0.025672326775084915
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688256",
+          "weight": 0.024646424304930442
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601689",
+          "weight": 0.024019764551678688
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300502",
+          "weight": 0.02255069124009102
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688041",
+          "weight": 0.02154166468232931
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688019",
+          "weight": 0.02092208709090013
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603986",
+          "weight": 0.020543911533367726
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688012",
+          "weight": 0.020340661640865176
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601100",
+          "weight": 0.02032575403533537
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:600276",
+          "weight": 0.018256199822588456
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688361",
+          "weight": 0.01771846712306838
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688981",
+          "weight": 0.017590976639737972
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688120",
+          "weight": 0.015336173899974779
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300750",
+          "weight": 0.014910634133207009
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300274",
+          "weight": 0.014504871613277855
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603119",
+          "weight": 0.01272586608323477
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:600183",
+          "weight": 0.012066476082361948
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002126",
+          "weight": 0.011264936915530686
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688072",
+          "weight": 0.011241993363116107
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688111",
+          "weight": 0.010951337777350826
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688692",
+          "weight": 0.010329103807438038
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300593",
+          "weight": 0.010133572571354612
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688698",
+          "weight": 0.008694571269720727
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:000738",
+          "weight": 0.008254000867816103
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688235",
+          "weight": 0.00823386263969542
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300054",
+          "weight": 0.008136414310416807
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301413",
+          "weight": 0.008060167349053309
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002050",
+          "weight": 0.007957195473601679
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:600562",
+          "weight": 0.007698727400242889
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688027",
+          "weight": 0.007273183894677175
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300870",
+          "weight": 0.006674912064667105
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601138",
+          "weight": 0.0066724229378023
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688615",
+          "weight": 0.006464175052215236
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688037",
+          "weight": 0.006278357904427029
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688502",
+          "weight": 0.006181745104551396
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300476",
+          "weight": 0.006061484285092166
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603121",
+          "weight": 0.005764150419619989
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002851",
+          "weight": 0.005652429484569959
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002916",
+          "weight": 0.0055739676089085815
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688052",
+          "weight": 0.005566083069720175
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002850",
+          "weight": 0.00537797583668379
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688369",
+          "weight": 0.005296949778980652
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002821",
+          "weight": 0.005284477625750986
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603993",
+          "weight": 0.005275178302265647
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688337",
+          "weight": 0.005249248965562022
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601600",
+          "weight": 0.005247891206446491
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603259",
+          "weight": 0.005237588740998948
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300624",
+          "weight": 0.005179476311706437
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300170",
+          "weight": 0.005153956802420141
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300007",
+          "weight": 0.0051231474729088455
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688385",
+          "weight": 0.0050191149093335675
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601899",
+          "weight": 0.0050071636952841924
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688234",
+          "weight": 0.004982931136094065
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002463",
+          "weight": 0.004976210670624204
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002315",
+          "weight": 0.00497213000080918
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002028",
+          "weight": 0.004890201632915
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301196",
+          "weight": 0.004886151608984769
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301000",
+          "weight": 0.004862309791635941
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688088",
+          "weight": 0.004801365852843529
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688626",
+          "weight": 0.004677524810867935
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688018",
+          "weight": 0.004674406592090308
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301550",
+          "weight": 0.00460479957243183
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688375",
+          "weight": 0.004558875014926357
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688095",
+          "weight": 0.004547772337755507
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002173",
+          "weight": 0.004469328417177519
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688767",
+          "weight": 0.004353333743238273
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002478",
+          "weight": 0.00399738792055147
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:000534",
+          "weight": 0.0038437430745956024
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300430",
+          "weight": 0.0038344805261720143
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300115",
+          "weight": 0.003336162094975651
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601168",
+          "weight": 0.0031039759324148265
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:600875",
+          "weight": 0.0030962082221494456
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:000933",
+          "weight": 0.0030858202887343138
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688249",
+          "weight": 0.0030550837431994
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300753",
+          "weight": 0.0029481341170291744
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603667",
+          "weight": 0.002849933805839722
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300421",
+          "weight": 0.002816636711502945
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001309",
+          "weight": 0.0027952131949740694
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:605060",
+          "weight": 0.0027914069760828527
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300458",
+          "weight": 0.002779318196061743
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688271",
+          "weight": 0.002564252697550025
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688552",
+          "weight": 0.002459735690638146
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300408",
+          "weight": 0.0020376448798468793
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603308",
+          "weight": 0.0019774853054502373
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002782",
+          "weight": 0.0019422871447268382
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:002602",
+          "weight": 0.0019233922542031664
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688795",
+          "weight": 0.0015338825681575669
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688273",
+          "weight": 0.0010317508218451088
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:300236",
+          "weight": 0.0010290969835648393
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688580",
+          "weight": 0.000977683131770253
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688802",
+          "weight": 0.0005431825082891846
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688759",
+          "weight": 0.0001074076152980548
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688790",
+          "weight": 9.244342384452807e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301656",
+          "weight": 6.411006730326482e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001280",
+          "weight": 3.516946255484009e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688729",
+          "weight": 2.8977863334135664e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688809",
+          "weight": 1.7930324920223976e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301638",
+          "weight": 1.1235332990821225e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001386",
+          "weight": 1.0259486296671666e-05
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688727",
+          "weight": 6.684824305848293e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001233",
+          "weight": 6.536290512456136e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688796",
+          "weight": 6.085506572651438e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688807",
+          "weight": 6.04689616291132e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301632",
+          "weight": 5.2895069559552506e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301563",
+          "weight": 5.007503524095558e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301491",
+          "weight": 4.597546713030961e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301584",
+          "weight": 4.082215729656842e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001369",
+          "weight": 3.937087034574952e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301609",
+          "weight": 3.8662269387382955e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301687",
+          "weight": 3.6114642933607387e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001221",
+          "weight": 3.1021807645856536e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301667",
+          "weight": 2.934367304560765e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:688805",
+          "weight": 2.9209103560385897e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603418",
+          "weight": 2.7953609762407347e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603175",
+          "weight": 2.794441599696963e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603092",
+          "weight": 2.7671054704621394e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001285",
+          "weight": 2.6161234113849e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301668",
+          "weight": 2.5170486709493714e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301449",
+          "weight": 2.4876831031216286e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:601026",
+          "weight": 2.1929786545646397e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:301575",
+          "weight": 2.1259050280490003e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603406",
+          "weight": 2.092255846546942e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603262",
+          "weight": 1.4830905690367947e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603248",
+          "weight": 1.4430806638911575e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001388",
+          "weight": 1.3744202615629335e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603370",
+          "weight": 1.2941757147831813e-06
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603376",
+          "weight": 9.906486565042906e-07
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:603334",
+          "weight": 9.834468735780757e-07
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:001396",
+          "weight": 8.314943614824107e-07
+        }
+      ]
+    }
+  },
+  "securities": {
+    "CN-equity:300308": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:002475": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688347": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:002371": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688256": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:601689": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:300502": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688041": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688019": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:603986": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688012": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:601100": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:600276": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688361": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688981": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:688120": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:300750": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页47"
+    },
+    "CN-equity:300274": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:603119": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:600183": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002126": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688072": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688111": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688692": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300593": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688698": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:000738": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688235": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300054": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:301413": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002050": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:600562": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688027": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300870": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:601138": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688615": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688037": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688502": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300476": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:603121": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002851": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002916": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688052": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002850": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688369": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002821": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:603993": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688337": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:601600": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:603259": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300624": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300170": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:300007": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688385": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:601899": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688234": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002463": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002315": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:002028": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:301196": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:301000": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页48"
+    },
+    "CN-equity:688088": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688626": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688018": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:301550": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688375": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688095": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:002173": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688767": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:002478": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:000534": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300430": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300115": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:601168": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:600875": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:000933": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688249": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300753": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:603667": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300421": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:001309": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:605060": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300458": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688271": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688552": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300408": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:603308": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:002782": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:002602": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688795": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688273": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:300236": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688580": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688802": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688759": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688790": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:301656": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:001280": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688729": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688809": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:301638": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:001386": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688727": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:001233": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688796": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页49"
+    },
+    "CN-equity:688807": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301632": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301563": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301491": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301584": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:001369": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301609": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301687": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:001221": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301667": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:688805": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603418": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603175": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603092": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:001285": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301668": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301449": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:601026": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:301575": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603406": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603262": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603248": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:001388": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603370": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603376": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:603334": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    },
+    "CN-equity:001396": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf # PDF页50"
+    }
+  }
+}

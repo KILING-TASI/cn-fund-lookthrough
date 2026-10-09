@@ -127,15 +127,56 @@ def parse_ruiyuan(pdf,report_date,published_at,source_url,net_assets,equity_valu
     result['sourceVerification']='local-report-identity-and-amount-check; not-live-source-authentication'
     return result
 
+
+def parse_chinaamc_growth(pdf,report_date,published_at,source_url,net_assets,equity_value):
+    """One additionally verified manager/report profile; no universal parser promise."""
+    import pdfplumber
+    if report_date != '2025-12-31' or published_at != '2026-03-31':
+        raise ValueError('本轮华夏成长仅验收2025年年报，其他期需另核版式')
+    if urlparse(source_url).scheme != 'https' or urlparse(source_url).hostname not in ('www.chinaamc.com.cn', 'www.chinaamc.com'):
+        raise ValueError('限定华夏管理人公开来源')
+    path = Path(pdf)
+    if not path.is_file() or path.stat().st_size > 64 * 1024 * 1024:
+        raise ValueError('本地PDF缺失或过大')
+    raw = path.read_bytes();nav = number(str(net_assets));equity = number(str(equity_value))
+    if nav <= 0 or equity < 0 or equity > nav:
+        raise ValueError('分母或权益金额无效')
+    with pdfplumber.open(path) as doc:
+        header = clean(''.join(page.extract_text() or '' for page in doc.pages[:5]))
+        if any(value not in header for value in ('华夏成长证券投资基金', '华夏基金管理有限公司', '2025年年度报告', '000001', '2025年12月31日')):
+            raise ValueError('限定报告身份、期间或基金代码未匹配')
+        selectors = [(5, 3, 10, 2, '期末基金资产净值', nav), (46, 4, 2, 3, '权益投资', equity)]
+        denominator_evidence = []
+        for page_no, table_no, row_no, column_no, label, expected in selectors:
+            tables = doc.pages[page_no-1].find_tables()
+            if len(tables) < table_no:
+                raise ValueError('已验收表格位置不再匹配')
+            table = tables[table_no-1];rows = table.extract()
+            if len(rows) < row_no or len(rows[row_no-1]) < column_no:
+                raise ValueError('金额位置缺失')
+            row = rows[row_no-1]
+            if label not in [clean(x) for x in row] or number(row[column_no-1]) != expected:
+                raise ValueError('原文分母/权益金额与输入不同')
+            if page_no == 5 and not any('2025年' in clean(x) for row_header in rows[:3] for x in row_header):
+                raise ValueError('净资产比较年度表头不匹配')
+            denominator_evidence.append(dict(page=page_no, tableIndex=table_no, rowIndex=row_no,
+                                             columnIndex=column_no, label=label, rawCells=row, rawHeader=rows[:3], tableBBox=list(table.bbox)))
+        result = domestic_result(doc, raw, '000001', report_date, published_at, source_url, nav, equity)
+    result.update(adapterProfile='chinaamc-growth-2025-six-column-v1',
+                  toolVersion='cnlookthrough-report-0.2.dev1', inputSchema='explicit-report-totals-v1',
+                  rulesVersion='six-column-equity-and-explicit-denominator-2', denominatorEvidence=denominator_evidence,
+                  sourceVerification='local-report-identity-and-selected-total-cells; not-live-authentication')
+    return result
+
 def to_spec(parsed,as_of):
     """One disclosed fund snapshot, not a customer account or issuer mapping."""
-    if parsed.get('adapterProfile')!='ruiyuan-growth-six-column-v1' or parsed.get('disclosureScope')!='completeEquity':raise ValueError('需先完成限定完整股票表适配')
+    if parsed.get('adapterProfile') not in ('ruiyuan-growth-six-column-v1','chinaamc-growth-2025-six-column-v1') or parsed.get('disclosureScope')!='completeEquity':raise ValueError('需先完成限定完整股票表适配')
     if datetime.date.fromisoformat(parsed['publishedAt'])>datetime.date.fromisoformat(as_of):raise ValueError('披露晚于截止日')
     key='fund:'+parsed['id']+':'+parsed['reportDate'];holdings=[];securities={}
     for row in parsed['holdings']:
         security=row['securityNamespace']+':'+row['code'];holdings.append({'kind':'stock','security':security,'weight':row['weight']})
         securities[security]={'kind':'stock','issuer':None,'source':parsed['sourceUrl']+' # '+row['locator']}
-    return {'inputSchema':'cnlookthrough-nodes-v1','adapterVersion':'cnlookthrough-report-0.1.dev1','asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
+    return {'inputSchema':'cnlookthrough-nodes-v1','adapterVersion':parsed.get('toolVersion','cnlookthrough-report-0.1.dev1'),'asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
             'nodes':{key:{'currency':'CNY','source':parsed['sourceUrl']+' sha256='+parsed['sourceSha256'],'reportDate':parsed['reportDate'],'publishedAt':parsed['publishedAt'],'holdings':holdings}},'securities':securities}
 
 def compare_snapshots(before,after):

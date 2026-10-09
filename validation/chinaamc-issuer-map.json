@@ -1,0 +1,21 @@
+{
+  "inputSchema": "issuer-snapshot-map-v1",
+  "methodVersion": "source-bound-snapshot-1",
+  "mappings": [
+    {
+      "security": "CN-equity:300308",
+      "code": "300308",
+      "issuerName": "中际旭创股份有限公司",
+      "validFrom": "2025-12-31",
+      "validUntil": "2025-12-31",
+      "basis": "snapshot-identity-only",
+      "publishedAt": "2026-03-31",
+      "source": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF",
+      "evidence": {
+        "page": 7,
+        "quote": "股票简称 中际旭创 股票代码 300308 公司的中文名称 中际旭创股份有限公司 ",
+        "documentSha256": "0290f380253dde79613d43a1c6203674ae36cb89f849f063668ccde9a8789b5e"
+      }
+    }
+  ]
+}
