@@ -191,3 +191,18 @@ def compare_snapshots(before,after):
     return {'toolVersion':'cnlookthrough-report-0.1.dev1','inputSchema':'two-disclosed-snapshots-v1','rulesVersion':'same-scope-snapshot-diff-1','beforeReportDate':before['reportDate'],'afterReportDate':after['reportDate'],'rows':rows,
             'beforeSourceSha256':before['sourceSha256'],'afterSourceSha256':after['sourceSha256'],
             'limitation':'仅披露快照变化；新增/消失不等于实际买卖，非股票部分保留未知'}
+
+
+def legacy_domestic_rows(doc):
+    rows,sequences=domestic_rows(doc)
+    for row in rows:
+        row.pop('tableBBox',None);row.pop('tableRowIndex',None)
+    return rows,sequences
+
+
+def legacy_domestic_result(doc,raw,code,report_date,published_at,source_url,net_assets,equity_value):
+    result=domestic_result(doc,raw,code,report_date,published_at,source_url,net_assets,equity_value)
+    for holding in result['holdings']:
+        for component in holding['components']:
+            for key in ('tableBBox','tableRowIndex','rawCells'):component.pop(key,None)
+    return result
