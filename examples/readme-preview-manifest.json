@@ -1,0 +1,18 @@
+{
+  "generatedOn": "2026-10-09",
+  "sampleType": "teaching-only",
+  "version": "0.2.0.dev1，未发布开发分支",
+  "commandFromRepositoryRoot": "python -m cnlookthrough examples/demo.json --format html --out local-data/report.html",
+  "input": "examples/demo.json",
+  "inputSha256": "7c9618246c7dcb10e06f410bcb4a88b7560052cffb4707bc22fe2699536b383a",
+  "originalOutputSha256": "ca999e0c39ecc87bf3731c508eede73646eae792eed9746e46a9b4acc260f89f",
+  "previewSha256": "d8be715c1a3e32997a42f41201850cb68ae6ad34562702be639fff11b937f956",
+  "transformation": "Only added a visible teaching/date/development-version banner; generated findings unchanged",
+  "screenshot": "not acquired; browser visual permission unavailable",
+  "checks": [
+    "demo exit code 0",
+    "generated findings and teaching label inspected as text",
+    "no private paths or PDF included"
+  ],
+  "visualAcceptance": "not performed"
+}

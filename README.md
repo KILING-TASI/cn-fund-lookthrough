@@ -1,5 +1,23 @@
 # 中国基金持仓穿透 · cn-fund-lookthrough
 
+看清多只基金背后是否重复持有同一批公司；嵌套路径与未知余额一起保留。
+
+## 先看结果，再试一次
+
+[实际生成的教学HTML预览（下载后打开）](examples/readme-preview.html) · [对应输入](examples/demo.json) · [生成与版本记录](examples/readme-preview-manifest.json)
+
+教学样本可解释84%的组合，16%未知；已映射股票约等效2.13个等权公司。这不是整个组合的风险来源数，也不是实际账户。 预览生成于2026-10-09，尚未取得截图或完成浏览器视觉验收；不是已发布版本的验收证明。
+
+在仓库根目录运行，Python 3.10+，此教学demo只用标准库、不联网：
+
+```bash
+python -m cnlookthrough examples/demo.json --format html --out local-data/report.html
+```
+
+打开 `local-data/report.html`。输出目录/文件须不存在；重复运行请换新路径，不覆盖旧结果。限定PDF接口需要另装可选依赖，下面的教学demo不需要。
+
+[返回主包按问题导航](https://github.com/KILING-TASI/research-workbench/blob/codex/bounded-research-extensions/references/tool-navigation.md)；本工具可单独使用，不强制安装主包。
+
 独立可运行的披露持仓分析工具。回答“我的基金是否重复持有同一批公司”，保留ETF联接、FOF子基金的投资路径与未知余额。
 
 Python 3.10+，计算核心只用标准库，不依赖research-workbench、行情账户或API密钥。输入由使用者或AI从公开报告整理，本版不自动下载基金PDF。首批开发版可用可选pdf组件解析限定睿远成长价值年报/中报完整股票表，具体验收范围见ROADMAP.md；不适用于任意管理人或季报。
@@ -60,3 +78,7 @@ python -m unittest discover -s tests -v
 已有能力、限定适配、转换契约和验收缺口见[开发路线](ROADMAP.md)。适配和定位代码已实现，限定真实样本结果见路线链接；版本关系与其他管理人等缺口仍保留，不代表全部已完成。
 
 开发分支版本为`0.2.0.dev1`，此前公开发布仍是`v0.1.0`；本批功能待PR审阅，不将本地完成写成已发布。
+
+## 许可范围
+
+[MIT原创许可](LICENSE) · [第三方、示例与数据范围](THIRD_PARTY_NOTICES.md)。代码许可不包含原文、数据或品牌的再分发授权。

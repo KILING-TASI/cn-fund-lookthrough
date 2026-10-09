@@ -11,3 +11,6 @@ license = {text = "MIT"}
 pdf = ["pdfplumber>=0.11,<0.12"]
 [tool.setuptools.packages.find]
 include = ["cnlookthrough*"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]

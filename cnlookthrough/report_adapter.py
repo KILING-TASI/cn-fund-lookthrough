@@ -1,3 +1,6 @@
+# Copyright (c) 2026 research-workbench contributors
+# SPDX-License-Identifier: MIT
+# Derived from research-workbench a00ace5/scripts/fund_report_holdings.py; see THIRD_PARTY_NOTICES.md.
 """Bounded Ruiyuan complete-equity adapter, derived from the author's MIT research-workbench parser.
 No source PDF is bundled. Six-column annual/interim tables only, explicit NAV denominator.
 """
