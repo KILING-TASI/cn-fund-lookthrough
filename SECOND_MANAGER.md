@@ -13,3 +13,6 @@ python -m cnlookthrough.report_cli /data/report.pdf --profile chinaamc-growth-20
 [限定核验记录](validation/chinaamc-growth-validation.json)、[公开计算输入](validation/chinaamc-growth-engine-input.json)、[未知余额结果](validation/chinaamc-growth-result.json)、[选定映射](validation/chinaamc-issuer-map.json)、[本地原页核验结果](validation/chinaamc-mapped-result.json)。公开映射无私人原文路径，重新运行时不直接认证已核。
 
 缺口：扫描件、其他期版式、全部发行人、A/H身份历史、债券与其他资产穿透、浏览器视觉均未完成。没有将债券余额填成现金，也没有把本次输入写为用户账户。
+
+
+迁移入口：主包旧六列辅助名已兼容转发到本库report_adapter单一核心，legacy投影只保留旧形状；此独立库仍可单独使用，不依赖主包安装。九列QDII/其他主包格式暂未迁移。详见主包第一批迁移清单（待审，不是发布包能力）。
