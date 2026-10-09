@@ -81,7 +81,7 @@ python -m unittest discover -s tests -v
 
 ## 许可范围
 
-[MIT原创许可](LICENSE) · [第三方、示例与数据范围](THIRD_PARTY_NOTICES.md)。代码许可不包含原文、数据或品牌的再分发授权。
+[MIT原创许可](LICENSE)（KILING-TASI及原有贡献者版权） · [第三方、示例与数据范围](THIRD_PARTY_NOTICES.md)。第三方保留原许可；代码许可不包含原文、数据或品牌的再分发授权。
 
 ## 结果表筛选与排序（待审）
 
@@ -95,3 +95,6 @@ python -m unittest discover -s tests -v
 
 
 新增限定实测：[第二管理人华夏成长样本](SECOND_MANAGER.md)，132条股票与原文分母/权益合计；仅选定证券单日发行人映射，其他未知。
+
+
+当前待审增量的实现、真实样本、版本与未完成项见[详细交付状态](SECOND_MANAGER.md)；CI不代表原件认证或投资有效，不自动更新已安装版。
