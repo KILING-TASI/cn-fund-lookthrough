@@ -1,7 +1,7 @@
 ---
 name: cn-fund-lookthrough
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 description: 根据已取得的中国基金、ETF联接和FOF披露持仓分析底层证券、公司重复暴露和未知部分。用户要求组合持仓穿透或重复押注诊断时使用；不自动采集全市场，不提供买卖建议。
 ---
 

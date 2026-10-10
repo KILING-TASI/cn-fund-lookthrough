@@ -1,8 +1,24 @@
 # 中国基金持仓穿透
 
+
+
 看基金是否买了同一批公司，并保留联接基金、FOF的投资路径和暂时看不清的部分。
 
 [![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) [![测试](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml)
+
+## 统一安装与启动
+
+本轮源码版本为 `0.2.1`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install .
+.\.venv\Scripts\cn-fund-lookthrough.exe --help
+.\.venv\Scripts\cn-fund-lookthrough.exe demo --out-dir reports/demo --auto-name
+```
+
+九个仓库都用仓库名启动；在已激活的环境中可以直接输入工具名。Linux/macOS 使用 `.venv/bin/python` 和 `.venv/bin/cn-fund-lookthrough`。教学结果写入当前工作目录；`--auto-name` 自动另选新名字，旧结果保留。不加该参数时，教学入口拒绝已有目录。`cn-fund-lookthrough run --help` 查看原生参数，原来的命令继续兼容。pip 安装提供 CLI；作为 Skill 使用仍须保留完整源码及许可资源，不能只复制 SKILL.md。安装可能需要联网获取普通构建依赖；教学离线。下面保留原生入口及此前发行记录，本轮安装和版本以本节为准。
+
 
 ## 先试一次
 
