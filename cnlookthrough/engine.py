@@ -16,10 +16,13 @@ def day(value):
 
 
 def analyze(spec):
+    if not isinstance(spec,dict):raise ValueError('输入须为对象，证券映射字段为securities')
     if spec.get('inputSchema') not in (None,'cnlookthrough-nodes-v1'):raise ValueError('未知输入schema，须显式转换，不能静默按旧版解释')
     cutoff=day(spec['asOf']);nodes=spec['nodes'];roots=spec['positions'];master=spec.get('securities',{})
     if not isinstance(nodes,dict) or not isinstance(master,dict) or not isinstance(roots,list) or not roots:
         raise ValueError('需要持仓列表、节点和证券映射')
+    from .input_diagnostics import inspect_fields,VERSION
+    diagnostics=inspect_fields(spec)
     currency=spec.get('currency')
     if not isinstance(currency,str) or len(currency)!=3 or not currency.isascii() or not currency.isalpha() or not currency.isupper():raise ValueError('须明确三字母币种')
     if len(roots)>100 or len(nodes)>1000:raise ValueError('首版最多100项根持仓、1000个节点')
@@ -57,6 +60,7 @@ def analyze(spec):
                 security=row['security']
                 if security not in master:gap(part,branch+[security],root,'证券身份或分类缺失');continue
                 meta=master[security]
+                if not isinstance(meta,dict):raise ValueError('securities每项须为含kind、issuer（可为null）、source的对象')
                 if meta.get('kind') not in ('stock','bond','cash','other'):raise ValueError('证券类型无效')
                 if meta['kind']!=row['kind']:raise ValueError('持仓与证券映射分类冲突')
                 if not isinstance(meta.get('source'),str) or not meta['source'].strip():raise ValueError('证券映射须注明依据')
@@ -83,9 +87,11 @@ def analyze(spec):
         unique=math.fsum(v for key,v in own.items() if not any(by_root[r].get(key,0)>0 for r in ids if r!=root))
         redundancy.append(dict(rootPosition=root,mappedEquityExposure=denom,
             replicatedShare=replicated/denom if denom else None,uniqueIssuerShare=unique/denom if denom else None))
-    return dict(toolVersion='cn-fund-lookthrough-0.2.0.dev1',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-2',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
+    result=dict(toolVersion='cn-fund-lookthrough-0.2.0.dev1',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-2',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
         knownExposure=known,unknownExposure=unresolved,unmappedStockIssuerExposure=missing_issuer,
         effectiveMappedEquityIssuers=effective,reportDates=sorted(periods),paths=traces,unknown=unknown,redundancy=redundancy,
         limitations=['仅已披露输入快照，不代表当前真实完整持仓','证券与发行人层分别汇总；AH或不同份额不会自动并成同证券',
                     '冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖',
                     '不同报告期的嵌套权重可能不同时点；覆盖率不是准确率'])
+    if diagnostics:result['inputDiagnostics']=dict(version=VERSION,warnings=diagnostics)
+    return result

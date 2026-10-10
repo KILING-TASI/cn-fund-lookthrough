@@ -1,0 +1,103 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-09-30",
+  "currency": "CNY",
+  "securityExposure": {},
+  "issuerExposure": {},
+  "knownExposure": 0.0,
+  "unknownExposure": 1.0,
+  "unmappedStockIssuerExposure": 0.0,
+  "effectiveMappedEquityIssuers": null,
+  "reportDates": [
+    "2026-06-30"
+  ],
+  "paths": [],
+  "unknown": [
+    {
+      "weight": 0.324,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "证券身份或分类缺失"
+    },
+    {
+      "weight": 0.21600000000000003,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-B"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "证券身份或分类缺失"
+    },
+    {
+      "weight": 0.059999999999999984,
+      "path": [
+        "feeder"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.2,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "主动基金",
+      "reason": "证券身份或分类缺失"
+    },
+    {
+      "weight": 0.1,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-C"
+      ],
+      "rootPosition": "主动基金",
+      "reason": "证券身份或分类缺失"
+    },
+    {
+      "weight": 0.1,
+      "path": [
+        "active"
+      ],
+      "rootPosition": "主动基金",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "联接基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    },
+    {
+      "rootPosition": "主动基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ],
+  "inputDiagnostics": {
+    "version": "declared-input-fields-1",
+    "warnings": [
+      {
+        "code": "securities-missing",
+        "fieldPath": "securities",
+        "message": "未提供securities；证券身份或分类缺失的敞口保留未知。issuerMap和其他同义名称不会代替此字段，不猜交易所或公司。"
+      }
+    ]
+  }
+}

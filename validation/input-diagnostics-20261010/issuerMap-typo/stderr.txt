@@ -1,0 +1,2 @@
+输入提示 [issuerMap]：issuerMap未被读取；证券映射应放在securities，每项为kind、issuer（可为null）、source对象。请核对依据后自行修正，不会自动转换或补source。
+输入提示 [securities]：未提供securities；证券身份或分类缺失的敞口保留未知。issuerMap和其他同义名称不会代替此字段，不猜交易所或公司。
