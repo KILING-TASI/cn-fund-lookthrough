@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "fixed-shared-components/1",
+  "hashFormat": "UTF-8 with LF newlines",
+  "components": [
+    {
+      "localPath": "cnlookthrough/html_controls.py",
+      "normalizedTextSha256": "d256eafb4bcfbc116620462af2aca121a96a3e33391ebeb78311ed0de5385a99",
+      "canonicalRepository": "research-workbench",
+      "canonicalPath": "scripts/event_html_controls.py",
+      "syncPolicy": "fixed-with-distribution; review and regenerate manifest before replacing; no runtime source dependency",
+      "licenseScope": "see repository third-party notices; inventory does not grant rights"
+    },
+    {
+      "localPath": "cnlookthrough/review_io.py",
+      "normalizedTextSha256": "c8e995fff7830ca02127ab5ba4605aa60e99c358a86635dece08ba92ab8afea5",
+      "canonicalRepository": "cn-data-adapters",
+      "canonicalPath": "cn_data_adapters/review_io.py",
+      "syncPolicy": "fixed-with-distribution; review and regenerate manifest before replacing; no runtime source dependency",
+      "licenseScope": "see repository third-party notices; inventory does not grant rights"
+    }
+  ],
+  "scope": "This inventory covers discovered equal original Python text, not proof of all interfaces being equivalent; divergent variants are not merged"
+}
