@@ -44,6 +44,9 @@ def convert(raw,config):
     return spec
 
 def main():
+    import sys
+    for stream in (sys.stdout,sys.stderr):
+        if hasattr(stream,"reconfigure"):stream.reconfigure(encoding="utf-8")
     from .__main__ import pairs
     p=argparse.ArgumentParser(description='本地股票持仓CSV导入；不联网、不猜身份、不归一权重')
     p.add_argument('input',type=Path);p.add_argument('--config',type=Path,required=True);p.add_argument('--out',type=Path)
