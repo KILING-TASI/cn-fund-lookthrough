@@ -10,6 +10,10 @@
 
 先看[保存的结果示例](examples/readme-preview.html)，不需要安装 Python：图片可直接查看；HTML 请下载完整源码后用浏览器打开。示例按原记录标注教学或限定真实样本，不能换个名称就当作你的研究结果。重新计算才需要 Python。
 
+![历史教学报告的浏览器截图](validation/browser-20261010/desktop.jpg)
+
+2026-10-10 选定教学页面截图，不是真实公司或账户；不代表所有报告或当前版本均已视觉验收。[桌面与窄屏验收记录](validation/browser-20261010/README.md)
+
 其他问题可看[九个工具如何选择](https://github.com/KILING-TASI/research-workbench/blob/main/references/tool-navigation.md)。各工具可独立使用，不必安装全部仓库。
 
 [![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) [![测试](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml)
@@ -24,7 +28,7 @@
 
 ## 安装和首次试用
 
-安装包见[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.1)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
+安装包见[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.1)，提供完整源码、wheel、sdist 和校验清单。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
 
 安装包版本为 `0.3.1`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
 
@@ -39,15 +43,6 @@ python -m venv .venv
 
 导入自己的资料前，可先运行 `python -m cnlookthrough input.json --validate-only`；[输入契约索引](examples/INPUT_CONTRACTS.md)列出字段、入口与预检限制。
 
-## 先试一次
-
-下载或克隆本仓库后，在仓库根目录运行。需要 **Python 3.10+**；这个教学例子只用标准库，不安装依赖、不联网。
-
-```powershell
-python -m cnlookthrough examples/demo.json --format html --out "local-data/第一次教学报告.html"
-```
-
-打开生成的 `local-data/第一次教学报告.html`。终端会提示结果位置，并标明输入声明为教学样本。再次运行时换一个新文件名，旧报告不会被覆盖；父目录可以复用。
 
 ## 结果是什么样
 
