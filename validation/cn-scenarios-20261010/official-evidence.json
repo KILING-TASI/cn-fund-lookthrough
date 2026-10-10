@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-10",
+  "timezone": "Asia/Shanghai",
+  "evidenceType": "official rules/templates and selected historical disclosures; synthetic scenario values separate",
+  "records": [
+    {
+      "id": "quarter",
+      "kind": "official-current-template",
+      "publisher": "中国证券投资基金业协会",
+      "url": "https://www.amac.org.cn/xwfb/xhyw/202603/P020260508338766981977.pdf",
+      "documentSha256": "9255466941640ee751384f4e0ba053497cc5291c7d5f8baa1c2c250d69844345",
+      "effectiveFrom": "2026-05-01",
+      "checkedAt": "2026-10-10",
+      "selector": "第一部分非货币基金 §5.3.1，物理页12；A/H排序脚注45",
+      "summary": "季报股票明细是前十名；权重列分母为基金净资产。A/H公允价值可合并排序，证券分别披露。",
+      "verification": "local selected page text and page rendering checked; not all-page audit"
+    },
+    {
+      "id": "annual",
+      "kind": "official-current-template",
+      "publisher": "中国证券投资基金业协会",
+      "url": "https://www.amac.org.cn/xwfb/xhyw/202603/P020260508338767123695.pdf",
+      "documentSha256": "4d2fba55180770865bdf061aa6b2bdd5816db4abb98a46399b5ec16098859839",
+      "effectiveFrom": "2026-05-01",
+      "checkedAt": "2026-10-10",
+      "selector": "§8.3.1物理页99、脚注242；§8.3.2物理页100",
+      "summary": "年/中报所有股票范围；指数及积极双表按实际产品范围分别检查，不把完整股票等同完整资产。",
+      "verification": "local selected page text and page rendering checked; not all-page audit"
+    },
+    {
+      "id": "format-rule",
+      "kind": "official-current-rule",
+      "publisher": "中国证监会",
+      "url": "https://www.csrc.gov.cn/csrc/c101954/c7619929/content.shtml",
+      "document": "证监会公告〔2026〕5号",
+      "effectiveFrom": "2026-05-01",
+      "checkedAt": "2026-10-10",
+      "selector": "附件1 第六条、第九条、第三十条、第三十六条",
+      "summary": "模板由协会制定；季报15工作日、中报2个月、年报3个月；投资组合披露规定范围；新准则实施时旧列举准则/模板废止。",
+      "boundary": "期限不是实际可得日期；不实现工作日/节假日截止计算。以具体publishedAt作日精度可得校验，北京时间，不推断盘中时点。"
+    },
+    {
+      "id": "ac-sample",
+      "kind": "official-historical-sample",
+      "publisher": "睿远基金",
+      "url": "https://www.foresightfund.com/upload/pdf/1774572977259-ruiyuanchengzhangjiazhihunhexingzhengquantouzijijin2025nianniandubaogao.pdf",
+      "checkedAt": "2026-10-10",
+      "selector": "2025年年报物理页5 §2.1；物理页68—71 §8.3",
+      "summary": "007119/007120在同份年报列A/C代码和分别份额数量；股票组合按基金净资产口径。只作选定报告结构依据，不把真实持仓转作教学值。",
+      "boundary": "2025年年报不按2026-05-01后的新模板认证；不从A/C名称泛化全部产品同组合。"
+    },
+    {
+      "id": "share-class-nav",
+      "kind": "official-historical-contract-announcement",
+      "publisher": "上交所披露的基金公告",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2024-06-11/501305_20240611_LKD2.pdf",
+      "checkedAt": "2026-10-10",
+      "selector": "第三部分份额类别，物理页11",
+      "summary": "该样本A/C分别设置代码，费用不同，分别计算各类别每份净值；账户份额须乘相应每份净值得到同日人民币市值。",
+      "boundary": "仅该公告样本；不硬编码当前费率，不假定同份额数量代表同市值。"
+    }
+  ],
+  "pdfsBundled": false
+}

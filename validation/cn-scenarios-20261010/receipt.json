@@ -1,0 +1,151 @@
+{
+  "batch": "cn-scenarios-20261010",
+  "sampleType": "synthetic-teaching-only",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "conversionRulesVersion": "complete-equity-all-classes-nav-2",
+  "groups": 3,
+  "officialEvidence": "examples/cn-scenarios/official-evidence.json",
+  "reuse": [
+    "examples/scenarios/fof-shared-etf.json",
+    "examples/scenarios/future-disclosure.json",
+    "examples/scenarios/publication-at-cutoff.json",
+    "examples/scenarios/wrong-denominator.json"
+  ],
+  "cases": [
+    {
+      "id": "quarter-top10",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "334e3dedc30a0016883c19c4e397e56210c12932c258a0a1f6a8fac66b959013",
+      "expected": {
+        "knownExposure": 0.4,
+        "unknownExposure": 0.6,
+        "unmappedStockIssuerExposure": 0.4,
+        "pathCount": 10
+      }
+    },
+    {
+      "id": "complete-equity",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "43d882d2ef1a990b9b69ce636b75277cedb57d17fcbe3800f7292f829e230973",
+      "expected": {
+        "knownExposure": 0.7,
+        "unknownExposure": 0.3,
+        "unmappedStockIssuerExposure": 0.7,
+        "pathCount": 2
+      }
+    },
+    {
+      "id": "top10-conversion",
+      "passed": true,
+      "entry": "to-spec",
+      "cliInvoked": false,
+      "inputSha256": "92416b219c58a686360eea5f4bb06e8e6c99761366d8aa9a079c626bd20d16b7",
+      "expected": {
+        "conversionErrorContains": "限定完整股票表"
+      }
+    },
+    {
+      "id": "single-class-conversion",
+      "passed": true,
+      "entry": "to-spec",
+      "cliInvoked": false,
+      "inputSha256": "617e8760ed31824529fdb14a53d82d16b57b184d609234f70188003a7eb2862e",
+      "expected": {
+        "conversionErrorContains": "基金全部份额合计口径"
+      }
+    },
+    {
+      "id": "equity-denominator-conversion",
+      "passed": true,
+      "entry": "to-spec",
+      "cliInvoked": false,
+      "inputSha256": "59088b966d421a47e418ec2d4de2e3031f27ffb52e3b996b4e072e3e07441936",
+      "expected": {
+        "conversionErrorContains": "基金净资产分母"
+      }
+    },
+    {
+      "id": "ac-explicit-shared-snapshot",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "bfea289ecd0f4f4f3649ebb776187ae65a5a66b497d41ef526f39eaac9dc46b4",
+      "expected": {
+        "knownExposure": 0.5,
+        "unknownExposure": 0.5,
+        "issuerExposure": {
+          "教学公司": 0.5
+        },
+        "pathWeights": {
+          "教学A类|fund>CN-equity:TEACHING-A": 0.2,
+          "教学C类|fund>CN-equity:TEACHING-A": 0.3
+        }
+      }
+    },
+    {
+      "id": "ac-name-only-not-merged",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "ea1ec4dc3838c417b46b6c72c4750fe69d54c6e7d0e6c6ff4158179c13553e8e",
+      "expected": {
+        "knownExposure": 0.32,
+        "unknownExposure": 0.68,
+        "pathWeights": {
+          "教学A类|fund>CN-equity:TEACHING-A": 0.2,
+          "教学C类|same-name-other>CN-equity:TEACHING-A": 0.12
+        }
+      }
+    },
+    {
+      "id": "ah-same-name-unmapped",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "b77319869423be3293d25344c1f85a605e650d88fe88b2237a1c7b5de7684d0d",
+      "expected": {
+        "knownExposure": 0.5,
+        "unknownExposure": 0.5,
+        "unmappedStockIssuerExposure": 0.5,
+        "issuerExposure": {},
+        "effectiveMappedEquityIssuers": null,
+        "securityExposure": {
+          "CN-equity:TEACHING-AH": 0.3,
+          "HK-equity:TEACHING-AH": 0.2
+        }
+      }
+    },
+    {
+      "id": "ah-explicit-issuer",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "fd1659967988c0cfe8a9b44d080fb4bafb0c2930ce59496d52b2d806d18b23ee",
+      "expected": {
+        "knownExposure": 0.5,
+        "unknownExposure": 0.5,
+        "unmappedStockIssuerExposure": 0,
+        "issuerExposure": {
+          "显式教学发行人": 0.5
+        },
+        "effectiveMappedEquityIssuers": 1,
+        "securityExposure": {
+          "CN-equity:TEACHING-AH": 0.3,
+          "HK-equity:TEACHING-AH": 0.2
+        }
+      }
+    }
+  ],
+  "officialEvidenceSha256": "4819aaaf53cb81ef5d80a37e5b95fd8378125a914e1cd0e22ca236c4ce144dc8",
+  "sourceSha256": {
+    "cnlookthrough/__init__.py": "1c2a96f007c9f04f74e9e78dffc046a022020f0322ecd325d78c062e5087e742",
+    "cnlookthrough/__main__.py": "d9f1c29a7df1df25a8abc51e0ee2f1a253b3ece0808d16f270a2ff6f6abd6769",
+    "cnlookthrough/engine.py": "38bbea29368c22011c47020904ceb7560bb5108b2ecf1af21d0afeefc62e1037",
+    "cnlookthrough/html_controls.py": "76d24a00fdc945e0e9dee52383c4d0ae5f61952536c762928395daacbf1eecf8",
+    "cnlookthrough/issuer_snapshot.py": "48fc5f7e15f9de664b81c890c059f80aeda0b0acedfa9c2082009bf8e0af2a69",
+    "cnlookthrough/report.py": "5e32fea467fa89d06ca4def795dba82a082aa5119949deb5d16ae2f75e779bd0",
+    "cnlookthrough/report_adapter.py": "1cce363c625e7b13f8607f19af61098c63796952ae9abb1778b1bfc5f8c7f4bc",
+    "cnlookthrough/report_cli.py": "e5ec3f67a12a21c8a68e96678a6e87c2f466573fa7432f36d563e53e291ea1d6"
+  },
+  "visualAcceptance": "not-performed"
+}

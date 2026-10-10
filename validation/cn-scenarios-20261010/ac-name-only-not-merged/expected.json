@@ -1,0 +1,14 @@
+{
+  "id": "ac-name-only-not-merged",
+  "group": "ac-identity",
+  "input": "examples/cn-scenarios/ac-name-only-not-merged.json",
+  "expected": {
+    "knownExposure": 0.32,
+    "unknownExposure": 0.68,
+    "pathWeights": {
+      "教学A类|fund>CN-equity:TEACHING-A": 0.2,
+      "教学C类|same-name-other>CN-equity:TEACHING-A": 0.12
+    }
+  },
+  "rationale": "名称相同不能替代关系证据；现有显式节点各走自己的快照，0.4×0.5+0.6×0.2=0.32。"
+}

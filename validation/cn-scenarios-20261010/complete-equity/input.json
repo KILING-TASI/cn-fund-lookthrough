@@ -1,0 +1,46 @@
+{
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "conversionRulesVersion": "complete-equity-all-classes-nav-2",
+  "adapterVersion": "cnlookthrough-report-0.1.dev1",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "positions": [
+    {
+      "id": "disclosed-fund",
+      "node": "fund:TEACHING-ALL:2025-12-31",
+      "weight": 1
+    }
+  ],
+  "nodes": {
+    "fund:TEACHING-ALL:2025-12-31": {
+      "currency": "CNY",
+      "source": "https://example.org/synthetic-cn-report sha256=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "reportDate": "2025-12-31",
+      "publishedAt": "2026-03-27",
+      "holdings": [
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-A",
+          "weight": 0.3
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-B",
+          "weight": 0.4
+        }
+      ]
+    }
+  },
+  "securities": {
+    "CN-equity:TEACHING-A": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://example.org/synthetic-cn-report # 虚构表行1"
+    },
+    "CN-equity:TEACHING-B": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "https://example.org/synthetic-cn-report # 虚构表行2"
+    }
+  }
+}

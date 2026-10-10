@@ -1,0 +1,183 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-equity:TEACHING-01": 0.04,
+    "CN-equity:TEACHING-02": 0.04,
+    "CN-equity:TEACHING-03": 0.04,
+    "CN-equity:TEACHING-04": 0.04,
+    "CN-equity:TEACHING-05": 0.04,
+    "CN-equity:TEACHING-06": 0.04,
+    "CN-equity:TEACHING-07": 0.04,
+    "CN-equity:TEACHING-08": 0.04,
+    "CN-equity:TEACHING-09": 0.04,
+    "CN-equity:TEACHING-10": 0.04
+  },
+  "issuerExposure": {},
+  "knownExposure": 0.4,
+  "unknownExposure": 0.6,
+  "unmappedStockIssuerExposure": 0.39999999999999997,
+  "effectiveMappedEquityIssuers": null,
+  "reportDates": [
+    "2026-03-31"
+  ],
+  "paths": [
+    {
+      "security": "CN-equity:TEACHING-01",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-01"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-02",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-02"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-03",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-03"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-04",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-04"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-05",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-05"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-06",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-06"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-07",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-07"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-08",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-08"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-09",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-09"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-10",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-10"
+      ],
+      "rootPosition": "教学基金",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.6,
+      "path": [
+        "fund"
+      ],
+      "rootPosition": "教学基金",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "教学基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

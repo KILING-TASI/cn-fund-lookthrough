@@ -1,0 +1,61 @@
+{
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "positions": [
+    {
+      "id": "教学A类",
+      "node": "fund",
+      "weight": 0.4
+    },
+    {
+      "id": "教学C类",
+      "node": "fund",
+      "weight": 0.6
+    }
+  ],
+  "nodes": {
+    "fund": {
+      "currency": "CNY",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-06-30",
+      "publishedAt": "2026-08-28",
+      "weightBasis": "parent-net-assets",
+      "holdings": [
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-A",
+          "weight": 0.5
+        }
+      ]
+    }
+  },
+  "securities": {
+    "CN-equity:TEACHING-A": {
+      "kind": "stock",
+      "issuer": "教学公司",
+      "source": "虚构发行人依据"
+    }
+  },
+  "teachingAccount": {
+    "valuationDate": "2026-10-09",
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "totalMarketValueCNY": 30000,
+    "classes": [
+      {
+        "id": "教学A类",
+        "units": 10000,
+        "navCNYPerUnit": 1.2,
+        "marketValueCNY": 12000
+      },
+      {
+        "id": "教学C类",
+        "units": 20000,
+        "navCNYPerUnit": 0.9,
+        "marketValueCNY": 18000
+      }
+    ],
+    "snapshotLinkBasis": "虚构同基金全部份额快照的显式关联，名称不能代替依据"
+  }
+}

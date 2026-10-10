@@ -171,12 +171,14 @@ def parse_chinaamc_growth(pdf,report_date,published_at,source_url,net_assets,equ
 def to_spec(parsed,as_of):
     """One disclosed fund snapshot, not a customer account or issuer mapping."""
     if parsed.get('adapterProfile') not in ('ruiyuan-growth-six-column-v1','chinaamc-growth-2025-six-column-v1') or parsed.get('disclosureScope')!='completeEquity':raise ValueError('需先完成限定完整股票表适配')
+    if parsed.get('portfolioScope')!='fund-all-share-classes':raise ValueError('限定转换须为基金全部份额合计口径，不接受单份额类或缺失范围')
+    if parsed.get('weightBasis') not in (None,'parent-net-assets') or parsed.get('renormalized') not in (None,False):raise ValueError('限定转换须使用基金净资产分母，不接受权益分母或重新归一')
     if datetime.date.fromisoformat(parsed['publishedAt'])>datetime.date.fromisoformat(as_of):raise ValueError('披露晚于截止日')
     key='fund:'+parsed['id']+':'+parsed['reportDate'];holdings=[];securities={}
     for row in parsed['holdings']:
         security=row['securityNamespace']+':'+row['code'];holdings.append({'kind':'stock','security':security,'weight':row['weight']})
         securities[security]={'kind':'stock','issuer':None,'source':parsed['sourceUrl']+' # '+row['locator']}
-    return {'inputSchema':'cnlookthrough-nodes-v1','adapterVersion':parsed.get('toolVersion','cnlookthrough-report-0.1.dev1'),'asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
+    return {'inputSchema':'cnlookthrough-nodes-v1','conversionRulesVersion':'complete-equity-all-classes-nav-2','adapterVersion':parsed.get('toolVersion','cnlookthrough-report-0.1.dev1'),'asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
             'nodes':{key:{'currency':'CNY','source':parsed['sourceUrl']+' sha256='+parsed['sourceSha256'],'reportDate':parsed['reportDate'],'publishedAt':parsed['publishedAt'],'holdings':holdings}},'securities':securities}
 
 def compare_snapshots(before,after):

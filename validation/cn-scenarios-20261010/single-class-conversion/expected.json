@@ -1,0 +1,11 @@
+{
+  "id": "single-class-conversion",
+  "group": "disclosure-scope",
+  "input": "examples/cn-scenarios/single-class-conversion.json",
+  "expected": {
+    "conversionErrorContains": "基金全部份额合计口径"
+  },
+  "rationale": "现有转换仅支持限定完整股票/全份额净资产；显式错误不得被转换丢弃。",
+  "entry": "to-spec",
+  "asOf": "2026-10-10"
+}

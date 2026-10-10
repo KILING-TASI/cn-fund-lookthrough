@@ -1,0 +1,26 @@
+{
+  "id": "TEACHING-ALL",
+  "adapterProfile": "ruiyuan-growth-six-column-v1",
+  "disclosureScope": "completeEquity",
+  "portfolioScope": "fund-all-share-classes",
+  "currency": "CNY",
+  "reportDate": "2025-12-31",
+  "publishedAt": "2026-03-27",
+  "sourceUrl": "https://example.org/synthetic-cn-report",
+  "sourceSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "holdings": [
+    {
+      "code": "TEACHING-A",
+      "securityNamespace": "CN-equity",
+      "weight": 0.3,
+      "locator": "虚构表行1"
+    },
+    {
+      "code": "TEACHING-B",
+      "securityNamespace": "CN-equity",
+      "weight": 0.4,
+      "locator": "虚构表行2"
+    }
+  ],
+  "weightBasis": "equity"
+}

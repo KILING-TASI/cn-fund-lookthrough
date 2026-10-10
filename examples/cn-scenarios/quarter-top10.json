@@ -1,0 +1,126 @@
+{
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "positions": [
+    {
+      "id": "教学基金",
+      "node": "fund",
+      "weight": 1
+    }
+  ],
+  "nodes": {
+    "fund": {
+      "currency": "CNY",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-03-31",
+      "publishedAt": "2026-04-22",
+      "weightBasis": "parent-net-assets",
+      "holdings": [
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-01",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-02",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-03",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-04",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-05",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-06",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-07",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-08",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-09",
+          "weight": 0.04
+        },
+        {
+          "kind": "stock",
+          "security": "CN-equity:TEACHING-10",
+          "weight": 0.04
+        }
+      ],
+      "disclosureScope": "top10"
+    }
+  },
+  "securities": {
+    "CN-equity:TEACHING-01": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-02": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-03": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-04": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-05": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-06": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-07": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-08": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-09": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    },
+    "CN-equity:TEACHING-10": {
+      "kind": "stock",
+      "issuer": null,
+      "source": "教学分类假设"
+    }
+  }
+}

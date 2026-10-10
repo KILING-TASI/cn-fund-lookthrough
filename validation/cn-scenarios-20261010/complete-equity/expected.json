@@ -1,0 +1,14 @@
+{
+  "id": "complete-equity",
+  "group": "disclosure-scope",
+  "input": "examples/cn-scenarios/complete-equity.json",
+  "expected": {
+    "knownExposure": 0.7,
+    "unknownExposure": 0.3,
+    "unmappedStockIssuerExposure": 0.7,
+    "pathCount": 2
+  },
+  "rationale": "虚构完整股票范围占净资产70%，非股票30%仍未知；完整股票不等于完整资产穿透。",
+  "entry": "to-spec",
+  "asOf": "2026-10-10"
+}
