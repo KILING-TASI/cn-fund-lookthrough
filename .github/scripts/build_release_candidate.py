@@ -49,7 +49,10 @@ def build(out, work):
             assert not member.issym() and not member.islnk() and not Path(member.name).is_absolute() and '..' not in Path(member.name).parts
         assert any(m.name.endswith('/SKILL.md') for m in members)
         assert any(m.name.endswith('/examples/demo.json') for m in members)
-        archive.extractall(work / 'sdist')
+        if hasattr(tarfile, 'data_filter'):
+            archive.extractall(work / 'sdist', filter='data')
+        else:
+            archive.extractall(work / 'sdist')
     sdist_source = next((work / 'sdist').iterdir())
     backend = "import setuptools.build_meta as b; b.build_wheel(" + repr(str(out)) + ")"
     run([sys.executable, '-X', 'utf8', '-c', backend], sdist_source)
@@ -59,7 +62,7 @@ def build(out, work):
         assert any(n.endswith('/share/cn-fund-lookthrough/examples/demo.json') for n in names)
         assert len([n for n in names if n.endswith(('/LICENSE', '/THIRD_PARTY_NOTICES.md'))]) == 2
         metadata = archive.read(next(n for n in names if n.endswith('/METADATA'))).decode()
-        assert 'Version: ' + VERSION + '\n' in metadata
+        assert 'Version: ' + VERSION in metadata.splitlines()
         assert not any(n.endswith(('.pdf', '.pyc')) for n in names)
     record['checks'].append('sdist complete Skill/demo resources; wheel built from sdist; version and both license files checked')
     run([sys.executable, '-m', 'venv', work / 'venv'])
