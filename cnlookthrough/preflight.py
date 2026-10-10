@@ -54,7 +54,7 @@ def inspect(spec):
             if not isinstance(target,str) or not target.strip():issue(hp,'缺少对应node或security标识');continue
             if kind=='fund':
                 if target not in nodes:warnings.append(dict(fieldPath=hp+'.node',message='子基金资料缺失，运行时保留未知'))
-            elif target not in master:warnings.append(dict(fieldPath=hp+'.security',message='证券映射缺失，运行时保留未知'))
+            elif target not in master:warnings.append(dict(fieldPath=hp+'.security',message='证券映射缺失，运行时保留未知；请在顶层 securities[证券代码] 补 kind、issuer 和 source。holdings 内的 issuer 不作为公司映射依据'))
             elif isinstance(master[target],dict) and master[target].get('kind')!=kind:issue(hp+'.kind','与证券映射分类冲突')
         if math.fsum(values)>1+1e-9:issue(path+'.holdings','权重超过1，不能截断')
         elif math.fsum(values)<1:warnings.append(dict(fieldPath=path+'.holdings',message='未披露余额保留未知，不归一或填零'))
