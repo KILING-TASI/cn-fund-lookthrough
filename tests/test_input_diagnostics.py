@@ -6,7 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from cnlookthrough import analyze
+from cnlookthrough import analyze, __version__
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,6 +27,7 @@ class InputDiagnostics(unittest.TestCase):
     def test_frozen_normal_result_and_metadata_compatibility(self):
         spec = self.spec()
         expected = json.loads((ROOT / 'validation/scenarios-20261010/existing-demo/actual.json').read_text('utf-8'))
+        expected['toolVersion'] = 'cn-fund-lookthrough-' + __version__
         self.assertEqual(analyze(spec), expected)
         spec.update(adapterVersion='legacy-adapter', conversionRulesVersion='declared-metadata',
                     teachingAccount={'anything': True}, metadata={'issuerMap': {}}, extensions={'professionalFields': [1]})

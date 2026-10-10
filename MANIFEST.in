@@ -1,0 +1,10 @@
+include SKILL.md README.md LICENSE THIRD_PARTY_NOTICES.md pyproject.toml
+include CN_SCENARIOS.md DISCLAIMER.md METHODS.md ROADMAP.md SCENARIOS.md SECOND_MANAGER.md RELEASE_NOTES.md
+recursive-include cnlookthrough *.py
+recursive-include examples *.json *.html
+recursive-include validation *.json *.html *.txt
+recursive-include tests *.py
+recursive-include tools *.py
+global-exclude *.pyc *.pdf
+prune build
+prune dist

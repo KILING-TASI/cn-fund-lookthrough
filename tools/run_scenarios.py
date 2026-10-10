@@ -29,6 +29,10 @@ def run(out, index_path=None):
     index = json.loads(index_file.read_text('utf-8'))
     (out / 'batch-index.json').write_bytes(index_file.read_bytes())
     receipt = {k: v for k, v in index.items() if k != 'cases'}
+    receipt['fixtureToolVersion'] = index['toolVersion']
+    sys.path.insert(0, str(ROOT))
+    from cnlookthrough import __version__
+    receipt['toolVersion'] = 'cn-fund-lookthrough-' + __version__
     receipt['cases'] = []
     if index.get('officialEvidence'):
         evidence = (ROOT / index['officialEvidence']).read_bytes()
@@ -83,7 +87,7 @@ def run(out, index_path=None):
                     observed = actual[key]
                 check(observed, value, case['id'] + '.' + key)
             for key in ('toolVersion', 'inputSchema', 'rulesVersion'):
-                check(actual[key], index[key], case['id'] + '.' + key)
+                check(actual[key], receipt[key], case['id'] + '.' + key)
             check(actual['knownExposure'] + actual['unknownExposure'], 1, 'conservation')
             html = subprocess.run(cmd + ['--format', 'html', '--out', str(folder / 'report.html')], cwd=ROOT, capture_output=True)
             if html.returncode:

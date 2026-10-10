@@ -16,3 +16,7 @@ jobs:
       - run: python -m cnlookthrough examples/demo.json --format markdown
       - name: Verify exported single-repository installed demo
         run: python .github/scripts/validate_isolated_install.py
+      - name: Prepare release build backend
+        run: python -m pip install "setuptools>=68" wheel
+      - name: Verify exact-HEAD release candidate assets
+        run: python .github/scripts/build_release_candidate.py --out-dir release-check-assets --work-dir release-check-work
