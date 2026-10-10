@@ -21,6 +21,10 @@ def inspect_fields(spec):
     def inspect(value, role, prefix):
         if not isinstance(value, dict):
             return
+        for key, item in value.items():
+            if key in {'name', 'issuer', 'id', 'node', 'security'} and isinstance(item, str) and len(item) > 512:
+                add('long-display-text', prefix + str(key),
+                    '身份或展示文字超过512字符；请核对是否误贴正文。仅告警，不截断、不改公司映射或金额。')
         for key in value:
             if key in FIELDS[role] or key in METADATA:
                 continue

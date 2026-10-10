@@ -16,6 +16,8 @@ def main():
  p.add_argument('input',type=Path);p.add_argument('--format',choices=['json','markdown','html'],default='json');p.add_argument('--out',type=Path)
  p.add_argument('--human',action='store_true',help='在stderr显示结果位置和下一步，stdout结果格式不变')
  p.add_argument("--validate-only","--dry-run",action="store_true",help="仅本地声明字段预检；不联网、不读PDF、不写文件、不计算")
+ p.add_argument("--progress",action="store_true",help="从开始就在stderr显示阶段；默认只在长任务开始提示")
+ p.add_argument("--no-progress",action="store_true",help="关闭stderr阶段提示，JSON结果仍写stdout")
  a=p.parse_args()
  try:
   if a.input.stat().st_size>16*1024*1024:raise ValueError('输入过大')
@@ -26,7 +28,8 @@ def main():
    r=inspect(spec);print(json.dumps(r,ensure_ascii=False,indent=2))
    if r['errors']:p.exit(2)
    return
-  r=analyze(spec)
+  from .progress import Progress
+  r=analyze(spec,progress=None if a.no_progress else Progress(force=a.progress or a.human))
   for warning in r.get('inputDiagnostics',{}).get('warnings',[]):
    print('输入提示 ['+warning['fieldPath']+']：'+warning['message'],file=sys.stderr)
   from .report import markdown

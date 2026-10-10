@@ -1,0 +1,92 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpuCount": 16,
+  "engineSha256": "dd65281dd84830c86023edf9c1e30358bb398581259c76b49ffbf87ad3ad29d8",
+  "methodSha256": {
+    "cnlookthrough/engine.py": "dd65281dd84830c86023edf9c1e30358bb398581259c76b49ffbf87ad3ad29d8",
+    "cnlookthrough/input_diagnostics.py": "3bfc0b035b5c9d98deee3d07f7b9de1bc239a4b7dc4bca44d6dda1b385405a6c",
+    "tools/benchmark.py": "f2e1def7a7eddcdce34d13cc1d5da9ed9e9a88b9dece96c02ad7a55bbfdf5c6e"
+  },
+  "measurement": "fresh subprocess; input built before tracemalloc; process peak includes fixture and runtime; timed region analyze only",
+  "records": [
+    {
+      "requestedCount": 1000,
+      "shape": "flat",
+      "inputHoldingRows": 1001,
+      "expandedLeafPaths": 1000,
+      "wallSeconds": 0.03111809998517856,
+      "tracemallocPeakBytes": 601677,
+      "processLifetimePeakResidentBytes": 22908928,
+      "inputUtf8Bytes": 145109,
+      "inputSha256": "7ce04a73322cd4a9dfbdc965c492b4fae066bfff722576a1d4047b83bd162146",
+      "cli16MiBWouldAccept": true
+    },
+    {
+      "requestedCount": 10000,
+      "shape": "flat",
+      "inputHoldingRows": 10010,
+      "expandedLeafPaths": 10000,
+      "wallSeconds": 0.32700410002144054,
+      "tracemallocPeakBytes": 5621037,
+      "processLifetimePeakResidentBytes": 43048960,
+      "inputUtf8Bytes": 1478648,
+      "inputSha256": "44e01907ae3f4beaa274ef726a365813681179f5d369fba5292567b0d3891890",
+      "cli16MiBWouldAccept": true
+    },
+    {
+      "requestedCount": 50000,
+      "shape": "flat",
+      "inputHoldingRows": 50050,
+      "expandedLeafPaths": 50000,
+      "wallSeconds": 1.600978899979964,
+      "tracemallocPeakBytes": 32486973,
+      "processLifetimePeakResidentBytes": 134701056,
+      "inputUtf8Bytes": 7525618,
+      "inputSha256": "d5f10035f7c2c319f94ec5e7cdd04bc4cf962bd82a3dddb5ed46a6735bae30be",
+      "cli16MiBWouldAccept": true
+    },
+    {
+      "requestedCount": 1000,
+      "shape": "shared",
+      "inputHoldingRows": 1002,
+      "expandedLeafPaths": 1000,
+      "wallSeconds": 0.032553199998801574,
+      "tracemallocPeakBytes": 609797,
+      "processLifetimePeakResidentBytes": 22872064,
+      "inputUtf8Bytes": 145280,
+      "inputSha256": "8aec75f631665947eee40e4b90545671873e703f9836b2a6bacbc58ce6c3d521",
+      "cli16MiBWouldAccept": true
+    },
+    {
+      "requestedCount": 10000,
+      "shape": "shared",
+      "inputHoldingRows": 1020,
+      "expandedLeafPaths": 10000,
+      "wallSeconds": 0.14594129999750294,
+      "tracemallocPeakBytes": 4145093,
+      "processLifetimePeakResidentBytes": 31490048,
+      "inputUtf8Bytes": 147244,
+      "inputSha256": "6236ebc5817a37c839a9636dc17c7baec4f890fe6ecd38f445accf9c81c8b532",
+      "cli16MiBWouldAccept": true
+    },
+    {
+      "requestedCount": 50000,
+      "shape": "shared",
+      "inputHoldingRows": 1100,
+      "expandedLeafPaths": 50000,
+      "wallSeconds": 0.6293863999890164,
+      "tracemallocPeakBytes": 19875469,
+      "processLifetimePeakResidentBytes": 67559424,
+      "inputUtf8Bytes": 156094,
+      "inputSha256": "00b034e455f37fa1f1a527cdfa93b8d2019e33371a4e9a4b0b938b5f734f2efd",
+      "cli16MiBWouldAccept": true
+    }
+  ],
+  "limitations": [
+    "仅原创合成样本，不是全市场或真实完整持仓",
+    "tracemalloc仅Python跟踪分配；进程峰值单列，均不是部署内存保证",
+    "不从有限点证明O(n)，共享节点按展开路径计量；未涵盖所有深度和循环形状",
+    "未计JSON解析、报告渲染与写盘；文件大小与API结构限制分开"
+  ]
+}

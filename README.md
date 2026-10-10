@@ -6,9 +6,9 @@
 
 ## 安装和首次试用
 
-本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.2)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
+本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.3)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
 
-本轮源码版本为 `0.2.2`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
+本轮源码版本为 `0.2.3`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
 
 ```powershell
 python -m venv .venv
@@ -134,3 +134,9 @@ CI在Windows/Linux、Python 3.10/3.12检查测试、单仓安装及教学报告�
 ## 导入前先预检
 
 `python -m cnlookthrough input.json --validate-only`（或`--dry-run`）只检查本地声明字段，不联网、不读PDF、不写报告，也不执行专业计算。问题按fieldPath列出；通过不证明来源或完整性。`python -m cnlookthrough.preflight --contract`查看契约索引。完整入口与边界见[输入契约说明](examples/INPUT_CONTRACTS.md)。
+
+## 规模、进度与性能
+
+JSON文件限制16 MiB，结构上限与路径展开限制分别适用，不能相乘当成推荐规模。阶段提示写stderr，默认长于10秒后出现；--progress立即显示，--no-progress关闭。超长身份文字只告警。[测试记录与复现方法](validation/PERFORMANCE.md)同时列出Python分配峰值和进程峰值，不承诺任意机器吞吐。
+
+本轮基金/财报新报告采用结论、关键缺口、完整证据三层阅读；保存页面已做[桌面与窄屏浏览器验收](validation/browser-20261010/README.md)。旧快照按原记录保留，不因此自动标为已验。

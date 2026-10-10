@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-10",
+  "browser": "Codex in-app browser on Windows",
+  "pages": [
+    "fund teaching report"
+  ],
+  "desktop": "default viewport",
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "summary and critical limitations visible",
+    "filter changes displayed rows while totals remain",
+    "details expand to full explanation",
+    "UTF-8 Chinese text readable"
+  ],
+  "htmlSha256": "6922034f573c427fda422cef24780f1a7a0b220ebae0745448cbf5c2ad1c351c",
+  "screenshots": {
+    "desktop.jpg": "fab56eafffca21ed35e2cbe489a15835d2ec93044acbff38242b2e421b3fd46f",
+    "mobile.jpg": "83d8d7fdf20c0f6b4864355f002c0361059c1c9a4ca2fa8c929b9dc2ced745ea"
+  },
+  "limitations": [
+    "只验本轮保存的页面，不代表全部历史报告、全部浏览器或所有输入",
+    "财报宽表使用局部水平滚动，不保证所有列同时在窄屏显示"
+  ]
+}

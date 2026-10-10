@@ -20,3 +20,5 @@ python -m cnlookthrough reports/import-first.json --format html --out reports/im
 ```
 
 示例只有35%已分类证券，65%未披露余额保持未知，其中15%没有公司映射；代码仅演示中国证券身份格式。所有教学数值为原创模拟。导入成功不证明原始数据取得权利、证券身份或声明持仓正确；分享导入JSON前检查metadata中的来源、配置和原值。
+
+资源代价、CLI/API差异及复现方法见[性能与限制](../validation/PERFORMANCE.md)。
