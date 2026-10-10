@@ -46,6 +46,10 @@ def publish(spec,out,request,source_inputs):
         if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     out=Path(out)
     if out.exists():raise FileExistsError('结果目录已存在，改用新目录；旧报告不覆盖')
+    # Reused files obey the same reader bound; reject before creating an unusable checkpoint.
+    for name,value in [('input.json',spec),('source-inputs.json',source_inputs),('research-request.json',request)]:
+        if len(json.dumps(value,ensure_ascii=False,indent=2,allow_nan=False).encode('utf-8'))>16*1024*1024:
+            raise ValueError('合并后的'+name+'超过16MiB接续限制；请选择较小的明确研究范围，不截断资料')
     check=inspect(spec)
     if check['errors']:raise ValueError('合并输入无效：'+str(check['errors']))
     result=analyze(spec)

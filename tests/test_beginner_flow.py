@@ -1,11 +1,18 @@
 import copy,json,tempfile,unittest
 from pathlib import Path
-from cnlookthrough.guide import config_from_answers,main as guide
+from cnlookthrough.guide import config_from_answers,prepare_csv,main as guide
 from cnlookthrough.question import compose,allocations,publish,main as question
 
 ROOT=Path(__file__).resolve().parents[1]
 
 class BeginnerFlow(unittest.TestCase):
+    def test_explicit_chinese_columns_keep_raw_and_do_not_guess_market(self):
+        raw='证券代码,交易所,权重百分数,公司,身份依据\n600519,上交所,3.18%,教学公司,教学身份声明\n'.encode('utf-8')
+        converted,record=prepare_csv(raw)
+        self.assertIn(b'CN-SSE:600519,3.18',converted)
+        self.assertEqual(record['originalRows'][0]['values']['权重百分数'],'3.18%')
+        self.assertFalse(record['identityVerified'])
+        with self.assertRaisesRegex(ValueError,'不能按代码猜'):prepare_csv(raw.replace('上交所'.encode(),b''))
     def test_unknown_basis_never_becomes_confirmed(self):
         config=json.loads((ROOT/'examples/holdings-import-config.json').read_text(encoding='utf-8'))
         answers={k:config[k] for k in ['positionId','source','reportDate','publishedAt','asOf','currency','weightBasis','disclosureScope']}

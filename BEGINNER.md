@@ -31,3 +31,5 @@
 用 question compare 输入清单声明相同截止日的2至10份单基金研究输入及配置百分数；每份保留原文来源与未知，不自动下载。示例见 examples/overlap-question.json。命令：python -m cnlookthrough.question compare --input examples/overlap-question.json --out-dir reports/overlap-first。
 
 改变比例：python -m cnlookthrough.question follow --continue-from reports/overlap-first --weights 50 50 --out-dir reports/overlap-second。复用的是用户已选的快照，不是更新行情；旧输入变动会拒绝复用，方法变化会提示。
+
+中文表格也可用：证券代码,交易所,权重百分数,公司,身份依据。交易所须在原表明确填写上交所、深交所或北交所；不会按数字开头推断。百分数列的3.18或3.18%均表示3.18%，不能填份额或股票部分归一比例。原表、转换表、原值与两份SHA256都会保留；公司未知留空。见 examples/holdings-chinese.csv（纯教学）。
