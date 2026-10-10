@@ -1,0 +1,8 @@
+{
+  "id": "wrong-denominator",
+  "input": "examples/scenarios/wrong-denominator.json",
+  "expected": {
+    "errorContains": "持仓须基于父节点净资产"
+  },
+  "rationale": "显式不合契约时拒绝生成；未声明的隐含错误仍需原文核对。"
+}

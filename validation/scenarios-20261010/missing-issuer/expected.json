@@ -1,0 +1,12 @@
+{
+  "id": "missing-issuer",
+  "input": "examples/scenarios/missing-issuer.json",
+  "expected": {
+    "knownExposure": 0.84,
+    "unknownExposure": 0.16,
+    "unmappedStockIssuerExposure": 0.84,
+    "effectiveMappedEquityIssuers": null,
+    "issuerExposure": {}
+  },
+  "rationale": "证券分类有依据仍已知；发行人未映射0.84单列，不虚构公司数。"
+}

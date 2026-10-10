@@ -1,0 +1,13 @@
+{
+  "id": "missing-security",
+  "input": "examples/scenarios/missing-security.json",
+  "expected": {
+    "knownExposure": 0.624,
+    "unknownExposure": 0.376,
+    "unknownReasons": {
+      "证券身份或分类缺失": 0.216,
+      "未披露或未解析余额": 0.16
+    }
+  },
+  "rationale": "证券身份缺失导致0.216未知；不能凭证券文字猜分类。"
+}

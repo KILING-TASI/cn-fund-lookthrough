@@ -1,0 +1,15 @@
+{
+  "id": "existing-demo",
+  "input": "examples/scenarios/existing-demo.json",
+  "expected": {
+    "knownExposure": 0.84,
+    "unknownExposure": 0.16,
+    "issuerExposure": {
+      "教学公司A": 0.524,
+      "教学公司B": 0.216,
+      "教学公司C": 0.1
+    },
+    "pathCount": 4
+  },
+  "rationale": "复用已验证教学正例：0.6×0.9×0.6+0.4×0.5=0.524；联接余额0.06，主动余额0.10。"
+}

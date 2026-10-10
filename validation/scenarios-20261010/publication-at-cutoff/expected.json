@@ -1,0 +1,9 @@
+{
+  "id": "publication-at-cutoff",
+  "input": "examples/scenarios/publication-at-cutoff.json",
+  "expected": {
+    "knownExposure": 0.84,
+    "unknownExposure": 0.16
+  },
+  "rationale": "披露日恰等于截止日允许，按日精度不推断盘中先后。"
+}

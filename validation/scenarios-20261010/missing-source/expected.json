@@ -1,0 +1,8 @@
+{
+  "id": "missing-source",
+  "input": "examples/scenarios/missing-source.json",
+  "expected": {
+    "errorContains": "节点来源缺失"
+  },
+  "rationale": "显式不合契约时拒绝生成；未声明的隐含错误仍需原文核对。"
+}

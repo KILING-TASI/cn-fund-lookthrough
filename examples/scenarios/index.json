@@ -1,0 +1,136 @@
+{
+  "batch": "bounded-scenarios-20261010",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "sampleType": "synthetic-teaching-only",
+  "cases": [
+    {
+      "id": "existing-demo",
+      "input": "examples/scenarios/existing-demo.json",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "issuerExposure": {
+          "教学公司A": 0.524,
+          "教学公司B": 0.216,
+          "教学公司C": 0.1
+        },
+        "pathCount": 4
+      },
+      "rationale": "复用已验证教学正例：0.6×0.9×0.6+0.4×0.5=0.524；联接余额0.06，主动余额0.10。"
+    },
+    {
+      "id": "fof-shared-etf",
+      "input": "examples/scenarios/fof-shared-etf.json",
+      "expected": {
+        "knownExposure": 0.825,
+        "unknownExposure": 0.175,
+        "issuerExposure": {
+          "教学公司A": 0.5,
+          "教学公司B": 0.3,
+          "教学公司C": 0.025
+        },
+        "pathCount": 6,
+        "securityExposure": {
+          "CN-SSE:DEMO-A": 0.5,
+          "CN-SSE:DEMO-B": 0.3,
+          "CN-SSE:DEMO-C": 0.025
+        }
+      },
+      "rationale": "两根路径均到ETF，分别保留再汇总。A=0.5×0.9×0.6+0.5×0.6×0.6+0.5×0.2×0.5=0.5；未知=0.05+0.10+0.025=0.175。"
+    },
+    {
+      "id": "missing-child",
+      "input": "examples/scenarios/missing-child.json",
+      "expected": {
+        "knownExposure": 0.3,
+        "unknownExposure": 0.7,
+        "unknownReasons": {
+          "子基金资料缺失": 0.54,
+          "未披露或未解析余额": 0.16
+        }
+      },
+      "rationale": "缺ETF的0.54整体未知，仍保留主动基金0.30及其他余额0.16。"
+    },
+    {
+      "id": "missing-security",
+      "input": "examples/scenarios/missing-security.json",
+      "expected": {
+        "knownExposure": 0.624,
+        "unknownExposure": 0.376,
+        "unknownReasons": {
+          "证券身份或分类缺失": 0.216,
+          "未披露或未解析余额": 0.16
+        }
+      },
+      "rationale": "证券身份缺失导致0.216未知；不能凭证券文字猜分类。"
+    },
+    {
+      "id": "missing-issuer",
+      "input": "examples/scenarios/missing-issuer.json",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "unmappedStockIssuerExposure": 0.84,
+        "effectiveMappedEquityIssuers": null,
+        "issuerExposure": {}
+      },
+      "rationale": "证券分类有依据仍已知；发行人未映射0.84单列，不虚构公司数。"
+    },
+    {
+      "id": "cycle",
+      "input": "examples/scenarios/cycle.json",
+      "expected": {
+        "knownExposure": 0.3,
+        "unknownExposure": 0.7,
+        "unknownReasons": {
+          "循环投资关系": 0.54,
+          "未披露或未解析余额": 0.16
+        }
+      },
+      "rationale": "循环路径0.54进入未知；不是无限递归也不是零。"
+    },
+    {
+      "id": "publication-at-cutoff",
+      "input": "examples/scenarios/publication-at-cutoff.json",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16
+      },
+      "rationale": "披露日恰等于截止日允许，按日精度不推断盘中先后。"
+    },
+    {
+      "id": "future-disclosure",
+      "input": "examples/scenarios/future-disclosure.json",
+      "expected": {
+        "errorContains": "披露时间或报告期超出截止日"
+      },
+      "rationale": "报告期早于截止仍不能使用尚未公开的报告。"
+    },
+    {
+      "id": "wrong-denominator",
+      "input": "examples/scenarios/wrong-denominator.json",
+      "expected": {
+        "errorContains": "持仓须基于父节点净资产"
+      },
+      "rationale": "显式不合契约时拒绝生成；未声明的隐含错误仍需原文核对。"
+    },
+    {
+      "id": "renormalized",
+      "input": "examples/scenarios/renormalized.json",
+      "expected": {
+        "errorContains": "持仓须基于父节点净资产"
+      },
+      "rationale": "显式不合契约时拒绝生成；未声明的隐含错误仍需原文核对。"
+    },
+    {
+      "id": "missing-source",
+      "input": "examples/scenarios/missing-source.json",
+      "expected": {
+        "errorContains": "节点来源缺失"
+      },
+      "rationale": "显式不合契约时拒绝生成；未声明的隐含错误仍需原文核对。"
+    }
+  ]
+}

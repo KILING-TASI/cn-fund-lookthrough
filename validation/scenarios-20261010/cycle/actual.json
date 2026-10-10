@@ -1,0 +1,98 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-09-30",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-SSE:DEMO-A": 0.2,
+    "CN-SSE:DEMO-C": 0.1
+  },
+  "issuerExposure": {
+    "教学公司A": 0.2,
+    "教学公司C": 0.1
+  },
+  "knownExposure": 0.30000000000000004,
+  "unknownExposure": 0.7000000000000001,
+  "unmappedStockIssuerExposure": 0.0,
+  "effectiveMappedEquityIssuers": 1.7999999999999998,
+  "reportDates": [
+    "2026-06-30"
+  ],
+  "paths": [
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": "教学公司A",
+      "kind": "stock",
+      "weight": 0.2,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "主动基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-C",
+      "issuer": "教学公司C",
+      "kind": "stock",
+      "weight": 0.1,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-C"
+      ],
+      "rootPosition": "主动基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.54,
+      "path": [
+        "feeder",
+        "etf",
+        "feeder"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "循环投资关系"
+    },
+    {
+      "weight": 0.059999999999999984,
+      "path": [
+        "feeder"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.1,
+      "path": [
+        "active"
+      ],
+      "rootPosition": "主动基金",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "联接基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    },
+    {
+      "rootPosition": "主动基金",
+      "mappedEquityExposure": 0.30000000000000004,
+      "replicatedShare": 0.0,
+      "uniqueIssuerShare": 1.0
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}
