@@ -41,6 +41,9 @@ def compose(inputs,weights,as_of):
     return spec
 
 def publish(spec,out,request,source_inputs):
+    import sys
+    for stream in (sys.stdout,sys.stderr):
+        if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     out=Path(out)
     if out.exists():raise FileExistsError('结果目录已存在，改用新目录；旧报告不覆盖')
     check=inspect(spec)
