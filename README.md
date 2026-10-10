@@ -12,7 +12,7 @@
 
 ![历史教学报告的浏览器截图](validation/browser-20261010/desktop.jpg)
 
-2026-10-10 选定教学页面截图，不是真实公司或账户；不代表所有报告或当前版本均已视觉验收。[桌面与窄屏验收记录](validation/browser-20261010/README.md)
+2026-10-10 选定教学页面截图，不是真实公司或账户；不代表所有报告或当前版本均已视觉验收。[截图对应页面](validation/browser-20261010/report.html) · [桌面与窄屏验收记录](validation/browser-20261010/README.md)
 
 其他问题可看[九个工具如何选择](https://github.com/KILING-TASI/research-workbench/blob/main/references/tool-navigation.md)。各工具可独立使用，不必安装全部仓库。
 
