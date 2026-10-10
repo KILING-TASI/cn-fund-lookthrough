@@ -33,3 +33,6 @@ description: 根据已取得的中国基金、ETF联接和FOF披露持仓分析�
 只有基金名字或代码时，先解释共同指数方向与所缺披露，不能从名称给数值重复率。用户提供CSV时，按中文向导确认持仓日期、公开日期、来源及净资产百分数，组织单基金输入。资料缺项继续解释已知部分，不换教学资料。
 
 取得两份同截止日单基金输入后，按 `examples/overlap-question.json` 组织明确配置，使用 `python -m cnlookthrough.question compare --input 清单.json --out-dir 新目录`。问“比例改成各一半呢”时，使用 `question follow --continue-from 已选结果 --weights 50 50 --out-dir 新目录`。只复用用户已选快照；不会自动联网更新。原输入变化会拒绝，方法变化会提示，来源真实性另核。配置不足100%时先确认剩余资产，本入口不替用户填现金。
+
+
+本轮新增独立跨期披露比较。独立入口、底稿与限制见 [EXPANSION.md](EXPANSION.md)。
