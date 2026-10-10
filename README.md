@@ -4,13 +4,19 @@
 
 [![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) [![测试](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml)
 
-当前版本：[v0.2.4](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.4)。完整源码、wheel、sdist 和校验清单在同一发布页；历史报告及旧下载包按各自版本阅读。
+当前版本：[v0.3.0](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.0)。完整源码、wheel、sdist 和校验清单在同一发布页；历史报告及旧下载包按各自版本阅读。
+
+## 先看一份教学报告
+
+完整源码解压后，需要 Python 3.10+。Windows 可运行 `Start-Demo.cmd`；或在源码目录执行 `python try_demo.py`。Linux/macOS 用 `sh Start-Demo.sh`。不需要先执行 pip 安装，不自动下载数据或覆盖旧报告；缺 Python 会提示处理路径。
+
+换成自己的资料，先看[中文资料准备与错误处理](BEGINNER.md)。已安装 CLI 可运行 `cn-fund-lookthrough doctor` 检查软件环境；它不检查资料或认证来源。
 
 ## 安装和首次试用
 
-本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.4)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
+本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.0)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
 
-本轮源码版本为 `0.2.4`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
+本轮源码版本为 `0.3.0`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
 
 ```powershell
 python -m venv .venv
@@ -142,3 +148,7 @@ CI在Windows/Linux、Python 3.10/3.12检查测试、单仓安装及教学报告�
 JSON文件限制16 MiB，结构上限与路径展开限制分别适用，不能相乘当成推荐规模。阶段提示写stderr，默认长于10秒后出现；--progress立即显示，--no-progress关闭。超长身份文字只告警。[测试记录与复现方法](validation/PERFORMANCE.md)同时列出Python分配峰值和进程峰值，不承诺任意机器吞吐。
 
 本轮基金/财报新报告采用结论、关键缺口、完整证据三层阅读；保存页面已做[桌面与窄屏浏览器验收](validation/browser-20261010/README.md)。旧快照按原记录保留，不因此自动标为已验。
+
+## 本轮验证范围
+
+源码教学启动、软件环境查询和安装后教学入口分别验证；软件就绪不等于真实资料已取得。中文问答需要助手按本仓Skill准备已声明输入，没有宣称任意自然语言自动发现或全市场数据闭环。旧报告、历史tag与案例证据保留。
