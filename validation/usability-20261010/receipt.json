@@ -1,0 +1,55 @@
+{
+  "baseline": "4b4a4c86d12cb5afb7f19ac87b8325edf0bde036",
+  "scope": "CLI guidance only, no research algorithm change",
+  "tests": 29,
+  "teachingOnly": true,
+  "reportSha256BeforeRepeat": "50596ce417a8c1241c099148c1f6a5a5d8d398b70f43a0dfcc2f304349ed0c52",
+  "reportSha256AfterRepeat": "50596ce417a8c1241c099148c1f6a5a5d8d398b70f43a0dfcc2f304349ed0c52",
+  "jsonKeysUnchanged": true,
+  "machineJSONKnownExposure": 0.8400000000000001,
+  "machineJSONUnknownExposure": 0.15999999999999998,
+  "checks": [
+    {
+      "case": "saved-html",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "cn-fund-lookthrough 独立CLI引擎：已生成html结果。输入声明为教学样本，非真实基金或账户。\r\n结果目录：<repo>\\validation\\usability-20261010\r\n打开报告：<repo>\\validation\\usability-20261010\\teaching.html\r\n"
+    },
+    {
+      "case": "existing-output",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "未能完成：输出文件已存在；请把 --out 换成新的文件名，旧文件保持不变。；未覆盖旧输出。\r\n"
+    },
+    {
+      "case": "machine-json",
+      "exit": 0,
+      "stdout": "JSON parsed; identical bytes across modes",
+      "stderr": ""
+    },
+    {
+      "case": "human-json",
+      "exit": 0,
+      "stdout": "JSON parsed; identical bytes across modes",
+      "stderr": "cn-fund-lookthrough 独立CLI引擎：已生成json结果。输入声明为教学样本，非真实基金或账户。\r\n结果已写到stdout；使用 --out 新文件路径 可保存。\r\n"
+    },
+    {
+      "case": "invalid-weight",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "未能完成：持仓须基于父节点净资产，不接受按权益/已知持仓重新归一；请核对输入的asOf、currency、positions、nodes、securities与权重分母，参照仓库示例，不要把缺值填零。；未覆盖旧输出。\r\n"
+    },
+    {
+      "case": "missing-pdf-extra",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "缺少可选PDF组件pdfplumber；在当前源码仓/版本的虚拟环境运行 python -m pip install \".[pdf]\"。此安装可能联网；JSON教学入口无需PDF组件。未生成适配结果。\r\n"
+    }
+  ],
+  "visualAcceptance": "not performed",
+  "sourcesSha256": {
+    "cnlookthrough/__main__.py": "a3626ece93b233ec6eacf81173b09fb84787dd85ec346e87863eaaa753c6191c",
+    "cnlookthrough/report_cli.py": "70bb575bed78d2084dd416b55e49212e0e1940a51779138374608f563c7f2c33",
+    "cnlookthrough/cli_feedback.py": "bf08446f922a07ca06aac957a837a1bd333338b6d8088108ba20591dd64f799e"
+  }
+}

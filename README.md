@@ -2,6 +2,37 @@
 
 看清多只基金背后是否重复持有同一批公司；嵌套路径与未知余额一起保留。
 
+本仓同时提供[Skill入口](SKILL.md)和独立Python CLI引擎。Skill的frontmatter `name`为`cn-fund-lookthrough`，仓库/安装包同名，运行模块为`cnlookthrough`。使用Skill时需保留整个项目目录及`README.md`、`examples/`、`cnlookthrough/`等资源，不能只复制一个`SKILL.md`。CLI可单独运行；工作台也可显式调用，运行不依赖工作台或其他自家专业仓，不自动改动已安装Skill。
+
+## 安装前提与Windows入口
+
+Python 3.10+（CI验证3.10/3.12）。已有源码时，JSON分析、教学报告和情景入口只用标准库，直接运行无需pip或联网；只读取本地声明输入，不自动下载持仓原文。
+
+```powershell
+python -m cnlookthrough examples/demo.json --format html --out "local-data/第一次教学报告.html"
+```
+
+成功提示在stderr显示结果目录和要打开的文件，并标明输入声明的教学样本。单文件输出只要求目标文件不存在，父目录可已存在；情景批入口要求整个输出目录不存在。重复运行请换新名字，不能覆盖旧报告。
+
+需要安装后从其他目录运行时，在本仓根目录建立独立环境（无需激活脚本）：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install .
+.\.venv\Scripts\python.exe -m cnlookthrough examples/demo.json --out "local-data/第一次教学底稿.json" --human
+```
+
+安装构建需要普通第三方`setuptools>=68`，pip可能联网下载；核心无第三方运行依赖。限定PDF入口可选依赖为`pdfplumber>=0.11,<0.12`及其普通第三方依赖，在当前源码/版本环境安装：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install ".[pdf]"
+.\.venv\Scripts\python.exe -m cnlookthrough.report_cli --help
+```
+
+这一步可能联网，程序不会自动安装。已安装依赖后解析本地PDF无需自动取数；限定参数与来源要求见[睿远适配说明](ROADMAP.md)和[华夏选定样本](SECOND_MANAGER.md)。可选PDF组件不是所有管理人/季报通用解析能力。上述命令针对当前源码待审版`0.2.0.dev1`；公开旧版`v0.1.0`不能代替当前接口，本说明不更新用户安装。
+
+默认JSON stdout仍为可解析JSON；保存文件时stdout为空。`--human`只在stderr补提示，保存HTML/Markdown自动补位置。限定PDF入口原有stdout成功回执保持不变，JSON本来写入`--out`文件；`--human`或HTML/Markdown只额外写stderr。非法输入保持退出码2，并提示核对相应字段；不存在的输入核对路径，缺PDF组件安装实际pdf extra，旧文件始终不覆盖。
+
 ## 先看结果，再试一次
 
 [实际生成的教学HTML预览（下载后打开）](examples/readme-preview.html) · [对应输入](examples/demo.json) · [生成与版本记录](examples/readme-preview-manifest.json)
@@ -14,7 +45,7 @@
 python -m cnlookthrough examples/demo.json --format html --out local-data/report.html
 ```
 
-打开 `local-data/report.html`。输出目录/文件须不存在；重复运行请换新路径，不覆盖旧结果。限定PDF接口需要另装可选依赖，下面的教学demo不需要。
+打开 `local-data/report.html`。输出文件须不存在，父目录可复用；重复运行请换新文件名，不覆盖旧结果。限定PDF接口需要另装可选依赖，下面的教学demo不需要。
 
 [返回主包按问题导航](https://github.com/KILING-TASI/research-workbench/blob/codex/bounded-research-extensions/references/tool-navigation.md)；本工具可单独使用，不强制安装主包。
 
