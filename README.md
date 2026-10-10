@@ -14,11 +14,11 @@
 
 2026-10-10 选定教学页面截图，不是真实公司或账户；不代表所有报告或当前版本均已视觉验收。[截图对应页面](validation/browser-20261010/report.html) · [桌面与窄屏验收记录](validation/browser-20261010/README.md)
 
-其他问题可看[九个工具如何选择](https://github.com/KILING-TASI/research-workbench/blob/main/references/tool-navigation.md)。各工具可独立使用，不必安装全部仓库。
+其他问题可看[按问题选择工具](https://github.com/KILING-TASI/research-workbench/blob/main/references/tool-navigation.md)。各工具可独立使用，不必安装全部仓库。
 
 [![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) [![测试](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml)
 
-当前版本：[v0.3.3](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.3)。完整源码、wheel、sdist 和校验清单在同一发布页；历史报告及旧下载包按各自版本阅读。
+当前版本：[v0.3.4](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.4)。完整源码、wheel、sdist 和校验清单在同一发布页；历史报告及旧下载包按各自版本阅读。
 
 ## 先看一份教学报告
 
@@ -40,9 +40,9 @@
 
 ## 安装和首次试用
 
-安装包见[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.3)，提供完整源码、wheel、sdist 和校验清单。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
+安装包见[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.4)，提供完整源码、wheel、sdist 和校验清单。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
 
-安装包版本为 `0.3.3`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
+安装包版本为 `0.3.4`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
 
 ```powershell
 python -m venv .venv
@@ -51,7 +51,7 @@ python -m venv .venv
 .\.venv\Scripts\cn-fund-lookthrough.exe demo --out-dir reports/demo --auto-name
 ```
 
-工具名与仓库名相同；在已激活的环境中可以直接输入工具名。Linux/macOS 使用 `.venv/bin/python` 和 `.venv/bin/cn-fund-lookthrough`。教学结果写入当前工作目录；`--auto-name` 自动另选新名字，旧结果保留。不加该参数时，教学入口拒绝已有目录。`cn-fund-lookthrough run --help` 查看原生参数，原来的命令继续兼容。pip 安装提供 CLI；作为 Skill 使用仍须保留完整源码及许可资源，不能只复制 SKILL.md。安装可能需要联网获取普通构建依赖；教学离线。下面保留原生入口及此前发行记录，安装步骤和对应版本以本节为准。
+工具名与仓库名相同；在已激活的环境中可以直接输入工具名。Linux/macOS 使用 `.venv/bin/python` 和 `.venv/bin/cn-fund-lookthrough`。教学结果写入当前工作目录；`--auto-name` 自动另选新名字，旧结果保留。不加该参数时，教学入口拒绝已有目录。`cn-fund-lookthrough run --help` 查看原生参数，原来的命令继续兼容。pip 安装提供 CLI；作为 Skill 使用仍须保留完整源码及许可资源，不能只复制 SKILL.md。安装可能需要联网获取普通构建依赖；教学离线。原生入口与当前安装步骤见下文；历史版本说明见 CHANGELOG。
 
 导入自己的资料前，可先运行 `python -m cnlookthrough input.json --validate-only`；[输入契约索引](examples/INPUT_CONTRACTS.md)列出字段、入口与预检限制。
 
@@ -174,16 +174,8 @@ JSON文件限制16 MiB，结构上限与路径展开限制分别适用，不能�
 本轮新增独立跨期披露比较。独立入口、底稿与限制见 [EXPANSION.md](EXPANSION.md)。
 
 
+## 参与、更新与清理
 
-## v0.3.2 本轮补强
-
-新增可独立安装运行的跨期披露比较；完整股票口径和未知部分保留，报告增加比例解释。各仓独立使用要求继续保留，CRM不在本轮。历史报告、tag和原始证据摘要不改写。
-
-
-[本轮审计范围与未认证事项](AUDIT_SCOPE.md)。
-
-## v0.3.3 缺口修正与数据入口
-
-清理重复使用者页面的发布残留，新增英文项目入口及版本变更索引；独立使用和历史冻结记录保持。
+[贡献说明](CONTRIBUTING.md) · [安全反馈](SECURITY.md) · [更新、缓存与卸载](LIFECYCLE.md)。
 
 [English introduction](README.en.md) · [版本变更](CHANGELOG.md)。
