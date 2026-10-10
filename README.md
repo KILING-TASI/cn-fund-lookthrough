@@ -1,20 +1,52 @@
-# 中国基金持仓穿透 · cn-fund-lookthrough
+# 中国基金持仓穿透
 
-看清多只基金背后是否重复持有同一批公司；嵌套路径与未知余额一起保留。
+看基金是否买了同一批公司，并保留联接基金、FOF的投资路径和暂时看不清的部分。
 
-本仓同时提供[Skill入口](SKILL.md)和独立Python CLI引擎。Skill的frontmatter `name`为`cn-fund-lookthrough`，仓库/安装包同名，运行模块为`cnlookthrough`。使用Skill时需保留整个项目目录及`README.md`、`examples/`、`cnlookthrough/`等资源，不能只复制一个`SKILL.md`。CLI可单独运行；工作台也可显式调用，运行不依赖工作台或其他自家专业仓，不自动改动已安装Skill。
+[![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) [![测试](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/KILING-TASI/cn-fund-lookthrough/actions/workflows/tests.yml)
 
-## 安装前提与Windows入口
+## 先试一次
 
-Python 3.10+（CI验证3.10/3.12）。已有源码时，JSON分析、教学报告和情景入口只用标准库，直接运行无需pip或联网；只读取本地声明输入，不自动下载持仓原文。
+下载或克隆本仓库后，在仓库根目录运行。需要 **Python 3.10+**；这个教学例子只用标准库，不安装依赖、不联网。
 
 ```powershell
 python -m cnlookthrough examples/demo.json --format html --out "local-data/第一次教学报告.html"
 ```
 
-成功提示在stderr显示结果目录和要打开的文件，并标明输入声明的教学样本。单文件输出只要求目标文件不存在，父目录可已存在；情景批入口要求整个输出目录不存在。重复运行请换新名字，不能覆盖旧报告。
+打开生成的 `local-data/第一次教学报告.html`。终端会提示结果位置，并标明输入声明为教学样本。再次运行时换一个新文件名，旧报告不会被覆盖；父目录可以复用。
 
-需要安装后从其他目录运行时，在本仓根目录建立独立环境（无需激活脚本）：
+## 结果是什么样
+
+教学组合中，**84%的权重能解释，16%仍未知**；公司A占组合52.4%。这些数字说明已知部分的结构，不代表实际账户，也不是实时持仓。已映射股票约相当于2.13个等权公司，不能据此说整个组合只有这些风险来源。
+
+[打开实际生成的教学HTML（下载后查看）](examples/readme-preview.html) · [查看教学输入](examples/demo.json) · [查看生成记录](examples/readme-preview-manifest.json)
+
+想看筛选、排序和保存输入的效果，可打开[另一份实际教学报告](examples/filter-sort-preview.html)。只改变表格显示，不重新计算。以上报告保持原样，尚未完成浏览器视觉验收。
+
+## 能做什么，哪些还不能判断
+
+| 要看什么 | 当前能给出的结果 |
+|---|---|
+| 联接基金、FOF是否绕了几层买到同一证券 | 按每条投资路径乘权重，再汇总；重复路径分别保留 |
+| 子基金缺报告，或只取得部分持仓 | 把缺失、循环和未披露余额列为未知，不填零，不把已知部分放大到100% |
+| 多只基金是否重复买了同一家公司 | 分别展示证券和有依据的公司敞口；没有公司映射就保留缺口 |
+| A/C份额、A/H证券是否应该合并 | 依据明确关系处理，不仅凭名称合并；A/H证券与公司层分别记录 |
+| 本地基金报告中的完整股票表 | 限定睿远成长价值年报/中报及华夏成长2025年报，核对净资产分母和股票金额，保留原表位置 |
+
+本工具读取你已取得的资料，不自动下载报告或采集全市场。它不能还原逐日交易、确认当前真实仓位，或仅凭持仓重叠判断基金该不该卖。不同报告期不当作同时持仓；季报前十大不能当成完整股票表。
+
+外币换算、杠杆、衍生品Delta、发行人自动识别和收益回测暂不支持。限定PDF解析不能套用到任意管理人或扫描件，QDII格式尚未迁移。具体支持条件见[报告适配与转换说明](ROADMAP.md)、[华夏选定样本及未核项](SECOND_MANAGER.md)。
+
+## 独立使用，也可以通过Skill调用
+
+本仓有[Skill入口](SKILL.md)，其 `name` 是 **`cn-fund-lookthrough`**；同时提供可独立运行的Python引擎。仓库和安装包叫 `cn-fund-lookthrough`，命令模块叫 `cnlookthrough`。
+
+使用Skill时保留整个项目目录，包括 `SKILL.md`、`README.md`、`examples/`、`cnlookthrough/` 等资源，不要只复制一个说明文件。CLI和Skill都不依赖其他自家仓库、作者缓存或行情账户，也不会自动改动已安装Skill。
+
+[research-workbench](https://github.com/KILING-TASI/research-workbench)可以显式调用本引擎来组织研究与报告，但不是运行本工具的前提。本仓负责披露持仓穿透，不替代基金综合评价或交易决策。
+
+### 安装后使用
+
+如果希望在其他目录调用，在仓库根目录安装到单独的虚拟环境。下面是Windows示例，不需要激活脚本：
 
 ```powershell
 python -m venv .venv
@@ -22,118 +54,40 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m cnlookthrough examples/demo.json --out "local-data/第一次教学底稿.json" --human
 ```
 
-安装构建需要普通第三方`setuptools>=68`，pip可能联网下载；核心无第三方运行依赖。限定PDF入口可选依赖为`pdfplumber>=0.11,<0.12`及其普通第三方依赖，在当前源码/版本环境安装：
+这里仍从仓库目录读取示例；换到其他目录运行时，传入自己输入文件的完整路径。安装构建需要普通第三方 `setuptools>=68`，pip可能联网下载；分析核心没有第三方运行依赖。
+
+限定PDF入口另需 `pdfplumber>=0.11,<0.12` 及其第三方依赖。在同一源码版本和环境中安装：
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install ".[pdf]"
 .\.venv\Scripts\python.exe -m cnlookthrough.report_cli --help
 ```
 
-这一步可能联网，程序不会自动安装。已安装依赖后解析本地PDF无需自动取数；限定参数与来源要求见[睿远适配说明](ROADMAP.md)和[华夏选定样本](SECOND_MANAGER.md)。可选PDF组件不是所有管理人/季报通用解析能力。上述命令针对当前源码待审版`0.2.0.dev1`；公开旧版`v0.1.0`不能代替当前接口，本说明不更新用户安装。
+安装可能联网，程序不会自动安装。依赖就绪后，解析你提供的本地PDF不需要程序自动取数；参数示例见[睿远入口](ROADMAP.md)和[华夏入口](SECOND_MANAGER.md)。
 
-默认JSON stdout仍为可解析JSON；保存文件时stdout为空。`--human`只在stderr补提示，保存HTML/Markdown自动补位置。限定PDF入口原有stdout成功回执保持不变，JSON本来写入`--out`文件；`--human`或HTML/Markdown只额外写stderr。非法输入保持退出码2，并提示核对相应字段；不存在的输入核对路径，缺PDF组件安装实际pdf extra，旧文件始终不覆盖。
+主引擎的默认JSON stdout保持可解析格式；`--human`只向stderr补使用提示。保存HTML或Markdown时自动提示打开位置。目标文件已存在就换新名字；缺PDF组件按上面的命令安装；输入无效时核对提示指出的字段。PDF入口的JSON写入指定文件，原有终端回执保留。详细输入示例与边界见下方。
 
-## 先看结果，再试一次
+### 准备自己的输入
 
-[实际生成的教学HTML预览（下载后打开）](examples/readme-preview.html) · [对应输入](examples/demo.json) · [生成与版本记录](examples/readme-preview-manifest.json)
+参考[完整教学输入](examples/demo.json)：根持仓权重按同一估值日的人民币市值换算，合计为1，不能直接用份额数量代替市值。每条基金持仓权重相对于父节点净资产；前十大不能重新归一。
 
-教学样本可解释84%的组合，16%未知；已映射股票约等效2.13个等权公司。这不是整个组合的风险来源数，也不是实际账户。 预览生成于2026-10-09，尚未取得截图或完成浏览器视觉验收；不是已发布版本的验收证明。
+`asOf`记录资料截止日，`currency`记录统一币种；`positions`列根持仓，`nodes`保存来源、报告期、实际公开日及持仓，`securities`保存证券分类和有依据的公司映射。缺公司身份不猜名称关系。日期、分母和未知处理见[方法说明](METHODS.md)及[中国公募情景](CN_SCENARIOS.md)。
 
-在仓库根目录运行，Python 3.10+，此教学demo只用标准库、不联网：
+## 当前源码与旧发布包
 
-```bash
-python -m cnlookthrough examples/demo.json --format html --out local-data/report.html
-```
+当前源码版本为 **`0.2.0.dev1`**。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；公开Release仍为 **`v0.1.0`研究预览版**，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。
 
-打开 `local-data/report.html`。输出文件须不存在，父目录可复用；重复运行请换新文件名，不覆盖旧结果。限定PDF接口需要另装可选依赖，下面的教学demo不需要。
+[查看公开Release](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.1.0) · [查看源码版本与可选依赖](pyproject.toml)
 
-[返回主包按问题导航](https://github.com/KILING-TASI/research-workbench/blob/codex/bounded-research-extensions/references/tool-navigation.md)；本工具可单独使用，不强制安装主包。
+## 验证、来源与许可
 
-独立可运行的披露持仓分析工具。回答“我的基金是否重复持有同一批公司”，保留ETF联接、FOF子基金的投资路径与未知余额。
+CI在Windows/Linux、Python 3.10/3.12检查测试、单仓安装及教学报告。隔离安装不依赖主工作台；这不是全新操作系统验收，也不证明真实基金全覆盖。自然语言发现、浏览器视觉及旧Release的重新安装验收尚未完成。
 
-Python 3.10+，计算核心只用标准库，不依赖research-workbench、行情账户或API密钥。输入由使用者或AI从公开报告整理，本版不自动下载基金PDF。首批开发版可用可选pdf组件解析限定睿远成长价值年报/中报完整股票表，具体验收范围见ROADMAP.md；不适用于任意管理人或季报。
+- [披露穿透情景与实际结果](SCENARIOS.md)：嵌套、未知、缺证据和失败实例。
+- [中国公募情景与官方口径](CN_SCENARIOS.md)：季报范围、A/C市值、A/H身份与转换反例。
+- [华夏选定原文样本](SECOND_MANAGER.md)与[睿远样本记录](validation/limited-real-samples.json)：限定版式、金额核对及证据缺口。
+- [历史截图尝试记录（2026-10-09）](https://github.com/KILING-TASI/cn-fund-lookthrough/blob/4b4a4c86d12cb5afb7f19ac87b8325edf0bde036/README.md#结果表筛选与排序待审)：原HTML未取得截图，未绕过浏览器策略。
 
-## 版本状态
+原创代码采用[MIT许可](LICENSE)，原贡献者版权保留。[第三方与资料权利](THIRD_PARTY_NOTICES.md)单独说明；代码许可不授权再分发报告原件、公告或数据，本仓不打包原始PDF、私人账户或作者缓存。
 
-更新日期：2026-10-09。公开发布为 `v0.1.0`（研究预览版）；当前分支为 `0.2.0.dev1`，增量尚未发布，不能用旧发布包调用新接口。
-
-基础教学示例与当前开发接口分开：先运行下面的离线示例；限定原文适配、真实样本和未完成项见[开发路线](ROADMAP.md)。原始报告不随源码分发。
-
-## 五分钟试用
-
-下载仓库，在仓库目录运行：
-
-```bash
-python -m cnlookthrough examples/demo.json
-python -m cnlookthrough examples/demo.json --format markdown
-python -m cnlookthrough examples/demo.json --format html --out local-data/report.html
-python -m unittest discover -s tests -v
-```
-
-也可以 `python -m pip install .` 后在其他目录运行。示例是虚构基金和公司，不是投资推荐。输出文件必须不存在。HTML是可直接打开的轻量文字报告，不需要启动服务。
-
-## 交付什么
-
-- 沿根持仓→联接基金→ETF或FOF子基金递归乘权重，保留逐条路径。
-- 子基金缺报告、循环引用、深度上限及未披露余额列为未知，不填零。
-- 证券敞口与发行人敞口分别汇总。AH证券或不同份额不会仅凭名字自动合并；公司映射由调用者提供依据。
-- 已映射股票部分的公司集中度等效数量 `1/HHI`，不是整个组合的独立风险来源数。
-- 每项根持仓被其余持仓复制的公司暴露，以及独有公司暴露占比。独有公司为零不表示产品没有作用，更不等于应该卖出。
-- 中文说明与JSON底稿；报告期不同明确保留，不当作同时持仓。
-
-## 输入
-
-完整格式见 [examples/demo.json](examples/demo.json)。金额组合应先按同一估值日的市值换算根权重；不能把份额和市值混用。
-
-`asOf`为截止日，`currency`为统一币种；`positions`列根持仓唯一id、node和weight，权重用小数且合计1，现金也要明确记录。`nodes`列各披露快照的currency、source、reportDate、publishedAt和holdings。基金边填写kind=fund、node、weight；证券边填写kind、security、weight。节点持仓不足100%的余额留为未知。
-
-`securities`提供证券到kind、issuer、source的映射；明确区分证券和发行人。kind为stock、bond、cash或other。发行人映射缺失时股票证券金额仍保留，但不虚构公司集中度。
-
-首版不支持外币隐含换算、超过100%的毛资产杠杆、衍生品Delta穿透、发行人自动识别、全市场扫描或收益回测。持仓表直接股票可作为一个持仓节点输入。每条权重必须相对于其父节点资产口径，前十大权重不能重新归一到100%。
-
-## 验证与开发
-
-本地已验证嵌套乘权重、未知守恒、循环、未来披露、币种冲突、杠杆拒绝、证券/发行人分层及输出不覆盖。CI在Windows/Linux、Python 3.10/3.12运行同一测试和示例；CI成功不等于真实基金报表全覆盖。
-
-后续优先增加真实基金报告适配与发行人关系证据核验，不承诺完整实时持仓。可与 [research-workbench](https://github.com/KILING-TASI/research-workbench) 的取数与报告流程配合，也可独立使用。两者接口不同；主包支持显式JSON桥，开发版另有限定PDF桥，不自动互换输入。
-
-原创部分采用MIT，见 [LICENSE](LICENSE)。数据与公告使用权属于各自提供方；本仓库不附第三方报告、账户资料或作者行情缓存，不构成投资建议。
-
-## 免责声明
-
-本项目仅供学习与研究，不构成投资建议或交易指令，不保证收益或结果准确性。请在使用前阅读[免责声明与使用边界](DISCLAIMER.md)，并结合本次数据来源、假设与缺口独立判断。代码许可不包含第三方数据使用授权。
-
-
-## 后续与项目关系
-
-已有能力、限定适配、转换契约和验收缺口见[开发路线](ROADMAP.md)。适配和定位代码已实现，限定真实样本结果见路线链接；版本关系与其他管理人等缺口仍保留，不代表全部已完成。
-
-开发分支版本为`0.2.0.dev1`，此前公开发布仍是`v0.1.0`；本批功能待PR审阅，不将本地完成写成已发布。
-
-## 许可范围
-
-[MIT原创许可](LICENSE)（KILING-TASI及原有贡献者版权） · [第三方、示例与数据范围](THIRD_PARTY_NOTICES.md)。第三方保留原许可；代码许可不包含原文、数据或品牌的再分发授权。
-
-## 结果表筛选与排序（待审）
-
-当前HTML可筛选表内文字、按首列名称排序，保存输入及方法摘要。只改变显示，不重新计算或改动未知余额/口径状态；仍需新输出路径，分享前检查保存的输入。原教学预览保持冻结，本次交互未截图、未做浏览器视觉验收。
-
-[本次实际生成的筛选排序HTML](examples/filter-sort-preview.html)沿用[教学输入](examples/demo.json)，保存输入和方法摘要；只做文本与结构检查，未截图/视觉验收。旧readme-preview.html保持冻结。
-
-截图重试记录（2026-10-09）：用户恢复权限后，本地HTML仍被浏览器file协议策略拒绝，且禁止绕过。实际HTML生成与代码验证已完成，三个报告尚未取得浏览器截图或视觉验收；不是合成图替代，也不是许可证或原件核验通过证明。
-
-[方法卡与教学反例](METHODS.md)说明哪些声明被校验、哪些仍需原文；本轮验证规则升级到v2，无schema旧输入仍受理，不自动迁移未知版本。
-
-
-新增限定实测：[第二管理人华夏成长样本](SECOND_MANAGER.md)，132条股票与原文分母/权益合计；仅选定证券单日发行人映射，其他未知。
-
-
-当前待审增量的实现、真实样本、版本与未完成项见[详细交付状态](SECOND_MANAGER.md)；CI不代表原件认证或投资有效，不自动更新已安装版。
-
-## 单仓隔离安装验收（当前待审版）
-
-[披露穿透情景实例](SCENARIOS.md)：复用教学正例，新增FOF共享ETF、缺证据及拒绝实例；可用一条命令生成输入/手算预期/实际CLI报告与版本回执。仅教学验证，不扩大真实基金覆盖。
-
-[中国公募新增情景](CN_SCENARIOS.md)：季报十大/完整股票范围、A/C市值与同名边界、A/H证券与发行人分层；引用官方2026模板及选定历史公告，3组9变体。限定转换新增全份额范围/显式分母校验，旧engine输入与冻结结果不改。
-
-2026-10-10：仅本仓git源码归档构建wheel，在新目录、新venv且清除作者路径/缓存环境后，用已安装包生成教学HTML与JSON；未安装主工作台或其他自家库。模块origin位于新venv，报告教学标记、数值/未知状态与版本核对通过；重复输出拒绝，缺PDF组件不作为原页通过。CI新增同仓导出安装检查。宿主仍有其他仓库，此为目录/进程隔离，不是全新操作系统；已发布v0.1.0未另验，视觉/自然语言发现未验。
+本项目用于学习与研究，不构成投资建议或交易指令。使用时结合本次来源、假设和缺口判断；完整边界见[免责声明](DISCLAIMER.md)。
