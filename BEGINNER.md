@@ -33,3 +33,6 @@
 改变比例：python -m cnlookthrough.question follow --continue-from reports/overlap-first --weights 50 50 --out-dir reports/overlap-second。复用的是用户已选的快照，不是更新行情；旧输入变动会拒绝复用，方法变化会提示。
 
 中文表格也可用：证券代码,交易所,权重百分数,公司,身份依据。交易所须在原表明确填写上交所、深交所或北交所；不会按数字开头推断。百分数列的3.18或3.18%均表示3.18%，不能填份额或股票部分归一比例。原表、转换表、原值与两份SHA256都会保留；公司未知留空。见 examples/holdings-chinese.csv（纯教学）。
+
+
+本轮新增独立跨期披露比较。独立入口、底稿与限制见 [EXPANSION.md](EXPANSION.md)。

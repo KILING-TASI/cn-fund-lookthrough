@@ -36,7 +36,10 @@ if module:
     wheel = next(wheels.glob('*.whl')); record['wheelSha256']=hashlib.sha256(wheel.read_bytes()).hexdigest()
     with zipfile.ZipFile(wheel) as data:
         record['licenses']=[n for n in data.namelist() if n.endswith(('/LICENSE','/THIRD_PARTY_NOTICES.md'))]
-        assert len(record['licenses']) == 2
+        metadata_licenses=[n for n in record['licenses'] if '.dist-info/' in n]
+        assert len(metadata_licenses)==2
+        assert {Path(n).name for n in metadata_licenses}=={'LICENSE','THIRD_PARTY_NOTICES.md'}
+        assert any('/share/cn-fund-lookthrough/SKILL.md' in n for n in data.namelist())
     run(['-m','pip','install','--no-index','--no-deps',wheel])
     sample=work/'demo.json';sample.write_bytes((source/'examples/demo.json').read_bytes())
     cmd=['-I','-m',module,sample,'--format','html','--out',work/'report.html']

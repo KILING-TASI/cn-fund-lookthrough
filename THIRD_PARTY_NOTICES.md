@@ -18,3 +18,5 @@ examples/demo.json是虚构教学输入；readme-preview.html由其实际计算�
 
 
 本批主包六列旧辅助名迁移仅复用现有report_adapter核心，legacy_domestic_rows/legacy_domestic_result只投影旧输出（省略新增坐标字段），不复制第二份排序/核算算法。原迁入版权与MIT出处继续保留。主包的九列QDII及其他未证路径仍暂未迁移，不能称全部持仓算法已去重。
+
+本轮新增研究复查、报告说明及合成教学为作者原创MIT；同作者随包通用I/O代码独立保留，不要求其他仓库安装。规则有限事实和来源链接不改变原文权利；未捆绑实际公告/研报PDF或私人账户资料。

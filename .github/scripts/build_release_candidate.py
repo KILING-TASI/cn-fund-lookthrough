@@ -8,7 +8,7 @@ import sys
 import tarfile
 import zipfile
 
-VERSION = '0.3.1'
+VERSION = '0.3.2'
 REPO = Path(__file__).resolve().parents[2]
 
 
@@ -60,7 +60,7 @@ def build(out, work):
     with zipfile.ZipFile(wheel) as archive:
         names = archive.namelist()
         assert any(n.endswith('/share/cn-fund-lookthrough/examples/demo.json') for n in names)
-        assert len([n for n in names if n.endswith(('/LICENSE', '/THIRD_PARTY_NOTICES.md'))]) == 2
+        assert len([n for n in names if '.dist-info/licenses/' in n and n.endswith(('/LICENSE', '/THIRD_PARTY_NOTICES.md'))]) == 2
         metadata = archive.read(next(n for n in names if n.endswith('/METADATA'))).decode()
         assert 'Version: ' + VERSION in metadata.splitlines()
         assert not any(n.endswith(('.pdf', '.pyc')) for n in names)

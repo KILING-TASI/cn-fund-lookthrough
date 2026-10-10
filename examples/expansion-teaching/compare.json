@@ -1,0 +1,45 @@
+{
+  "teaching": true,
+  "before": {
+    "id": "900001",
+    "adapterProfile": "ruiyuan-growth-six-column-v1",
+    "disclosureScope": "completeEquity",
+    "portfolioScope": "fund-all-share-classes",
+    "currency": "CNY",
+    "reportDate": "2025-12-31",
+    "publishedAt": "2026-03-27",
+    "sourceUrl": "https://example.org/teaching",
+    "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "holdings": [
+      {
+        "code": "900001",
+        "securityNamespace": "CN-equity",
+        "weight": 0.2
+      },
+      {
+        "code": "900002",
+        "securityNamespace": "CN-equity",
+        "weight": 0.3
+      }
+    ]
+  },
+  "after": {
+    "id": "900001",
+    "adapterProfile": "ruiyuan-growth-six-column-v1",
+    "disclosureScope": "completeEquity",
+    "portfolioScope": "fund-all-share-classes",
+    "currency": "CNY",
+    "reportDate": "2026-06-30",
+    "publishedAt": "2026-08-27",
+    "sourceUrl": "https://example.org/teaching",
+    "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "holdings": [
+      {
+        "code": "900001",
+        "securityNamespace": "CN-equity",
+        "weight": 0.25
+      }
+    ]
+  },
+  "asOf": "2026-10-11"
+}
