@@ -1,0 +1,11 @@
+{
+  "id": "top10-conversion",
+  "group": "disclosure-scope",
+  "input": "examples/cn-scenarios/top10-conversion.json",
+  "expected": {
+    "conversionErrorContains": "限定完整股票表"
+  },
+  "rationale": "现有转换仅支持限定完整股票/全份额净资产；显式错误不得被转换丢弃。",
+  "entry": "to-spec",
+  "asOf": "2026-10-10"
+}

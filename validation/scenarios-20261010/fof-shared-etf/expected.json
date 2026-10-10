@@ -1,0 +1,20 @@
+{
+  "id": "fof-shared-etf",
+  "input": "examples/scenarios/fof-shared-etf.json",
+  "expected": {
+    "knownExposure": 0.825,
+    "unknownExposure": 0.175,
+    "issuerExposure": {
+      "教学公司A": 0.5,
+      "教学公司B": 0.3,
+      "教学公司C": 0.025
+    },
+    "pathCount": 6,
+    "securityExposure": {
+      "CN-SSE:DEMO-A": 0.5,
+      "CN-SSE:DEMO-B": 0.3,
+      "CN-SSE:DEMO-C": 0.025
+    }
+  },
+  "rationale": "两根路径均到ETF，分别保留再汇总。A=0.5×0.9×0.6+0.5×0.6×0.6+0.5×0.2×0.5=0.5；未知=0.05+0.10+0.025=0.175。"
+}

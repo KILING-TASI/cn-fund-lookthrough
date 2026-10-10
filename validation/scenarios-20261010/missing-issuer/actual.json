@@ -1,0 +1,114 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-09-30",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-SSE:DEMO-A": 0.524,
+    "CN-SSE:DEMO-B": 0.21600000000000003,
+    "CN-SSE:DEMO-C": 0.1
+  },
+  "issuerExposure": {},
+  "knownExposure": 0.8400000000000001,
+  "unknownExposure": 0.15999999999999998,
+  "unmappedStockIssuerExposure": 0.84,
+  "effectiveMappedEquityIssuers": null,
+  "reportDates": [
+    "2026-06-30"
+  ],
+  "paths": [
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.324,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "联接基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-B",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.21600000000000003,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-B"
+      ],
+      "rootPosition": "联接基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.2,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "主动基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-C",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.1,
+      "path": [
+        "active",
+        "CN-SSE:DEMO-C"
+      ],
+      "rootPosition": "主动基金",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.059999999999999984,
+      "path": [
+        "feeder"
+      ],
+      "rootPosition": "联接基金",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.1,
+      "path": [
+        "active"
+      ],
+      "rootPosition": "主动基金",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "联接基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    },
+    {
+      "rootPosition": "主动基金",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

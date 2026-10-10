@@ -1,0 +1,1891 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-10-09",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-equity:300308": 0.04569641932378323,
+    "CN-equity:002475": 0.028443511028937614,
+    "CN-equity:688347": 0.0257139076019054,
+    "CN-equity:002371": 0.025672326775084915,
+    "CN-equity:688256": 0.024646424304930442,
+    "CN-equity:601689": 0.024019764551678688,
+    "CN-equity:300502": 0.02255069124009102,
+    "CN-equity:688041": 0.02154166468232931,
+    "CN-equity:688019": 0.02092208709090013,
+    "CN-equity:603986": 0.020543911533367726,
+    "CN-equity:688012": 0.020340661640865176,
+    "CN-equity:601100": 0.02032575403533537,
+    "CN-equity:600276": 0.018256199822588456,
+    "CN-equity:688361": 0.01771846712306838,
+    "CN-equity:688981": 0.017590976639737972,
+    "CN-equity:688120": 0.015336173899974779,
+    "CN-equity:300750": 0.014910634133207009,
+    "CN-equity:300274": 0.014504871613277855,
+    "CN-equity:603119": 0.01272586608323477,
+    "CN-equity:600183": 0.012066476082361948,
+    "CN-equity:002126": 0.011264936915530686,
+    "CN-equity:688072": 0.011241993363116107,
+    "CN-equity:688111": 0.010951337777350826,
+    "CN-equity:688692": 0.010329103807438038,
+    "CN-equity:300593": 0.010133572571354612,
+    "CN-equity:688698": 0.008694571269720727,
+    "CN-equity:000738": 0.008254000867816103,
+    "CN-equity:688235": 0.00823386263969542,
+    "CN-equity:300054": 0.008136414310416807,
+    "CN-equity:301413": 0.008060167349053309,
+    "CN-equity:002050": 0.007957195473601679,
+    "CN-equity:600562": 0.007698727400242889,
+    "CN-equity:688027": 0.007273183894677175,
+    "CN-equity:300870": 0.006674912064667105,
+    "CN-equity:601138": 0.0066724229378023,
+    "CN-equity:688615": 0.006464175052215236,
+    "CN-equity:688037": 0.006278357904427029,
+    "CN-equity:688502": 0.006181745104551396,
+    "CN-equity:300476": 0.006061484285092166,
+    "CN-equity:603121": 0.005764150419619989,
+    "CN-equity:002851": 0.005652429484569959,
+    "CN-equity:002916": 0.0055739676089085815,
+    "CN-equity:688052": 0.005566083069720175,
+    "CN-equity:002850": 0.00537797583668379,
+    "CN-equity:688369": 0.005296949778980652,
+    "CN-equity:002821": 0.005284477625750986,
+    "CN-equity:603993": 0.005275178302265647,
+    "CN-equity:688337": 0.005249248965562022,
+    "CN-equity:601600": 0.005247891206446491,
+    "CN-equity:603259": 0.005237588740998948,
+    "CN-equity:300624": 0.005179476311706437,
+    "CN-equity:300170": 0.005153956802420141,
+    "CN-equity:300007": 0.0051231474729088455,
+    "CN-equity:688385": 0.0050191149093335675,
+    "CN-equity:601899": 0.0050071636952841924,
+    "CN-equity:688234": 0.004982931136094065,
+    "CN-equity:002463": 0.004976210670624204,
+    "CN-equity:002315": 0.00497213000080918,
+    "CN-equity:002028": 0.004890201632915,
+    "CN-equity:301196": 0.004886151608984769,
+    "CN-equity:301000": 0.004862309791635941,
+    "CN-equity:688088": 0.004801365852843529,
+    "CN-equity:688626": 0.004677524810867935,
+    "CN-equity:688018": 0.004674406592090308,
+    "CN-equity:301550": 0.00460479957243183,
+    "CN-equity:688375": 0.004558875014926357,
+    "CN-equity:688095": 0.004547772337755507,
+    "CN-equity:002173": 0.004469328417177519,
+    "CN-equity:688767": 0.004353333743238273,
+    "CN-equity:002478": 0.00399738792055147,
+    "CN-equity:000534": 0.0038437430745956024,
+    "CN-equity:300430": 0.0038344805261720143,
+    "CN-equity:300115": 0.003336162094975651,
+    "CN-equity:601168": 0.0031039759324148265,
+    "CN-equity:600875": 0.0030962082221494456,
+    "CN-equity:000933": 0.0030858202887343138,
+    "CN-equity:688249": 0.0030550837431994,
+    "CN-equity:300753": 0.0029481341170291744,
+    "CN-equity:603667": 0.002849933805839722,
+    "CN-equity:300421": 0.002816636711502945,
+    "CN-equity:001309": 0.0027952131949740694,
+    "CN-equity:605060": 0.0027914069760828527,
+    "CN-equity:300458": 0.002779318196061743,
+    "CN-equity:688271": 0.002564252697550025,
+    "CN-equity:688552": 0.002459735690638146,
+    "CN-equity:300408": 0.0020376448798468793,
+    "CN-equity:603308": 0.0019774853054502373,
+    "CN-equity:002782": 0.0019422871447268382,
+    "CN-equity:002602": 0.0019233922542031664,
+    "CN-equity:688795": 0.0015338825681575669,
+    "CN-equity:688273": 0.0010317508218451088,
+    "CN-equity:300236": 0.0010290969835648393,
+    "CN-equity:688580": 0.000977683131770253,
+    "CN-equity:688802": 0.0005431825082891846,
+    "CN-equity:688759": 0.0001074076152980548,
+    "CN-equity:688790": 9.244342384452807e-05,
+    "CN-equity:301656": 6.411006730326482e-05,
+    "CN-equity:001280": 3.516946255484009e-05,
+    "CN-equity:688729": 2.8977863334135664e-05,
+    "CN-equity:688809": 1.7930324920223976e-05,
+    "CN-equity:301638": 1.1235332990821225e-05,
+    "CN-equity:001386": 1.0259486296671666e-05,
+    "CN-equity:688727": 6.684824305848293e-06,
+    "CN-equity:001233": 6.536290512456136e-06,
+    "CN-equity:688796": 6.085506572651438e-06,
+    "CN-equity:688807": 6.04689616291132e-06,
+    "CN-equity:301632": 5.2895069559552506e-06,
+    "CN-equity:301563": 5.007503524095558e-06,
+    "CN-equity:301491": 4.597546713030961e-06,
+    "CN-equity:301584": 4.082215729656842e-06,
+    "CN-equity:001369": 3.937087034574952e-06,
+    "CN-equity:301609": 3.8662269387382955e-06,
+    "CN-equity:301687": 3.6114642933607387e-06,
+    "CN-equity:001221": 3.1021807645856536e-06,
+    "CN-equity:301667": 2.934367304560765e-06,
+    "CN-equity:688805": 2.9209103560385897e-06,
+    "CN-equity:603418": 2.7953609762407347e-06,
+    "CN-equity:603175": 2.794441599696963e-06,
+    "CN-equity:603092": 2.7671054704621394e-06,
+    "CN-equity:001285": 2.6161234113849e-06,
+    "CN-equity:301668": 2.5170486709493714e-06,
+    "CN-equity:301449": 2.4876831031216286e-06,
+    "CN-equity:601026": 2.1929786545646397e-06,
+    "CN-equity:301575": 2.1259050280490003e-06,
+    "CN-equity:603406": 2.092255846546942e-06,
+    "CN-equity:603262": 1.4830905690367947e-06,
+    "CN-equity:603248": 1.4430806638911575e-06,
+    "CN-equity:001388": 1.3744202615629335e-06,
+    "CN-equity:603370": 1.2941757147831813e-06,
+    "CN-equity:603376": 9.906486565042906e-07,
+    "CN-equity:603334": 9.834468735780757e-07,
+    "CN-equity:001396": 8.314943614824107e-07
+  },
+  "issuerExposure": {},
+  "knownExposure": 0.794172019762883,
+  "unknownExposure": 0.20582798023711701,
+  "unmappedStockIssuerExposure": 0.7941720197628831,
+  "effectiveMappedEquityIssuers": null,
+  "reportDates": [
+    "2025-12-31"
+  ],
+  "paths": [
+    {
+      "security": "CN-equity:300308",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.04569641932378323,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300308"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002475",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.028443511028937614,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002475"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688347",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0257139076019054,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688347"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002371",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.025672326775084915,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002371"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688256",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.024646424304930442,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688256"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601689",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.024019764551678688,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601689"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300502",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.02255069124009102,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300502"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688041",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.02154166468232931,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688041"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688019",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.02092208709090013,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688019"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603986",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.020543911533367726,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603986"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688012",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.020340661640865176,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688012"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601100",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.02032575403533537,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601100"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:600276",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.018256199822588456,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:600276"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688361",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.01771846712306838,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688361"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688981",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.017590976639737972,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688981"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688120",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.015336173899974779,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688120"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300750",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.014910634133207009,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300750"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300274",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.014504871613277855,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300274"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603119",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.01272586608323477,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603119"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:600183",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.012066476082361948,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:600183"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002126",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.011264936915530686,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002126"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688072",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.011241993363116107,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688072"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688111",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.010951337777350826,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688111"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688692",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.010329103807438038,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688692"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300593",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.010133572571354612,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300593"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688698",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.008694571269720727,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688698"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:000738",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.008254000867816103,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:000738"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688235",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.00823386263969542,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688235"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300054",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.008136414310416807,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300054"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301413",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.008060167349053309,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301413"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002050",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.007957195473601679,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002050"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:600562",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.007698727400242889,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:600562"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688027",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.007273183894677175,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688027"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300870",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.006674912064667105,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300870"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601138",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0066724229378023,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601138"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688615",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.006464175052215236,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688615"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688037",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.006278357904427029,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688037"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688502",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.006181745104551396,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688502"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300476",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.006061484285092166,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300476"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603121",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005764150419619989,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603121"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002851",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005652429484569959,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002851"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002916",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0055739676089085815,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002916"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688052",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005566083069720175,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688052"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002850",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.00537797583668379,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002850"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688369",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005296949778980652,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688369"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002821",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005284477625750986,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002821"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603993",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005275178302265647,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603993"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688337",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005249248965562022,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688337"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601600",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005247891206446491,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601600"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603259",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005237588740998948,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603259"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300624",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005179476311706437,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300624"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300170",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.005153956802420141,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300170"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300007",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0051231474729088455,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300007"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688385",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0050191149093335675,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688385"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601899",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0050071636952841924,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601899"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688234",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004982931136094065,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688234"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002463",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004976210670624204,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002463"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002315",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.00497213000080918,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002315"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002028",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004890201632915,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002028"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301196",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004886151608984769,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301196"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301000",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004862309791635941,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301000"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688088",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004801365852843529,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688088"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688626",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004677524810867935,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688626"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688018",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004674406592090308,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688018"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301550",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.00460479957243183,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301550"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688375",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004558875014926357,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688375"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688095",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004547772337755507,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688095"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002173",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004469328417177519,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002173"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688767",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.004353333743238273,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688767"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002478",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.00399738792055147,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002478"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:000534",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0038437430745956024,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:000534"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300430",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0038344805261720143,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300430"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300115",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.003336162094975651,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300115"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601168",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0031039759324148265,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601168"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:600875",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0030962082221494456,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:600875"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:000933",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0030858202887343138,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:000933"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688249",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0030550837431994,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688249"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300753",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0029481341170291744,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300753"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603667",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.002849933805839722,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603667"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300421",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.002816636711502945,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300421"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001309",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0027952131949740694,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001309"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:605060",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0027914069760828527,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:605060"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300458",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.002779318196061743,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300458"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688271",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.002564252697550025,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688271"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688552",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.002459735690638146,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688552"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300408",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0020376448798468793,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300408"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603308",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0019774853054502373,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603308"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002782",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0019422871447268382,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002782"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:002602",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0019233922542031664,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:002602"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688795",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0015338825681575669,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688795"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688273",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0010317508218451088,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688273"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:300236",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0010290969835648393,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:300236"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688580",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.000977683131770253,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688580"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688802",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0005431825082891846,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688802"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688759",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.0001074076152980548,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688759"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688790",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 9.244342384452807e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688790"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301656",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 6.411006730326482e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301656"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001280",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 3.516946255484009e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001280"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688729",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.8977863334135664e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688729"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688809",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.7930324920223976e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688809"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301638",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.1235332990821225e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301638"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001386",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.0259486296671666e-05,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001386"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688727",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 6.684824305848293e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688727"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001233",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 6.536290512456136e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001233"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688796",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 6.085506572651438e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688796"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688807",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 6.04689616291132e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688807"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301632",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 5.2895069559552506e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301632"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301563",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 5.007503524095558e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301563"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301491",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 4.597546713030961e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301491"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301584",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 4.082215729656842e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301584"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001369",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 3.937087034574952e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001369"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301609",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 3.8662269387382955e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301609"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301687",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 3.6114642933607387e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301687"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001221",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 3.1021807645856536e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001221"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301667",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.934367304560765e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301667"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:688805",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.9209103560385897e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:688805"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603418",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.7953609762407347e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603418"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603175",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.794441599696963e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603175"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603092",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.7671054704621394e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603092"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001285",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.6161234113849e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001285"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301668",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.5170486709493714e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301668"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301449",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.4876831031216286e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301449"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:601026",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.1929786545646397e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:601026"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:301575",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.1259050280490003e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:301575"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603406",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 2.092255846546942e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603406"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603262",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.4830905690367947e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603262"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603248",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.4430806638911575e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603248"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001388",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.3744202615629335e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001388"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603370",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 1.2941757147831813e-06,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603370"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603376",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 9.906486565042906e-07,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603376"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:603334",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 9.834468735780757e-07,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:603334"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:001396",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 8.314943614824107e-07,
+      "path": [
+        "fund:000001:2025-12-31",
+        "CN-equity:001396"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf sha256=6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+      "reportDate": "2025-12-31"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.20582798023711701,
+      "path": [
+        "fund:000001:2025-12-31"
+      ],
+      "rootPosition": "disclosed-fund",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "disclosed-fund",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "batch": "bounded-scenarios-20261010",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "sampleType": "synthetic-teaching-only",
+  "cases": [
+    {
+      "id": "existing-demo",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "54414beeae949a0c9fc928145e2db73c9bbcf6b3ce86d8eda938c63dec844069",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "issuerExposure": {
+          "教学公司A": 0.524,
+          "教学公司B": 0.216,
+          "教学公司C": 0.1
+        },
+        "pathCount": 4
+      }
+    },
+    {
+      "id": "fof-shared-etf",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "342d378c4266cf2cfd86da77fda737a5b233744332c333aadaf2eab6b76b3d5a",
+      "expected": {
+        "knownExposure": 0.825,
+        "unknownExposure": 0.175,
+        "issuerExposure": {
+          "教学公司A": 0.5,
+          "教学公司B": 0.3,
+          "教学公司C": 0.025
+        },
+        "pathCount": 6,
+        "securityExposure": {
+          "CN-SSE:DEMO-A": 0.5,
+          "CN-SSE:DEMO-B": 0.3,
+          "CN-SSE:DEMO-C": 0.025
+        }
+      }
+    },
+    {
+      "id": "missing-child",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "844707d257afa637fcbd088f61c312a1cde087a361e44aac3cd2a78aa6359288",
+      "expected": {
+        "knownExposure": 0.3,
+        "unknownExposure": 0.7,
+        "unknownReasons": {
+          "子基金资料缺失": 0.54,
+          "未披露或未解析余额": 0.16
+        }
+      }
+    },
+    {
+      "id": "missing-security",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "c5a806bebc50221f68a2f618ff6c6289743ae43b9ba73fa04b8db3c9cb90e17a",
+      "expected": {
+        "knownExposure": 0.624,
+        "unknownExposure": 0.376,
+        "unknownReasons": {
+          "证券身份或分类缺失": 0.216,
+          "未披露或未解析余额": 0.16
+        }
+      }
+    },
+    {
+      "id": "missing-issuer",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "6e465c391b5fe8168e4a6dc21da1cf76eee5e44dde9ce6fc9f1150348ee7b8bd",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "unmappedStockIssuerExposure": 0.84,
+        "effectiveMappedEquityIssuers": null,
+        "issuerExposure": {}
+      }
+    },
+    {
+      "id": "cycle",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "4eae1762d956eef0c2816b5d26d990aeb31c0585fe516fff3079e99227ff0f51",
+      "expected": {
+        "knownExposure": 0.3,
+        "unknownExposure": 0.7,
+        "unknownReasons": {
+          "循环投资关系": 0.54,
+          "未披露或未解析余额": 0.16
+        }
+      }
+    },
+    {
+      "id": "publication-at-cutoff",
+      "passed": true,
+      "exitCode": 0,
+      "inputSha256": "03259418b729440d45e2bde64bc207a0d7bc21520e14694c0aa63b190095cebd",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16
+      }
+    },
+    {
+      "id": "future-disclosure",
+      "passed": true,
+      "exitCode": 2,
+      "inputSha256": "fb17b4d0df86c89c91867da2aa2939c7f3dc4c1fffdf0f04c20e2b65e86ac5b8",
+      "expected": {
+        "errorContains": "披露时间或报告期超出截止日"
+      }
+    },
+    {
+      "id": "wrong-denominator",
+      "passed": true,
+      "exitCode": 2,
+      "inputSha256": "96599382422da8004a3c9f07050a67a6070cfd7d6e3f9809fdac84242b7f8fd9",
+      "expected": {
+        "errorContains": "持仓须基于父节点净资产"
+      }
+    },
+    {
+      "id": "renormalized",
+      "passed": true,
+      "exitCode": 2,
+      "inputSha256": "c1e3486926b1fd7fbfdecd73e2116d5316048ac8595a3117803979ce9bfc170e",
+      "expected": {
+        "errorContains": "持仓须基于父节点净资产"
+      }
+    },
+    {
+      "id": "missing-source",
+      "passed": true,
+      "exitCode": 2,
+      "inputSha256": "ab6083c40bf2a98be075b49bf94a9d7d6c91e43eaeadf433b4e5fc01041ee00e",
+      "expected": {
+        "errorContains": "节点来源缺失"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "cnlookthrough/__init__.py": "1c2a96f007c9f04f74e9e78dffc046a022020f0322ecd325d78c062e5087e742",
+    "cnlookthrough/__main__.py": "d9f1c29a7df1df25a8abc51e0ee2f1a253b3ece0808d16f270a2ff6f6abd6769",
+    "cnlookthrough/engine.py": "38bbea29368c22011c47020904ceb7560bb5108b2ecf1af21d0afeefc62e1037",
+    "cnlookthrough/html_controls.py": "76d24a00fdc945e0e9dee52383c4d0ae5f61952536c762928395daacbf1eecf8",
+    "cnlookthrough/issuer_snapshot.py": "48fc5f7e15f9de664b81c890c059f80aeda0b0acedfa9c2082009bf8e0af2a69",
+    "cnlookthrough/report.py": "5e32fea467fa89d06ca4def795dba82a082aa5119949deb5d16ae2f75e779bd0",
+    "cnlookthrough/report_adapter.py": "b9058f9c6e0efdf0c013df705198b6c655b600425a8b481a4b6f3c3093f175f8",
+    "cnlookthrough/report_cli.py": "e5ec3f67a12a21c8a68e96678a6e87c2f466573fa7432f36d563e53e291ea1d6"
+  },
+  "visualAcceptance": "not-performed"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ah-same-name-unmapped",
+  "group": "ah-identity",
+  "input": "examples/cn-scenarios/ah-same-name-unmapped.json",
+  "expected": {
+    "knownExposure": 0.5,
+    "unknownExposure": 0.5,
+    "unmappedStockIssuerExposure": 0.5,
+    "issuerExposure": {},
+    "effectiveMappedEquityIssuers": null,
+    "securityExposure": {
+      "CN-equity:TEACHING-AH": 0.3,
+      "HK-equity:TEACHING-AH": 0.2
+    }
+  },
+  "rationale": "A/H证券名称相同、排序合并都不是证券合并或发行人认证依据；公司未映射保持未知。"
+}

@@ -1,0 +1,71 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-equity:TEACHING-A": 0.3,
+    "CN-equity:TEACHING-B": 0.4
+  },
+  "issuerExposure": {},
+  "knownExposure": 0.7,
+  "unknownExposure": 0.30000000000000004,
+  "unmappedStockIssuerExposure": 0.7,
+  "effectiveMappedEquityIssuers": null,
+  "reportDates": [
+    "2025-12-31"
+  ],
+  "paths": [
+    {
+      "security": "CN-equity:TEACHING-A",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.3,
+      "path": [
+        "fund:TEACHING-ALL:2025-12-31",
+        "CN-equity:TEACHING-A"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://example.org/synthetic-cn-report sha256=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "reportDate": "2025-12-31"
+    },
+    {
+      "security": "CN-equity:TEACHING-B",
+      "issuer": null,
+      "kind": "stock",
+      "weight": 0.4,
+      "path": [
+        "fund:TEACHING-ALL:2025-12-31",
+        "CN-equity:TEACHING-B"
+      ],
+      "rootPosition": "disclosed-fund",
+      "source": "https://example.org/synthetic-cn-report sha256=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "reportDate": "2025-12-31"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.30000000000000004,
+      "path": [
+        "fund:TEACHING-ALL:2025-12-31"
+      ],
+      "rootPosition": "disclosed-fund",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "disclosed-fund",
+      "mappedEquityExposure": 0.0,
+      "replicatedShare": null,
+      "uniqueIssuerShare": null
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "url": "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf",
+    "sha256": "6f3fd5cf18facae2c457ce364c91d343d01a5dcca9c1d2033d31179d31ce116d",
+    "pages": 61,
+    "publishedAt": "2026-03-31",
+    "obtainedAt": "2026-10-09"
+  },
+  "profile": "chinaamc-growth-2025-six-column-v1",
+  "rows": 132,
+  "denominator": {
+    "netAssetsCNY": "2936772770.95",
+    "physicalPage": 5,
+    "table": 3,
+    "row": 10,
+    "column": 2
+  },
+  "equity": {
+    "CNY": "2332302763.09",
+    "physicalPage": 46,
+    "table": 4,
+    "row": 2,
+    "column": 3
+  },
+  "knownExposure": 0.794172019762883,
+  "unknownExposure": 0.20582798023711701,
+  "legacyComparison": {
+    "equal": true,
+    "selectedFields": [
+      "code",
+      "name",
+      "quantity",
+      "marketValueCNY",
+      "weight"
+    ],
+    "rows": 132,
+    "scope": "same-family helper numeric overlap, not independent PDF audit",
+    "workbenchSourceSha256": "3cdbb91f63f4ce71f144affdc92c8640bd4988d82437a8185e4a7d4a23a889ab"
+  },
+  "issuerMappingScope": "only CN-equity:300308 at 2025-12-31; remaining unknown",
+  "visualStatus": "not-browser-verified"
+}

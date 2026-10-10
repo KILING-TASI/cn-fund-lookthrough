@@ -1,0 +1,8 @@
+{
+  "id": "future-disclosure",
+  "input": "examples/scenarios/future-disclosure.json",
+  "expected": {
+    "errorContains": "披露时间或报告期超出截止日"
+  },
+  "rationale": "报告期早于截止仍不能使用尚未公开的报告。"
+}

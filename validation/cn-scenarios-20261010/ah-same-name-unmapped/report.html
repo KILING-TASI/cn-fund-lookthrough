@@ -1,0 +1,80 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>研究结果</title><style>body{max-width:1000px;margin:32px auto;padding:0 20px;font:17px/1.7 system-ui,sans-serif;color:#203047}pre{white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ddd;padding:10px;text-align:left}input,select{font:inherit;max-width:100%}</style><body><p>截止日 2026-10-10；方法 cn-fund-lookthrough-0.2.0.dev1 / cnlookthrough-nodes-v1 / disclosed-paths-2</p><pre># 基金持仓穿透
+
+本次能解释50.00%的组合权重，另有50.00%仍未知。买了多只基金，不代表底层风险已经分散。
+
+证券先逐项记录，再按有依据的公司身份汇总；不自动把AH股票或不同份额并成同一证券。
+
+## 已映射公司敞口
+
+
+## 哪些持仓给了相同的公司暴露
+
+- 教学基金：未取得可比较的公司映射。这不等于没有配置作用。
+
+## 未知部分
+
+- fund：50.00%，未披露或未解析余额
+
+报告期：2026-06-30。不同披露时点不能当作同时持仓。
+
+- 仅已披露输入快照，不代表当前真实完整持仓
+- 证券与发行人层分别汇总；AH或不同份额不会自动并成同证券
+- 冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖
+- 不同报告期的嵌套权重可能不同时点；覆盖率不是准确率
+</pre><section><label>筛选当前结果 <input id="result-filter" type="search" placeholder="输入名称、状态或期间"></label> <label>排序 <select id="result-sort"><option value="original">原顺序</option><option value="name">首列名称</option></select></label><p id="result-count" aria-live="polite"></p><p>仅筛选、排序本页已保存结果，不重新计算，不更换研究情景，也不改变总量与未知部分。</p><div style="overflow:auto"><table id="result-table"><thead><tr><th scope="col">已映射公司</th><th scope="col">占组合权重</th></tr></thead><tbody></tbody></table></div></section><script>
+(()=>{const q=document.getElementById('result-filter'),s=document.getElementById('result-sort'),t=document.querySelector('#result-table tbody'),rows=Array.from(t.rows);function update(){let count=0;rows.sort((a,b)=>s.value==='name'?a.cells[0].textContent.localeCompare(b.cells[0].textContent,'zh-CN'):Number(a.dataset.order)-Number(b.dataset.order));for(const row of rows){row.hidden=!row.textContent.toLowerCase().includes(q.value.trim().toLowerCase());if(!row.hidden)count++;t.appendChild(row);}document.getElementById('result-count').textContent='显示 '+count+' / '+rows.length+' 条';}q.addEventListener('input',update);s.addEventListener('change',update);update();})();
+</script><details><summary>保存的输入与方法摘要（分享前检查隐私）</summary><pre>{
+  &quot;input&quot;: {
+    &quot;inputSchema&quot;: &quot;cnlookthrough-nodes-v1&quot;,
+    &quot;asOf&quot;: &quot;2026-10-10&quot;,
+    &quot;currency&quot;: &quot;CNY&quot;,
+    &quot;positions&quot;: [
+      {
+        &quot;id&quot;: &quot;教学基金&quot;,
+        &quot;node&quot;: &quot;fund&quot;,
+        &quot;weight&quot;: 1
+      }
+    ],
+    &quot;nodes&quot;: {
+      &quot;fund&quot;: {
+        &quot;currency&quot;: &quot;CNY&quot;,
+        &quot;source&quot;: &quot;虚构中国公募教学披露，不是真实基金&quot;,
+        &quot;reportDate&quot;: &quot;2026-06-30&quot;,
+        &quot;publishedAt&quot;: &quot;2026-08-28&quot;,
+        &quot;weightBasis&quot;: &quot;parent-net-assets&quot;,
+        &quot;holdings&quot;: [
+          {
+            &quot;kind&quot;: &quot;stock&quot;,
+            &quot;security&quot;: &quot;CN-equity:TEACHING-AH&quot;,
+            &quot;weight&quot;: 0.3
+          },
+          {
+            &quot;kind&quot;: &quot;stock&quot;,
+            &quot;security&quot;: &quot;HK-equity:TEACHING-AH&quot;,
+            &quot;weight&quot;: 0.2
+          }
+        ]
+      }
+    },
+    &quot;securities&quot;: {
+      &quot;CN-equity:TEACHING-AH&quot;: {
+        &quot;kind&quot;: &quot;stock&quot;,
+        &quot;issuer&quot;: null,
+        &quot;name&quot;: &quot;同名教学公司&quot;,
+        &quot;source&quot;: &quot;教学证券分类，市值已在披露中折算人民币；不另猜汇率&quot;
+      },
+      &quot;HK-equity:TEACHING-AH&quot;: {
+        &quot;kind&quot;: &quot;stock&quot;,
+        &quot;issuer&quot;: null,
+        &quot;name&quot;: &quot;同名教学公司&quot;,
+        &quot;source&quot;: &quot;教学证券分类，市值已在披露中折算人民币；不另猜汇率&quot;
+      }
+    }
+  },
+  &quot;methodSha256&quot;: {
+    &quot;engine.py&quot;: &quot;38bbea29368c22011c47020904ceb7560bb5108b2ecf1af21d0afeefc62e1037&quot;,
+    &quot;report.py&quot;: &quot;5e32fea467fa89d06ca4def795dba82a082aa5119949deb5d16ae2f75e779bd0&quot;,
+    &quot;html_controls.py&quot;: &quot;76d24a00fdc945e0e9dee52383c4d0ae5f61952536c762928395daacbf1eecf8&quot;,
+    &quot;__main__.py&quot;: &quot;d9f1c29a7df1df25a8abc51e0ee2f1a253b3ece0808d16f270a2ff6f6abd6769&quot;
+  }
+}</pre></details></body></html>

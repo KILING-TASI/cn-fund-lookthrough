@@ -1,0 +1,17 @@
+{
+  "id": "ac-explicit-shared-snapshot",
+  "group": "ac-identity",
+  "input": "examples/cn-scenarios/ac-explicit-shared-snapshot.json",
+  "expected": {
+    "knownExposure": 0.5,
+    "unknownExposure": 0.5,
+    "issuerExposure": {
+      "教学公司": 0.5
+    },
+    "pathWeights": {
+      "教学A类|fund>CN-equity:TEACHING-A": 0.2,
+      "教学C类|fund>CN-equity:TEACHING-A": 0.3
+    }
+  },
+  "rationale": "账户市值12000/30000=40%、18000/30000=60%；不是10000:20000份额权重。显式关联同快照仍保留两根路径；不证明收益/费用相同。"
+}

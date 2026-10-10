@@ -1,0 +1,157 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-09-30",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-SSE:DEMO-A": 0.5,
+    "CN-SSE:DEMO-B": 0.30000000000000004,
+    "CN-SSE:DEMO-C": 0.025
+  },
+  "issuerExposure": {
+    "教学公司A": 0.5,
+    "教学公司B": 0.30000000000000004,
+    "教学公司C": 0.025
+  },
+  "knownExposure": 0.8250000000000001,
+  "unknownExposure": 0.17499999999999996,
+  "unmappedStockIssuerExposure": 0.0,
+  "effectiveMappedEquityIssuers": 1.9981651376146792,
+  "reportDates": [
+    "2026-06-30"
+  ],
+  "paths": [
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": "教学公司A",
+      "kind": "stock",
+      "weight": 0.27,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "联接",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-B",
+      "issuer": "教学公司B",
+      "kind": "stock",
+      "weight": 0.18000000000000002,
+      "path": [
+        "feeder",
+        "etf",
+        "CN-SSE:DEMO-B"
+      ],
+      "rootPosition": "联接",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": "教学公司A",
+      "kind": "stock",
+      "weight": 0.18,
+      "path": [
+        "fof",
+        "etf",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "FOF",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-B",
+      "issuer": "教学公司B",
+      "kind": "stock",
+      "weight": 0.12,
+      "path": [
+        "fof",
+        "etf",
+        "CN-SSE:DEMO-B"
+      ],
+      "rootPosition": "FOF",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-A",
+      "issuer": "教学公司A",
+      "kind": "stock",
+      "weight": 0.05,
+      "path": [
+        "fof",
+        "active",
+        "CN-SSE:DEMO-A"
+      ],
+      "rootPosition": "FOF",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-SSE:DEMO-C",
+      "issuer": "教学公司C",
+      "kind": "stock",
+      "weight": 0.025,
+      "path": [
+        "fof",
+        "active",
+        "CN-SSE:DEMO-C"
+      ],
+      "rootPosition": "FOF",
+      "source": "教学持仓报告，非真实基金",
+      "reportDate": "2026-06-30"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.04999999999999999,
+      "path": [
+        "feeder"
+      ],
+      "rootPosition": "联接",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.025,
+      "path": [
+        "fof",
+        "active"
+      ],
+      "rootPosition": "FOF",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.09999999999999998,
+      "path": [
+        "fof"
+      ],
+      "rootPosition": "FOF",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "联接",
+      "mappedEquityExposure": 0.45000000000000007,
+      "replicatedShare": 0.7777777777777776,
+      "uniqueIssuerShare": 0.0
+    },
+    {
+      "rootPosition": "FOF",
+      "mappedEquityExposure": 0.375,
+      "replicatedShare": 0.9333333333333332,
+      "uniqueIssuerShare": 0.06666666666666667
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

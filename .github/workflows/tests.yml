@@ -14,3 +14,5 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -s tests -v
       - run: python -m cnlookthrough examples/demo.json --format markdown
+      - name: Verify exported single-repository installed demo
+        run: python .github/scripts/validate_isolated_install.py

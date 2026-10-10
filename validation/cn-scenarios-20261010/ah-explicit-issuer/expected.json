@@ -1,0 +1,19 @@
+{
+  "id": "ah-explicit-issuer",
+  "group": "ah-identity",
+  "input": "examples/cn-scenarios/ah-explicit-issuer.json",
+  "expected": {
+    "knownExposure": 0.5,
+    "unknownExposure": 0.5,
+    "unmappedStockIssuerExposure": 0,
+    "issuerExposure": {
+      "显式教学发行人": 0.5
+    },
+    "effectiveMappedEquityIssuers": 1,
+    "securityExposure": {
+      "CN-equity:TEACHING-AH": 0.3,
+      "HK-equity:TEACHING-AH": 0.2
+    }
+  },
+  "rationale": "有显式教学发行人依据才能在公司层汇总0.5；两证券0.3/0.2保持分开。1只公司仅限已映射股票子集。"
+}

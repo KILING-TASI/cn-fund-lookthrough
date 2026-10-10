@@ -1,0 +1,13 @@
+{
+  "id": "missing-child",
+  "input": "examples/scenarios/missing-child.json",
+  "expected": {
+    "knownExposure": 0.3,
+    "unknownExposure": 0.7,
+    "unknownReasons": {
+      "子基金资料缺失": 0.54,
+      "未披露或未解析余额": 0.16
+    }
+  },
+  "rationale": "缺ETF的0.54整体未知，仍保留主动基金0.30及其他余额0.16。"
+}

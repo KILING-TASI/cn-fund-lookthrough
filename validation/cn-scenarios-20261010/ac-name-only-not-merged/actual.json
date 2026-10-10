@@ -1,0 +1,86 @@
+{
+  "toolVersion": "cn-fund-lookthrough-0.2.0.dev1",
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "asOf": "2026-10-10",
+  "currency": "CNY",
+  "securityExposure": {
+    "CN-equity:TEACHING-A": 0.32
+  },
+  "issuerExposure": {
+    "教学公司": 0.32
+  },
+  "knownExposure": 0.32,
+  "unknownExposure": 0.6799999999999999,
+  "unmappedStockIssuerExposure": 0.0,
+  "effectiveMappedEquityIssuers": 1.0,
+  "reportDates": [
+    "2026-06-30"
+  ],
+  "paths": [
+    {
+      "security": "CN-equity:TEACHING-A",
+      "issuer": "教学公司",
+      "kind": "stock",
+      "weight": 0.2,
+      "path": [
+        "fund",
+        "CN-equity:TEACHING-A"
+      ],
+      "rootPosition": "教学A类",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-06-30"
+    },
+    {
+      "security": "CN-equity:TEACHING-A",
+      "issuer": "教学公司",
+      "kind": "stock",
+      "weight": 0.12,
+      "path": [
+        "same-name-other",
+        "CN-equity:TEACHING-A"
+      ],
+      "rootPosition": "教学C类",
+      "source": "虚构中国公募教学披露，不是真实基金",
+      "reportDate": "2026-06-30"
+    }
+  ],
+  "unknown": [
+    {
+      "weight": 0.2,
+      "path": [
+        "fund"
+      ],
+      "rootPosition": "教学A类",
+      "reason": "未披露或未解析余额"
+    },
+    {
+      "weight": 0.48,
+      "path": [
+        "same-name-other"
+      ],
+      "rootPosition": "教学C类",
+      "reason": "未披露或未解析余额"
+    }
+  ],
+  "redundancy": [
+    {
+      "rootPosition": "教学A类",
+      "mappedEquityExposure": 0.2,
+      "replicatedShare": 0.6,
+      "uniqueIssuerShare": 0.0
+    },
+    {
+      "rootPosition": "教学C类",
+      "mappedEquityExposure": 0.12,
+      "replicatedShare": 1.0,
+      "uniqueIssuerShare": 0.0
+    }
+  ],
+  "limitations": [
+    "仅已披露输入快照，不代表当前真实完整持仓",
+    "证券与发行人层分别汇总；AH或不同份额不会自动并成同证券",
+    "冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖",
+    "不同报告期的嵌套权重可能不同时点；覆盖率不是准确率"
+  ]
+}

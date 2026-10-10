@@ -21,7 +21,9 @@ def main():
   r=analyze(spec)
   from .report import markdown
   text=json.dumps(r,ensure_ascii=False,indent=2,allow_nan=False) if a.format=='json' else markdown(r)
-  if a.format=='html':text='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>中国基金持仓穿透</title><style>body{max-width:900px;margin:40px auto;padding:0 24px;font:17px/1.8 system-ui,"Microsoft YaHei",sans-serif;color:#203047}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><body><pre>'+html.escape(text)+'</pre></body></html>'
+  if a.format=='html':
+   from .report import html_report
+   text=html_report(r,spec)
   if a.out:
    a.out.parent.mkdir(parents=True,exist_ok=True)
    with a.out.open('x',encoding='utf-8') as f:f.write(text)
