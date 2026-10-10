@@ -15,9 +15,10 @@ def day(value):
     return dt.date.fromisoformat(value)
 
 
-def analyze(spec):
+def analyze(spec, progress=None):
     if not isinstance(spec,dict):raise ValueError('输入须为对象，证券映射字段为securities')
     if spec.get('inputSchema') not in (None,'cnlookthrough-nodes-v1'):raise ValueError('未知输入schema，须显式转换，不能静默按旧版解释')
+    if progress:progress('input-check')
     cutoff=day(spec['asOf']);nodes=spec['nodes'];roots=spec['positions'];master=spec.get('securities',{})
     if not isinstance(nodes,dict) or not isinstance(master,dict) or not isinstance(roots,list) or not roots:
         raise ValueError('需要持仓列表、节点和证券映射')
@@ -30,10 +31,10 @@ def analyze(spec):
     if abs(total-1)>1e-9:raise ValueError('根持仓权重须合计为1，现金也应明确记录')
     ids=[r['id'] for r in roots]
     if any(not isinstance(x,str) or not x.strip() for x in ids) or len(set(ids))!=len(ids):raise ValueError('根持仓标识须唯一')
-    traces=[];unknown=[];periods=set();visits=0
+    traces=[];unknown=[];periods=set();visits=0;records_seen=0
     def gap(amount,path,root,reason):unknown.append(dict(weight=amount,path=path,rootPosition=root,reason=reason))
     def walk(key,amount,path,root):
-        nonlocal visits
+        nonlocal visits,records_seen
         visits+=1
         if visits>100000:raise ValueError('投资路径过多，需缩小输入范围')
         if amount==0:return
@@ -53,6 +54,8 @@ def analyze(spec):
         periods.add(report.isoformat())
         branch=path+[key]
         for row in holdings:
+            records_seen+=1
+            if progress and records_seen%1000==0:progress('traverse',records_seen)
             if row.get('kind') not in ('fund','stock','bond','cash','other'):raise ValueError('持仓类型无效')
             part=amount*weight(row['weight'])
             if row.get('kind')=='fund':walk(row['node'],part,branch,root)
@@ -68,6 +71,7 @@ def analyze(spec):
                     path=branch+[security],rootPosition=root,source=node['source'],reportDate=node['reportDate']))
         if used<1:gap(amount*(1-used),branch,root,'未披露或未解析余额')
     for row in roots:walk(row['node'],weight(row['weight']),[],row['id'])
+    if progress:progress('aggregate',records_seen)
     security_totals=defaultdict(float);issuer_totals=defaultdict(float);by_root=defaultdict(lambda:defaultdict(float))
     missing_issuer=0.
     for trace in traces:
@@ -87,11 +91,12 @@ def analyze(spec):
         unique=math.fsum(v for key,v in own.items() if not any(by_root[r].get(key,0)>0 for r in ids if r!=root))
         redundancy.append(dict(rootPosition=root,mappedEquityExposure=denom,
             replicatedShare=replicated/denom if denom else None,uniqueIssuerShare=unique/denom if denom else None))
-    result=dict(toolVersion='cn-fund-lookthrough-0.2.2',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-2',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
+    result=dict(toolVersion='cn-fund-lookthrough-0.2.3',inputSchema='cnlookthrough-nodes-v1',rulesVersion='disclosed-paths-2',asOf=spec['asOf'],currency=currency,securityExposure=dict(security_totals),issuerExposure=dict(issuer_totals),
         knownExposure=known,unknownExposure=unresolved,unmappedStockIssuerExposure=missing_issuer,
         effectiveMappedEquityIssuers=effective,reportDates=sorted(periods),paths=traces,unknown=unknown,redundancy=redundancy,
         limitations=['仅已披露输入快照，不代表当前真实完整持仓','证券与发行人层分别汇总；AH或不同份额不会自动并成同证券',
                     '冗余与独有贡献仅描述已映射股票证券结构，不说明边际风险或是否该卖',
                     '不同报告期的嵌套权重可能不同时点；覆盖率不是准确率'])
     if diagnostics:result['inputDiagnostics']=dict(version=VERSION,warnings=diagnostics)
+    if progress:progress('complete',records_seen)
     return result

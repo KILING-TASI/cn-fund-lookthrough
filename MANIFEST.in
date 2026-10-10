@@ -10,3 +10,7 @@ prune build
 prune dist
 
 recursive-include examples *.csv *.md
+
+recursive-include validation *.md
+
+recursive-include validation *.jpg
