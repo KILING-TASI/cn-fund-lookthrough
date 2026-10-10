@@ -73,6 +73,24 @@ python -m venv .venv
 
 `asOf`记录资料截止日，`currency`记录统一币种；`positions`列根持仓，`nodes`保存来源、报告期、实际公开日及持仓，`securities`保存证券分类和有依据的公司映射。缺公司身份不猜名称关系。日期、分母和未知处理见[方法说明](METHODS.md)及[中国公募情景](CN_SCENARIOS.md)。
 
+下面是教学输入中完整的证券映射部分，证券代码必须与持仓行的`security`一致。这些名称和依据都是教学声明，不能复制到真实基金充当证据：
+
+```json
+{
+"securities": {
+  "CN-SSE:DEMO-A": {"kind": "stock", "issuer": "教学公司A", "source": "教学证券身份映射"},
+  "CN-SSE:DEMO-B": {"kind": "stock", "issuer": "教学公司B", "source": "教学证券身份映射"},
+  "CN-SSE:DEMO-C": {"kind": "stock", "issuer": "教学公司C", "source": "教学证券身份映射"}
+}
+}
+```
+
+不要将`securities`改成`issuerMap`，也不要将每项对象简写为公司名称，或把`issuer`写成`issuerName`。字段误写会提示未被使用，不自动转换。每项`kind`是证券分类，`issuer`可为有依据的公司名称或`null`，`source`必须注明依据；本次用到的映射缺来源会报错，不自动补上。
+
+没有`securities`或某项证券分类时，相应敞口列入未知；已有分类和来源、只缺`issuer`时，证券金额仍保留，公司未映射敞口单列，不计算虚构的公司数。金额权重能算出来不代表身份已经认证。
+
+输入诊断采用`declared-input-fields-1`：仅有告警时在JSON旁加`inputDiagnostics`，包含`version`和`warnings`（每项为`code`、`fieldPath`、`message`），同时向stderr提示；正常教学输入原结果字段和数值不变。未知字段继续受理但提示未用于计算；既有适配版本、转换版本、教学账户、节点范围/名称和证券`issuerEvidence`保留兼容。附加资料可放在任一已检查对象的`metadata`、`extensions`或`notes`中，其内容不参与计算或自动认证。未知的显式`inputSchema`仍拒绝。例子和反例见[情景说明](SCENARIOS.md#输入字段诊断)；核心规则仍为`disclosed-paths-2`。
+
 ## 当前源码与旧发布包
 
 当前源码版本为 **`0.2.0.dev1`**。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；公开Release仍为 **`v0.1.0`研究预览版**，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。

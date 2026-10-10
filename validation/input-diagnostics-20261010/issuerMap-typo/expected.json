@@ -1,0 +1,8 @@
+{
+  "knownExposure": 0,
+  "unknownExposure": 1,
+  "diagnosticCodes": [
+    "unused-issuer-map",
+    "securities-missing"
+  ]
+}

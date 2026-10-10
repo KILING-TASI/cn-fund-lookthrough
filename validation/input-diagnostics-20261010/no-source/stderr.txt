@@ -1,0 +1,1 @@
+未能完成：证券映射须注明依据；请核对输入的asOf、currency、positions、nodes、securities与权重分母，参照仓库示例，不要把缺值填零。；未覆盖旧输出。

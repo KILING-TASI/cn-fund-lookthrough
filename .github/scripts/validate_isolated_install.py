@@ -46,6 +46,15 @@ if module:
     result=json.loads((work/'result.json').read_text('utf-8'))
     if module=='cnlookthrough':
         assert abs(result['knownExposure']-.84)<1e-12 and abs(result['unknownExposure']-.16)<1e-12
+        typo=json.loads(sample.read_text('utf-8'));typo['issuerMap']=typo.pop('securities')
+        typo_file=work/'mapping-typo.json';typo_file.write_text(json.dumps(typo,ensure_ascii=False),encoding='utf-8')
+        response=run(['-I','-m',module,typo_file])
+        diagnosed=json.loads(response.stdout)
+        assert diagnosed['knownExposure']==0 and abs(diagnosed['unknownExposure']-1)<1e-12
+        assert diagnosed['inputDiagnostics']['version']=='declared-input-fields-1'
+        assert any(w['code']=='unused-issuer-map' for w in diagnosed['inputDiagnostics']['warnings'])
+        assert 'issuerMap' in response.stderr
+        record['installedInputDiagnostics']='passed; typo warned without automatic conversion'
     else:
         assert result['results'][0]['difference']=='0.00' and result['results'][1]['difference']=='-20000000.00'
         assert result['results'][0]['pageEvidenceStatus']=='declared-not-page-verified'

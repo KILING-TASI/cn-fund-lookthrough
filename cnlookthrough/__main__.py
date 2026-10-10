@@ -20,6 +20,8 @@ def main():
   if a.input.stat().st_size>16*1024*1024:raise ValueError('输入过大')
   spec=json.loads(a.input.read_text('utf-8-sig'),object_pairs_hook=pairs,parse_constant=lambda v:(_ for _ in ()).throw(ValueError('JSON不能含NaN或Infinity')))
   r=analyze(spec)
+  for warning in r.get('inputDiagnostics',{}).get('warnings',[]):
+   print('输入提示 ['+warning['fieldPath']+']：'+warning['message'],file=sys.stderr)
   from .report import markdown
   text=json.dumps(r,ensure_ascii=False,indent=2,allow_nan=False) if a.format=='json' else markdown(r)
   if a.format=='html':

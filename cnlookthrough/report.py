@@ -1,6 +1,13 @@
 def markdown(r):
     known=r['knownExposure']*100;unknown=r['unknownExposure']*100
     text=f"# 基金持仓穿透\n\n本次能解释{known:.2f}%的组合权重，另有{unknown:.2f}%仍未知。买了多只基金，不代表底层风险已经分散。\n\n"
+    if r.get('inputDiagnostics'):
+        text+='## 输入需要核对的地方\n\n'
+        for warning in r['inputDiagnostics']['warnings']:
+            text+='- '+warning['fieldPath']+'：'+warning['message']+'\n'
+        text+='\n'
+    if r['unmappedStockIssuerExposure']>0:
+        text+=f"另有{r['unmappedStockIssuerExposure']*100:.2f}%是有证券分类声明、但没有有效公司映射的股票敞口；证券身份或分类缺失则列入未知。金额权重能计算，不代表证券或公司身份已经认证。\n\n"
     effective=r['effectiveMappedEquityIssuers']
     if effective is not None:text+=f'已映射的股票部分，按公司集中度折算约{effective:.2f}个等权主体；不是整个组合的独立风险来源数。\n\n'
     text+='证券先逐项记录，再按有依据的公司身份汇总；不自动把AH股票或不同份额并成同一证券。\n\n## 已映射公司敞口\n\n'
@@ -21,7 +28,7 @@ def html_report(r, spec=None):
     from pathlib import Path
     from .html_controls import table
     body=table(['已映射公司','占组合权重'],[[name,f'{value*100:.2f}%'] for name,value in sorted(r['issuerExposure'].items(),key=lambda x:-x[1])])
-    files=['engine.py','report.py','html_controls.py','__main__.py']
+    files=['engine.py','input_diagnostics.py','report.py','html_controls.py','__main__.py']
     hashes={f:hashlib.sha256((Path(__file__).parent/f).read_bytes()).hexdigest() for f in files}
     frozen='<details><summary>保存的输入与方法摘要（分享前检查隐私）</summary><pre>'+escape(json.dumps({'input':spec,'methodSha256':hashes},ensure_ascii=False,indent=2,allow_nan=False))+'</pre></details>'
     meta='截止日 '+str(r['asOf'])+'；方法 '+r['toolVersion']+' / '+r['inputSchema']+' / '+r['rulesVersion']

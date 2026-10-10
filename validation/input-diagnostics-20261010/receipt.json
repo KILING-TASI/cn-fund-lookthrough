@@ -1,0 +1,121 @@
+{
+  "baseline": "3d8fb6e",
+  "teachingOnly": true,
+  "inputSchema": "cnlookthrough-nodes-v1",
+  "rulesVersion": "disclosed-paths-2",
+  "diagnosticsVersion": "declared-input-fields-1",
+  "cases": [
+    {
+      "id": "normal",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "9bed7b0ad0d4ef37b7af2595201b75ed3632480109850d4a9f633eca1ce6ecc5",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "diagnosticCodes": []
+      }
+    },
+    {
+      "id": "issuerMap-typo",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "05adca10d436d53c2a98d0aa0bcad16c2a077e2f743f3b891372d37da48c8bef",
+      "expected": {
+        "knownExposure": 0,
+        "unknownExposure": 1,
+        "diagnosticCodes": [
+          "unused-issuer-map",
+          "securities-missing"
+        ]
+      }
+    },
+    {
+      "id": "no-securities",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "098d535a3657156ed4d2eedd64f8203963888834e8b2fd2dcf8aaa909cefb854",
+      "expected": {
+        "knownExposure": 0,
+        "unknownExposure": 1,
+        "diagnosticCodes": [
+          "securities-missing"
+        ]
+      }
+    },
+    {
+      "id": "no-issuer",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "c1e8e2e4f9cb6732b628b6973bb850f9bef246f69fec8e9f299b31353ce0ce17",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "unmappedStockIssuerExposure": 0.84,
+        "diagnosticCodes": []
+      }
+    },
+    {
+      "id": "no-source",
+      "passed": true,
+      "exit": 2,
+      "inputSha256": "142983525509e0eb6c7bc0a0caa4061e347c4b1cd6063ca70eae34ae21df4c03",
+      "expected": {
+        "exit": 2,
+        "errorContains": "证券映射须注明依据"
+      }
+    },
+    {
+      "id": "bad-shape",
+      "passed": true,
+      "exit": 2,
+      "inputSha256": "7941e40a67cdef88bd85dc3c7ee327fd427656073f9e861171532c9baa8d69ff",
+      "expected": {
+        "exit": 2,
+        "errorContains": "securities每项须为"
+      }
+    },
+    {
+      "id": "legal-metadata",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "9fe09a1a4b721d77b04fe9e9d468a0b2b3858db8fd98157f722dde5a67cb93d7",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "diagnosticCodes": []
+      }
+    },
+    {
+      "id": "unknown-extension",
+      "passed": true,
+      "exit": 0,
+      "inputSha256": "ff3bf4ef04daa7056b87af40d1651c39b32e9710d8ff3f310fe36b198ef82ebf",
+      "expected": {
+        "knownExposure": 0.84,
+        "unknownExposure": 0.16,
+        "diagnosticCodes": [
+          "unused-field"
+        ]
+      }
+    },
+    {
+      "id": "unknown-schema",
+      "passed": true,
+      "exit": 2,
+      "inputSha256": "eca3a87775dceac13bd5df8ec05e13ed1654a8fb621e5b61cb25c287cefceebc",
+      "expected": {
+        "exit": 2,
+        "errorContains": "未知输入schema"
+      }
+    }
+  ],
+  "readmeMappingExample": "parsed and matches frozen teaching input",
+  "visual": "not tested",
+  "sourceSha256": {
+    "cnlookthrough/engine.py": "d0436b102931b05738fb8910de00a4a91e79e1aeb7a1efccdaf9df39d9fc33c1",
+    "cnlookthrough/input_diagnostics.py": "af054fbb62dd9008bc42f1ac47fe2a018f01a6cff723080d81df576860d1ab5b",
+    "cnlookthrough/__main__.py": "9b22a2f511b6e77ecc342003f4b8739375352fcfc1fb0ae592c6fcfda5d51f95",
+    "cnlookthrough/report.py": "1c76767ad750fc0bfef4654b58163d62baa42a11d8c127bfe639d3d18957edab"
+  }
+}

@@ -32,3 +32,20 @@ python tools/run_scenarios.py --out-dir local-data/new-scenario-batch
 本次23项测试通过，11个CLI实例全部与预期相符；没有发现需要改计算核心的问题。方法仍为disclosed-paths-2、输入cnlookthrough-nodes-v1、工具0.2.0.dev1；不把待审增量写成已发布v0.1.0。
 
 余项：隐含错误分母、来源真实性仍须原文核对；FOF完整原文自动提取、QDII迁移、任意管理人/PDF、全发行人历史和视觉验收不在本批。限定PDF仍仅已有睿远及华夏样本，旧六列兼容转发契约不变。本批不合并、不发版、不修改用户安装。
+
+## 输入字段诊断
+
+2026-10-10新增独立检查，不改前轮冻结回执。复用[完整教学输入](examples/demo.json)及[README中的完整securities例子](README.md#准备自己的输入)，不往空模板填假数据。
+
+| 输入情况 | 预期行为 |
+|---|---|
+| 正常教学映射 | 已知84%、未知16%；原JSON字段与数值完全不变 |
+| 将securities误写为issuerMap | 继续返回可解析JSON，明确issuerMap未被读取、缺securities；已知0%、未知100%，不自动转换 |
+| 真正省略securities | 缺证券身份/分类，相应敞口全部未知；不猜交易所或公司 |
+| 保留分类和来源，只省略issuer | 已知证券84%、公司未映射84%、未知余额16%；无有效公司数 |
+| 每项写成文字，或已提供映射却缺source | 退出2，不生成报告；提示对象结构或必须有来源 |
+| issuerName误写或issuer为对象 | 明确字段未使用或类型不支持，不将格式问题只归为资料缺失 |
+| 合法旧元数据/专业扩展 | 适配/转换版本、教学账户、issuerEvidence及metadata/extensions/notes继续兼容；其他字段非阻断告警，不认证扩展内容 |
+| 未知显式schema、目标文件已存在 | 保留拒绝规则和退出码2，旧文件摘要不变 |
+
+诊断版本`declared-input-fields-1`独立于核心计算规则`disclosed-paths-2`，只在有告警时旁加`inputDiagnostics`，CLI提示走stderr；公司映射缺失和证券身份缺失在中文报告中分开说明。已有数据不迁移、不补source、不推断身份。实际新结果见[本轮回执](validation/input-diagnostics-20261010/receipt.json)；这仍是教学和格式检查，不是原文身份认证。
