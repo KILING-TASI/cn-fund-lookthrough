@@ -7,9 +7,10 @@ import subprocess
 import sys
 import tarfile
 import zipfile
+import re
 
-VERSION = '0.3.2'
 REPO = Path(__file__).resolve().parents[2]
+VERSION = re.search(r'^version\s*=\s*"([^"]+)"', (REPO / 'pyproject.toml').read_text(encoding='utf-8'), re.M).group(1)
 
 
 def build(out, work):
