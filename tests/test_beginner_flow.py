@@ -38,4 +38,12 @@ class BeginnerFlow(unittest.TestCase):
         other=copy.deepcopy(source);other['securities']['CN-SSE:DEMO-A']['issuer']='另一教学公司'
         with self.assertRaisesRegex(ValueError,'映射冲突'):compose([source,other],[.6,.4],source['asOf'])
 
+    def test_no_company_mapping_does_not_become_no_overlap(self):
+        source=json.loads((ROOT/'examples/demo.json').read_text(encoding='utf-8'));source['positions']=[dict(source['positions'][0],weight=1)];source['securities']={}
+        with tempfile.TemporaryDirectory() as t:
+            spec=compose([source,source],[.5,.5],source['asOf'])
+            result=publish(spec,Path(t)/'no-mapping',{},[source,source])
+            self.assertIn('暂不能判断',result['questionAnswer']['answer'])
+            self.assertNotIn('尚未发现',result['questionAnswer']['answer'])
+
 if __name__=='__main__':unittest.main()

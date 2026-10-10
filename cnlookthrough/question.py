@@ -50,9 +50,13 @@ def publish(spec,out,request,source_inputs):
     if check['errors']:raise ValueError('合并输入无效：'+str(check['errors']))
     result=analyze(spec)
     # These answer words reflect computed disclosed scope, not a future investment recommendation.
+    comparable=any(row['replicatedShare'] is not None for row in result['redundancy'])
     shared=any(row['replicatedShare'] is not None and row['replicatedShare']>0 for row in result['redundancy'])
-    answer=('已映射的股票公司敞口有重合。' if shared else '已映射部分尚未发现公司敞口重合。')+f"本次能解释{result['knownExposure']:.2%}，另有{result['unknownExposure']:.2%}未知；这不是完整基金相似度或未来风险结论。"
-    result['questionAnswer']=dict(question='这些基金是否重复配置了同一批公司？',answer=answer,sourceVerification='not-verified',scope='同截止日的用户披露输入；报告期可能不同',nextSteps=['查看公司敞口与未知路径；日期不同不能当作同时真实持仓','换比例用 follow，复用选定快照并另存，不自动刷新资料'])
+    conclusion='缺少可比较的公司映射，暂不能判断是否重合。' if not comparable else '已映射的股票公司敞口有重合。' if shared else '已映射部分尚未发现公司敞口重合。'
+    answer=conclusion+f"本次已分类证券权重{result['knownExposure']:.2%}，另有{result['unknownExposure']:.2%}未知。"
+    if result['unmappedStockIssuerExposure']>0:answer+=f"已分类股票中另有{result['unmappedStockIssuerExposure']:.2%}组合权重没有有效公司映射。"
+    answer+='这不是完整基金相似度或未来风险结论。'
+    result['questionAnswer']=dict(question='这些基金是否重复配置了同一批公司？',answer=answer,dataAcquisition='provided-inputs',calculationComplete=True,sourceVerification='not-verified',scope='同截止日的用户披露输入；报告期可能不同',nextSteps=['查看公司敞口与未知路径；日期不同不能当作同时真实持仓','换比例用 follow，复用选定快照并另存，不自动刷新资料'])
     out.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.question-',dir=out.parent) as temp:
         stage=Path(temp)/'result';stage.mkdir()
@@ -61,7 +65,9 @@ def publish(spec,out,request,source_inputs):
         (stage/'answer.md').write_text('# 基金重合问题\n\n'+answer+'\n\n'+markdown(result),encoding='utf-8')
         page=html_report(result,spec)
         from html import escape
-        page=page.replace('<body>','<body><section style="padding:20px;max-width:1100px;margin:auto"><h1>基金重合问题</h1><p>'+escape(answer)+'</p></section>',1)
+        teaching=all('教学' in node.get('source','') or '虚构' in node.get('source','') for node in spec['nodes'].values())
+        badge='原创教学输入，非真实研究结论。' if teaching else '基于用户提供的披露声明；原始来源尚未核验。'
+        page=page.replace('<body>','<body><section style="padding:20px;max-width:1100px;margin:auto"><p>'+escape(badge)+'</p><h1>基金重合问题</h1><p>'+escape(answer)+'</p></section>',1)
         (stage/'report.html').write_text(page,encoding='utf-8')
         request_hash=hashlib.sha256((stage/'research-request.json').read_bytes()).hexdigest()
         receipt=dict(requestSha256=request_hash,files={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in stage.iterdir()},methodFiles={name:hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest() for name in ('question.py','engine.py','report.py')},scope='内容完整性，不认证来源真实性')
