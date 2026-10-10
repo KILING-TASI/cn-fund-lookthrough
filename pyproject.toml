@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "cn-fund-lookthrough"
-version = "0.3.2"
+version = "0.3.3"
 description = "中国基金持仓穿透：显式来源、未知与计算边界"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -17,7 +17,7 @@ license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 
 # Installed CLI teaching input; Skill resources are complete in the source ZIP.
 [tool.setuptools.data-files]
-"share/cn-fund-lookthrough" = ["AUDIT_SCOPE.md", "SKILL.md", "README.md", "BEGINNER.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "EXPANSION.md", "EXPANSION_RELEASE.md"]
+"share/cn-fund-lookthrough" = ["README.en.md", "CHANGELOG.md", "AUDIT_SCOPE.md", "SKILL.md", "README.md", "BEGINNER.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "EXPANSION.md", "EXPANSION_RELEASE.md"]
 "share/cn-fund-lookthrough/examples" = ["examples/demo.json", "examples/holdings-import.csv", "examples/holdings-import-config.json", "examples/INPUT_CONTRACTS.md"]
 
 "share/cn-fund-lookthrough/examples/expansion-teaching" = ["examples/expansion-teaching/compare.json"]
