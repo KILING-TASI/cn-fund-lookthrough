@@ -8,3 +8,5 @@ recursive-include tools *.py
 global-exclude *.pyc *.pdf
 prune build
 prune dist
+
+recursive-include examples *.csv *.md
