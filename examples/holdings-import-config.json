@@ -1,0 +1,5 @@
+{
+  "format": "user-stock-holdings-csv-v1", "asOf": "2026-09-30", "currency": "CNY",
+  "positionId": "教学单基金", "nodeId": "teaching-fund", "source": "原创教学持仓清单，代码仅为格式示例，不代表真实持仓",
+  "reportDate": "2026-06-30", "publishedAt": "2026-07-20", "weightBasis": "parent-net-assets", "disclosureScope": "top-holdings"
+}

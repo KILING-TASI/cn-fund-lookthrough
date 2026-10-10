@@ -6,9 +6,9 @@
 
 ## 安装和首次试用
 
-本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.1)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
+本轮对应[发布页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.2)；下载时以实际上传的完整源码、wheel、sdist 与校验清单为准。源码按下面步骤安装；下载 wheel 后，将安装命令末尾的 `.` 换成该 wheel 文件路径。pip 安装不会自动注册 AI 工具中的 Skill。
 
-本轮源码版本为 `0.2.1`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
+本轮源码版本为 `0.2.2`。统一安装入口需要 Python 3.10 或以上。在完整源码目录新建自己的 Python 环境，下面的 Windows 命令不需要激活脚本：
 
 ```powershell
 python -m venv .venv
@@ -18,6 +18,8 @@ python -m venv .venv
 ```
 
 工具名与仓库名相同；在已激活的环境中可以直接输入工具名。Linux/macOS 使用 `.venv/bin/python` 和 `.venv/bin/cn-fund-lookthrough`。教学结果写入当前工作目录；`--auto-name` 自动另选新名字，旧结果保留。不加该参数时，教学入口拒绝已有目录。`cn-fund-lookthrough run --help` 查看原生参数，原来的命令继续兼容。pip 安装提供 CLI；作为 Skill 使用仍须保留完整源码及许可资源，不能只复制 SKILL.md。安装可能需要联网获取普通构建依赖；教学离线。下面保留原生入口及此前发行记录，本轮安装和版本以本节为准。
+
+导入自己的资料前，可先运行 `python -m cnlookthrough input.json --validate-only`；[输入契约索引](examples/INPUT_CONTRACTS.md)列出字段、入口与预检限制。
 
 ## 先试一次
 
@@ -108,7 +110,7 @@ python -m venv .venv
 
 ## 当前源码与旧发布包
 
-当前源码版本为 **`0.2.0`**。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；**`v0.2.0`已发布**，安装包与完整源码可从下方链接下载；旧 **`v0.1.0`研究预览版**保留历史，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。
+此前v0.2.0发行时的功能如下；当前源码与本轮版本以上方安装节为准。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；**`v0.2.0`已发布**，安装包与完整源码可从下方链接下载；旧 **`v0.1.0`研究预览版**保留历史，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。
 
 [下载v0.2.0 Release](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.2.0) · [发布说明与安装方式](RELEASE_NOTES.md) · [旧v0.1.0 Release](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.1.0) · [查看源码版本与可选依赖](pyproject.toml)
 
@@ -128,3 +130,7 @@ CI在Windows/Linux、Python 3.10/3.12检查测试、单仓安装及教学报告�
 原创代码采用[MIT许可](LICENSE)，原贡献者版权保留。[第三方与资料权利](THIRD_PARTY_NOTICES.md)单独说明；代码许可不授权再分发报告原件、公告或数据，本仓不打包原始PDF、私人账户或作者缓存。
 
 本项目用于学习与研究，不构成投资建议或交易指令。使用时结合本次来源、假设和缺口判断；完整边界见[免责声明](DISCLAIMER.md)。
+
+## 导入前先预检
+
+`python -m cnlookthrough input.json --validate-only`（或`--dry-run`）只检查本地声明字段，不联网、不读PDF、不写报告，也不执行专业计算。问题按fieldPath列出；通过不证明来源或完整性。`python -m cnlookthrough.preflight --contract`查看契约索引。完整入口与边界见[输入契约说明](examples/INPUT_CONTRACTS.md)。

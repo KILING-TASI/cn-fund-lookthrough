@@ -123,7 +123,7 @@ def parse_ruiyuan(pdf,report_date,published_at,source_url,net_assets,equity_valu
         if not re.search(rf'{date.year}年0?{date.month}月0?{date.day}日',alltext):raise ValueError('声明报告日未在原件找到')
         result=domestic_result(doc,raw,'007119',report_date,published_at,source_url,nav,equity)
     result['adapterProfile']='ruiyuan-growth-six-column-v1'
-    result.update(toolVersion='cnlookthrough-report-0.2.1',inputSchema='explicit-report-totals-v1',rulesVersion='six-column-equity-1')
+    result.update(toolVersion='cnlookthrough-report-0.2.2',inputSchema='explicit-report-totals-v1',rulesVersion='six-column-equity-1')
     result['sourceVerification']='local-report-identity-and-amount-check; not-live-source-authentication'
     return result
 
@@ -163,7 +163,7 @@ def parse_chinaamc_growth(pdf,report_date,published_at,source_url,net_assets,equ
                                              columnIndex=column_no, label=label, rawCells=row, rawHeader=rows[:3], tableBBox=list(table.bbox)))
         result = domestic_result(doc, raw, '000001', report_date, published_at, source_url, nav, equity)
     result.update(adapterProfile='chinaamc-growth-2025-six-column-v1',
-                  toolVersion='cnlookthrough-report-0.2.1', inputSchema='explicit-report-totals-v1',
+                  toolVersion='cnlookthrough-report-0.2.2', inputSchema='explicit-report-totals-v1',
                   rulesVersion='six-column-equity-and-explicit-denominator-2', denominatorEvidence=denominator_evidence,
                   sourceVerification='local-report-identity-and-selected-total-cells; not-live-authentication')
     return result
@@ -178,7 +178,7 @@ def to_spec(parsed,as_of):
     for row in parsed['holdings']:
         security=row['securityNamespace']+':'+row['code'];holdings.append({'kind':'stock','security':security,'weight':row['weight']})
         securities[security]={'kind':'stock','issuer':None,'source':parsed['sourceUrl']+' # '+row['locator']}
-    return {'inputSchema':'cnlookthrough-nodes-v1','conversionRulesVersion':'complete-equity-all-classes-nav-2','adapterVersion':parsed.get('toolVersion','cnlookthrough-report-0.2.1'),'asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
+    return {'inputSchema':'cnlookthrough-nodes-v1','conversionRulesVersion':'complete-equity-all-classes-nav-2','adapterVersion':parsed.get('toolVersion','cnlookthrough-report-0.2.2'),'asOf':as_of,'currency':'CNY','positions':[{'id':'disclosed-fund','node':key,'weight':1}],
             'nodes':{key:{'currency':'CNY','source':parsed['sourceUrl']+' sha256='+parsed['sourceSha256'],'reportDate':parsed['reportDate'],'publishedAt':parsed['publishedAt'],'holdings':holdings}},'securities':securities}
 
 def compare_snapshots(before,after):
@@ -190,7 +190,7 @@ def compare_snapshots(before,after):
     rows=[{'security':key,'beforeWeight':a[key]['weight'] if key in a else None,'afterWeight':b[key]['weight'] if key in b else None,
            'weightChange':b[key]['weight']-a[key]['weight'] if key in a and key in b else None,
            'status':'both-disclosed' if key in a and key in b else 'newly-disclosed' if key in b else 'no-longer-disclosed'} for key in sorted(set(a)|set(b))]
-    return {'toolVersion':'cnlookthrough-report-0.2.1','inputSchema':'two-disclosed-snapshots-v1','rulesVersion':'same-scope-snapshot-diff-1','beforeReportDate':before['reportDate'],'afterReportDate':after['reportDate'],'rows':rows,
+    return {'toolVersion':'cnlookthrough-report-0.2.2','inputSchema':'two-disclosed-snapshots-v1','rulesVersion':'same-scope-snapshot-diff-1','beforeReportDate':before['reportDate'],'afterReportDate':after['reportDate'],'rows':rows,
             'beforeSourceSha256':before['sourceSha256'],'afterSourceSha256':after['sourceSha256'],
             'limitation':'仅披露快照变化；新增/消失不等于实际买卖，非股票部分保留未知'}
 
