@@ -16,6 +16,7 @@ def markdown(r):
     for row in r['redundancy']:
         ratio=row['replicatedShare'];value='未取得可比较的公司映射' if ratio is None else f"已映射股票中，约{ratio*100:.2f}%能在其余持仓找到对应公司暴露"
         text+='- '+row['rootPosition']+'：'+value+'。这不等于没有配置作用。\n'
+    text+='\n上述比例按每家公司本持仓与其余持仓的较小敞口配对，再除以本持仓已映射股票敞口。因此两个方向可能不同；这是已知部分的配对比例，不是完整基金持仓相似度。\n'
     text+='\n## 未知部分\n\n'
     for row in r['unknown']:text+=f"- {' → '.join(row['path'])}：{row['weight']*100:.2f}%，{row['reason']}\n"
     text+='\n报告期：'+', '.join(r['reportDates'])+'。不同披露时点不能当作同时持仓。\n\n'
