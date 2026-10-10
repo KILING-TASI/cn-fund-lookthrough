@@ -10,6 +10,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class Guidance(unittest.TestCase):
+    def test_identity_matches_existing_skill_and_cli(self):
+        skill = (ROOT / 'SKILL.md').read_text('utf-8')
+        self.assertIn('name: cn-fund-lookthrough', skill)
+        result = self.cli('--help')
+        self.assertEqual(result.returncode, 0)
+        self.assertIn('本仓同名Skill', result.stdout.decode('utf-8'))
+
     def cli(self, *args):
         return subprocess.run([sys.executable, '-m', 'cnlookthrough', *map(str, args)], cwd=ROOT, capture_output=True)
 

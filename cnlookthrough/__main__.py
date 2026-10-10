@@ -12,7 +12,7 @@ def pairs(items):
 def main():
  for stream in (sys.stdout,sys.stderr):
   if hasattr(stream,"reconfigure"):stream.reconfigure(encoding="utf-8")
- p=argparse.ArgumentParser(description='cn-fund-lookthrough 独立CLI引擎；读取声明资料，不自动联网，不是直接Skill')
+ p=argparse.ArgumentParser(description='cn-fund-lookthrough 独立CLI引擎；可配合本仓同名Skill使用，读取声明资料，不自动联网')
  p.add_argument('input',type=Path);p.add_argument('--format',choices=['json','markdown','html'],default='json');p.add_argument('--out',type=Path)
  p.add_argument('--human',action='store_true',help='在stderr显示结果位置和下一步，stdout结果格式不变')
  a=p.parse_args()

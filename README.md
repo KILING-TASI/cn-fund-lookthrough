@@ -2,7 +2,7 @@
 
 看清多只基金背后是否重复持有同一批公司；嵌套路径与未知余额一起保留。
 
-这是独立Python CLI引擎，仓库/安装包名为`cn-fund-lookthrough`，运行模块名为`cnlookthrough`。本仓没有`SKILL.md`或Skill frontmatter name，不是可直接放进Skills目录的Skill；工作台可以显式调用本引擎，运行不依赖工作台或其他自家专业仓，不自动改动已安装Skill。
+本仓同时提供[Skill入口](SKILL.md)和独立Python CLI引擎。Skill的frontmatter `name`为`cn-fund-lookthrough`，仓库/安装包同名，运行模块为`cnlookthrough`。使用Skill时需保留整个项目目录及`README.md`、`examples/`、`cnlookthrough/`等资源，不能只复制一个`SKILL.md`。CLI可单独运行；工作台也可显式调用，运行不依赖工作台或其他自家专业仓，不自动改动已安装Skill。
 
 ## 安装前提与Windows入口
 
