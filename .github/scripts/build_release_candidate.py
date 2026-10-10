@@ -8,7 +8,7 @@ import sys
 import tarfile
 import zipfile
 
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 REPO = Path(__file__).resolve().parents[2]
 
 

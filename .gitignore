@@ -4,3 +4,9 @@ __pycache__/
 local-data/
 dist/
 *.egg-info/
+
+# Local Python installation/build outputs
+.venv/
+build/
+dist/
+*.egg-info/
