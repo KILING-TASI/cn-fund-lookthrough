@@ -22,7 +22,7 @@ def convert(raw,config):
         if len(holdings)>=5000:raise ValueError('最多5000行持仓')
         if None in row or any(v is None for v in row.values()):raise ValueError('CSV行字段数量不匹配')
         security=row['security']
-        if not re.fullmatch(r'CN-(SSE|SZSE|BSE):[0-9]{6}',security):raise ValueError('security须为显式CN-SSE:/CN-SZSE:/CN-BSE:加六位代码；不猜交易所')
+        if not re.fullmatch(r'CN-(SSE|SZSE|BSE):[0-9]{6}',security):raise ValueError('security须为显式CN-SSE:/CN-SZSE:/CN-BSE:加六位代码；不猜交易所。下一步：从有来源的证券目录或原文核对市场后填写；不能仅凭数字开头认证身份')
         if security in seen:raise ValueError('重复证券行须先核对，不自动合并：'+security)
         seen.add(security)
         try:percent=Decimal(row['weightPercent'])

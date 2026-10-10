@@ -1,0 +1,13 @@
+{
+  "asOf": "2026-09-30",
+  "funds": [
+    {
+      "input": "overlap-fund-1.json",
+      "allocationPercent": 60
+    },
+    {
+      "input": "overlap-fund-2.json",
+      "allocationPercent": 40
+    }
+  ]
+}
