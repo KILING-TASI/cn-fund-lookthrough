@@ -93,9 +93,9 @@ python -m venv .venv
 
 ## 当前源码与旧发布包
 
-当前源码版本为 **`0.2.0.dev1`**。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；公开Release仍为 **`v0.1.0`研究预览版**，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。
+当前源码版本为 **`0.2.0`（发布候选）**。披露穿透、限定报告适配、公司映射与情景验证已集成默认分支；本轮v0.2.0候选尚未发布；现有公开Release仍为 **`v0.1.0`研究预览版**，不包含全部新增接口。克隆当前源码与安装旧发布包不是同一版本，旧安装不会自动更新。
 
-[查看公开Release](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.1.0) · [查看源码版本与可选依赖](pyproject.toml)
+[查看现有v0.1.0 Release](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.1.0) · [候选发布说明与安装方式](RELEASE_NOTES.md) · [查看源码版本与可选依赖](pyproject.toml)
 
 ## 验证、来源与许可
 
