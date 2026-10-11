@@ -1,6 +1,6 @@
 {
   "schemaVersion": "fixed-shared-components/1",
-  "hashFormat": "UTF-8 with LF newlines",
+  "hashFormat": "UTF-8 with LF newlines; BOM ignored",
   "components": [
     {
       "localPath": "cnlookthrough/html_controls.py",
@@ -17,7 +17,15 @@
       "canonicalPath": "cn_data_adapters/review_io.py",
       "syncPolicy": "fixed-with-distribution; review and regenerate manifest before replacing; no runtime source dependency",
       "licenseScope": "see repository third-party notices; inventory does not grant rights"
+    },
+    {
+      "localPath": "tools/check_shared_code.py",
+      "normalizedTextSha256": "ca56b58560ada0ca40e3c02ca71cfaf4a26d6962fd863b1d34e0673c5d65b8aa",
+      "canonicalRepository": "cn-data-adapters",
+      "canonicalPath": "tools/check_shared_code.py",
+      "syncPolicy": "fixed-with-distribution; review and regenerate manifest before replacing; no runtime source dependency",
+      "licenseScope": "see repository third-party notices; inventory does not grant rights"
     }
   ],
-  "scope": "This inventory covers discovered equal original Python text, not proof of all interfaces being equivalent; divergent variants are not merged"
+  "scope": "Git 跟踪的非空 Python 文件；排除 tests/test/build/dist 和 test_ 文件；按 UTF-8、LF、无 BOM 比较。相同文本不证明接口语义等价；历史固定版不要求跟随权威源最新版。"
 }
