@@ -17,7 +17,7 @@ license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 
 # Installed CLI teaching input; Skill resources are complete in the source ZIP.
 [tool.setuptools.data-files]
-"share/cn-fund-lookthrough" = ["SHARED_CODE.json", "RIGHTS_INDEX.json", "CONTRIBUTING.md", "SECURITY.md", "LIFECYCLE.md", "README.en.md", "CHANGELOG.md", "AUDIT_SCOPE.md", "SKILL.md", "README.md", "BEGINNER.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "EXPANSION.md", ]
+"share/cn-fund-lookthrough" = ["USAGE.md", "SHARED_CODE.json", "RIGHTS_INDEX.json", "CONTRIBUTING.md", "SECURITY.md", "LIFECYCLE.md", "README.en.md", "CHANGELOG.md", "AUDIT_SCOPE.md", "SKILL.md", "README.md", "BEGINNER.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "EXPANSION.md", ]
 "share/cn-fund-lookthrough/examples" = ["examples/demo.json", "examples/holdings-import.csv", "examples/holdings-import-config.json", "examples/INPUT_CONTRACTS.md"]
 
 "share/cn-fund-lookthrough/examples/expansion-teaching" = ["examples/expansion-teaching/compare.json"]
