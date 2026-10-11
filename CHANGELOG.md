@@ -32,3 +32,8 @@
 [完整Skill与源码ZIP](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.2.0/cn-fund-lookthrough-v0.2.0-source.zip) · [Python wheel安装包](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.2.0/cn_fund_lookthrough-0.2.0-py3-none-any.whl) · [sdist源码包](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.2.0/cn_fund_lookthrough-0.2.0.tar.gz) · [SHA256摘要](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.2.0/SHA256SUMS.txt)
 
 发布资产固定于提交`7afd2b5`；本页更新发布状态和下载链接，标签内的准备记录、历史输入和结果保持原样。
+
+## 0.3.5
+
+- Skill版本元数据与命令行包对齐，发行页、独立安装与结果状态说明统一。
+- 计算方法继续按各自结果内的方法版本复查。
