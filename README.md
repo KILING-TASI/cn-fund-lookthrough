@@ -2,7 +2,7 @@
 
 按披露持仓与明确映射计算底层资产、公司重叠和未知部分。
 
-[![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) · [当前发行版 v0.3.5](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.5) · [运行检查](https://github.com/KILING-TASI/cn-fund-lookthrough/actions)
+[![原创代码 MIT](https://img.shields.io/badge/原创代码-MIT-green)](LICENSE) · [当前发行版 v0.3.6](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.6) · [运行检查](https://github.com/KILING-TASI/cn-fund-lookthrough/actions)
 
 ## 能解决什么问题
 
@@ -12,7 +12,7 @@
 
 ## 快速开始
 
-从[发行页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.5)下载完整源码并解压，需要 Python 3.10 或以上。在源码目录执行：
+从[发行页](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.6)下载完整源码并解压，需要 Python 3.10 或以上。在源码目录执行：
 
 ```text
 python try_demo.py --no-open --out-dir reports/first-demo

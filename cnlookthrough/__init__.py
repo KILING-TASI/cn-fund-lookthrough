@@ -1,3 +1,3 @@
 """Disclosed Chinese fund holdings look-through. No automatic data collection."""
-__version__ = '0.3.5'
+__version__ = '0.3.6'
 from .engine import analyze
