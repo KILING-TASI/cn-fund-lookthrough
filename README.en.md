@@ -4,7 +4,7 @@ Trace declared fund holdings to known securities and issuers while preserving un
 
 [中文说明](README.md) · [Release v0.3.6](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.6) · [Skill instructions](SKILL.md) · [Input preparation](BEGINNER.md)
 
-Current release: **regular release**. Python **3.10+**. Base runtime dependencies: none. Optional extras: `pdf`. See [USAGE.md](USAGE.md) for scope.
+Current release: **v0.3.6 · regular release**. Python **3.10+**. Base runtime dependencies: none. Optional extras: `pdf`. See [USAGE.md](USAGE.md) for scope.
 
 ## First run
 
