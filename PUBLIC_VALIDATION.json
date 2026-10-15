@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "public-validation/1",
+  "repository": "cn-fund-lookthrough",
+  "registeredOn": "2026-10-15",
+  "hashFormat": "UTF-8 with LF newlines; BOM ignored; original response hashes remain in original receipts",
+  "coverage": "limited-public-inputs",
+  "sourceAuthenticityCertified": false,
+  "evidence": [
+    {
+      "path": "validation/chinaamc-growth-engine-input.json",
+      "kind": "public-facts",
+      "normalizedSha256": "961dbf22cc4385b171e17eb777bd4c5330a5f432fb654746b4fb24967a7c6c36",
+      "sourceUrls": [
+        "https://www.chinaamc.com.cn/upload/resources/file/2026/03/31/8b7d455376d9421b805f62a6d27cbffd.pdf"
+      ]
+    },
+    {
+      "path": "examples/cn-scenarios/official-evidence.json",
+      "kind": "official-rule-evidence",
+      "normalizedSha256": "9f2cdedb7e2717759a7521103f9eb415f586f25acdf04c8b3a6862454203eb5e",
+      "sourceUrls": [
+        "https://www.amac.org.cn/xwfb/xhyw/202603/P020260508338766981977.pdf",
+        "https://www.amac.org.cn/xwfb/xhyw/202603/P020260508338767123695.pdf",
+        "https://www.csrc.gov.cn/csrc/c101954/c7619929/content.shtml",
+        "https://www.foresightfund.com/upload/pdf/1774572977259-ruiyuanchengzhangjiazhihunhexingzhengquantouzijijin2025nianniandubaogao.pdf"
+      ]
+    }
+  ],
+  "checkFiles": [
+    "test_cn_scenarios.py"
+  ],
+  "gaps": [
+    "限定历史披露与人工映射，不代表当前实时完整持仓",
+    "官方格式证据与合成情景数值分开"
+  ],
+  "limits": "registry and selected counterexamples; no new original-document authentication or investment-effect certification"
+}

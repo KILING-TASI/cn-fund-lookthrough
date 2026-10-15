@@ -2,13 +2,13 @@
 
 Trace declared fund holdings to known securities and issuers while preserving unknown exposure. Includes limited Ruiyuan and Huaxia report adapters and standalone snapshot comparisons.
 
-[中文说明](README.md) · [Release v0.3.6](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.6) · [Skill instructions](SKILL.md) · [Input preparation](BEGINNER.md)
+[中文说明](README.md) · [Release v0.3.7](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/tag/v0.3.7) · [Skill instructions](SKILL.md) · [Input preparation](BEGINNER.md)
 
-Current release: **v0.3.6 · regular release**. Python **3.10+**. Base runtime dependencies: none. Optional extras: `pdf`. See [USAGE.md](USAGE.md) for scope.
+Current release: **v0.3.7 · regular release**. Python **3.10+**. Base runtime dependencies: none. Optional extras: `pdf`. See [USAGE.md](USAGE.md) for scope.
 
 ## First run
 
-Download the [complete source ZIP](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.3.6/cn-fund-lookthrough-v0.3.6-source.zip), extract it and enter the directory containing `try_demo.py`:
+Download the [complete source ZIP](https://github.com/KILING-TASI/cn-fund-lookthrough/releases/download/v0.3.7/cn-fund-lookthrough-v0.3.7-source.zip), extract it and enter the directory containing `try_demo.py`:
 
 ```console
 python try_demo.py --no-open --out-dir reports/first-demo
